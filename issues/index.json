@@ -1,0 +1,22 @@
+{
+  "issues": [
+    {
+      "id": "issue-01",
+      "number": 1,
+      "range": "13–20 October 2026",
+      "published": "2026-10-20",
+      "headline": "Labs may soon sign off on their own animal experiments",
+      "art": "lab",
+      "file": "issues/issue-01.json"
+    },
+    {
+      "id": "issue-02",
+      "number": 2,
+      "range": "19–25 October 2026",
+      "published": "2026-10-26",
+      "headline": "Wild animal attacks: Kerala can't hide behind a ₹75,000 cap",
+      "art": "elephant",
+      "file": "issues/issue-02.json"
+    }
+  ]
+}

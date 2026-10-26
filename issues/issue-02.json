@@ -1,0 +1,576 @@
+{
+  "number": 2,
+  "id": "issue-02",
+  "range": "19–25 October 2026",
+  "published": "2026-10-26",
+  "summary": [
+    "The [Kerala High Court](#feature) held that the state is liable for wild-animal attacks even though it doesn't own the animals. In the same week, Kerala doubled crop-loss compensation and removed the cap on claims.",
+    "Objections to the [draft lab-animal rules](#movement) are mounting. The deadline is most often given as 5 November, but one report says 30 October, so file early.",
+    "The [MP High Court](#courts) let Indore Metro fell trees but ordered ornithologists on site to protect roosting parakeets, and the [Gujarat High Court](#courts) told the state to fill gaps in its stray cattle and dog data.",
+    "Fish Welfare Initiative [retracted two years of data](#movement) from one Andhra Pradesh region. On the [EA Forum](#forum), Ronen Bar asks whether appetite drugs could help people who want to eat less meat."
+  ],
+  "cover": {
+    "art": "elephant",
+    "kicker": "Cover story",
+    "title": "Wild animal attacks: Kerala can't hide behind a ₹75,000 cap",
+    "dek": "A Kerala High Court judgment, reported on 23 October, upheld more than ₹5.3 lakh in damages for a farmer disabled by wild elephants. The court said the state must take reasonable steps against human-wildlife conflict and can be sued in civil court. That same week, Kerala doubled its crop-loss compensation.",
+    "tags": [
+      "Strict liability for the state",
+      "Crop-loss cap removed"
+    ]
+  },
+  "topStories": [
+    {
+      "art": "lab",
+      "label": "Draft lab-animal rules",
+      "title": "Comment deadline: 5 Nov, or possibly 30 Oct",
+      "text": "Objections are growing across the country. Reports disagree on the closing date, so the safe choice is to file this week.",
+      "anchor": "movement"
+    },
+    {
+      "art": "leaf",
+      "label": "Madhya Pradesh High Court",
+      "title": "Metro trees can go, but parakeets get guards",
+      "text": "Felling must happen in phases, with two ornithologists checking for nests, eggs and chicks.",
+      "anchor": "courts"
+    }
+  ],
+  "feature": {
+    "art": "elephant",
+    "kicker": "Human-wildlife conflict · Kerala",
+    "title": "The state pays when wild animals strike",
+    "dek": "In [The State of Kerala & Ors v. Sebastian @ Sabu V K](https://www.livelaw.in/high-court/kerala-high-court/kerala-high-court-states-lack-of-ownership-wild-animals-not-exclude-liability-555677), the Kerala High Court dismissed the state's second appeal against damages for a Wayanad farmer. Three wild elephants attacked him in 2017 and left him permanently disabled. On 23 October, [Onmanorama reported](https://www.onmanorama.com/news/kerala/2026/10/23/wildlife-attacks-kerala-doubles-crop-loss-compensation-removes-cap-on-claims.html) that the Forest Department had also overhauled what it pays farmers for crops lost to wildlife.",
+    "columns": [
+      {
+        "heading": "What the High Court held",
+        "items": [
+          {
+            "lead": "Ownership is no defence.",
+            "text": "The state doesn't own wild animals, but that does not free it from strict liability for harm they cause."
+          },
+          {
+            "lead": "A duty to act.",
+            "text": "The Wild Life (Protection) Act 1972 and Article 48A require the state to take reasonable steps against conflict, weighed against the victim's rights under Article 21. It does not have to fence every forest."
+          },
+          {
+            "lead": "Caps aren't the ceiling.",
+            "text": "The 1980 Kerala compensation rules and the 2013 order's ₹75,000 limit are for quick relief. Victims can still sue for full compensation."
+          },
+          {
+            "lead": "Claims need proof.",
+            "text": "The state could not prove the fencing and trenches it said it had built."
+          },
+          {
+            "lead": "Award upheld.",
+            "text": "₹5,37,030 with 8% interest. The farmer had earlier received ₹75,000 as relief."
+          }
+        ]
+      },
+      {
+        "heading": "What the government changed",
+        "items": [
+          {
+            "lead": "Double the rates.",
+            "text": "This is reportedly the first revision of crop-loss compensation since 2015."
+          },
+          {
+            "lead": "Full assessed loss.",
+            "text": "Payouts now cover 100% of the assessed loss. The maximum payout and the limits on how many times a farmer can apply are removed."
+          },
+          {
+            "lead": "New crops covered.",
+            "text": "Coconut (₹15 a nut) and cocoa (₹30 a kg) are added."
+          },
+          {
+            "lead": "Time limits.",
+            "text": "Damage must be reported within 72 hours to two weeks, depending on the case, and claims filed within six months."
+          },
+          {
+            "lead": "Unverified.",
+            "text": "The order's number and date were not published in the coverage we found."
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "label": "Case",
+        "text": "RSA No. 449 of 2026 · 2026:KER:78477 · 2026 LiveLaw (Ker) 594"
+      },
+      {
+        "label": "Bench and dates",
+        "text": "Justice Mohammed Nias C.P. Judgment dated 13 Oct; reported 23 Oct. [Read the judgment (PDF)](https://www.livelaw.in/pdf_upload/2026/10/22/2-3-707787.pdf)."
+      },
+      {
+        "label": "Precedents",
+        "text": "The court followed V.V. George (2017) and Thadathil Saramma (2026), and distinguished the Supreme Court's WWF ruling, (2013) 8 SCC 234."
+      },
+      {
+        "label": "Who's affected",
+        "text": "Farmers and residents in forest-fringe areas, the Forest Department, and anyone litigating against the state over wildlife conflict."
+      }
+    ],
+    "whyItMatters": "Kerala is the centre of India's argument about human-wildlife conflict. That argument includes its contested push to amend the Wildlife Protection Act and pressure to cull 'problem' animals. Making the state pay full damages and fully compensate crop losses gives it a reason to invest in prevention, such as fencing, early warning and corridors. It also reduces the pressure to treat the animals themselves as the problem.",
+    "sidebar": {
+      "title": "Elephants at festivals, again",
+      "text": "On 21 October, an elephant ran amok during the Shivamogga Dasara procession in Karnataka. Its mahout was reportedly injured. A [Deccan Herald editorial](https://deccanherald.com/opinion/editorial/tradition-and-the-missing-safety-clause-4193229) called for a rethink of using elephants in festivals, and PETA India offered the state mechanical elephants (see [Movement watch](#movement))."
+    },
+    "sources": [
+      {
+        "label": "LiveLaw, 23 Oct",
+        "url": "https://www.livelaw.in/high-court/kerala-high-court/kerala-high-court-states-lack-of-ownership-wild-animals-not-exclude-liability-555677"
+      },
+      {
+        "label": "Judgment PDF",
+        "url": "https://www.livelaw.in/pdf_upload/2026/10/22/2-3-707787.pdf"
+      },
+      {
+        "label": "Onmanorama, 24 Oct",
+        "url": "https://www.onmanorama.com/news/kerala/2026/10/24/kerala-high-court-state-liability-wild-animal-attacks.html"
+      },
+      {
+        "label": "Onmanorama, 23 Oct (crop loss)",
+        "url": "https://www.onmanorama.com/news/kerala/2026/10/23/wildlife-attacks-kerala-doubles-crop-loss-compensation-removes-cap-on-claims.html"
+      }
+    ]
+  },
+  "courts": {
+    "cases": [
+      {
+        "art": "elephant",
+        "title": "Kerala: the state is liable for wild-animal harm",
+        "reported": "23 Oct",
+        "citation": "State of Kerala & Ors v. Sebastian @ Sabu V K · RSA 449/2026 · Kerala High Court · Justice Mohammed Nias C.P. · judgment 13 Oct",
+        "parts": [
+          {
+            "label": "The ask",
+            "text": "The state argued that ₹75,000 was the legal maximum for a farmer disabled by wild elephants, and that it does not own wild animals."
+          },
+          {
+            "label": "Held",
+            "text": "Appeal dismissed. Strict liability applies regardless of ownership, and the statutory caps do not limit damages a civil court can award."
+          },
+          {
+            "label": "Why it matters",
+            "text": "This is the [cover story](#feature): it opens the way to full damages for victims of wildlife conflict."
+          }
+        ],
+        "links": [
+          {
+            "label": "LiveLaw report",
+            "url": "https://www.livelaw.in/high-court/kerala-high-court/kerala-high-court-states-lack-of-ownership-wild-animals-not-exclude-liability-555677"
+          },
+          {
+            "label": "Read the judgment (PDF)",
+            "url": "https://www.livelaw.in/pdf_upload/2026/10/22/2-3-707787.pdf"
+          }
+        ]
+      },
+      {
+        "art": "leaf",
+        "title": "Indore Metro: trees felled, birds protected",
+        "reported": "24 Oct",
+        "citation": "Priyanshu Jain v. Union of India & Ors · Madhya Pradesh High Court (Indore) · Justices Subodh Abhyankar & Jai Kumar Pillai · order 22 Oct · case number not reported",
+        "parts": [
+          {
+            "label": "The ask",
+            "text": "A writ petition to stop trees at Rani Sarai being felled for an underground metro station, and to enforce the Wild Life (Protection) Act for roosting parakeets."
+          },
+          {
+            "label": "Held",
+            "text": "Dismissed. The bench was bound by a 2024 coordinate-bench ruling upholding the route. It ordered phased felling overseen by at least two ornithologists, a rescue team on site, replanting of the same species, the promised 2,500 trees, and yearly compliance reports."
+          },
+          {
+            "label": "Why it matters",
+            "text": "Even when it lets a project go ahead, the court sets concrete wildlife safeguards that can be monitored."
+          }
+        ],
+        "links": [
+          {
+            "label": "LawBeat report",
+            "url": "https://lawbeat.in/news-updates/madhya-pradesh-high-court-refuses-to-halt-indore-metro-tree-felling-orders-safeguards-for-roosting-birds-1645134"
+          }
+        ]
+      },
+      {
+        "art": "cow",
+        "title": "Gujarat: 17 districts have no stray-animal data",
+        "reported": "22 Oct (hearing date unconfirmed)",
+        "citation": "Suo motu PIL on stray cattle and dogs on highways · Gujarat High Court · division bench led by the Chief Justice · case number not reported",
+        "parts": [
+          {
+            "label": "The background",
+            "text": "The court took up the case after a fatal highway crash. The state and NHAI disagree over who is responsible for stray cattle on highways."
+          },
+          {
+            "label": "Directed",
+            "text": "The state must collect stray cattle and dog data from the 17 districts that have none. The court criticised NHAI for returning seized cattle to their owners. The state proposed heavy fines on owners and continuous fencing along highways."
+          },
+          {
+            "label": "Why it matters",
+            "text": "High Courts are feeding data into the Supreme Court's national stray-animal case. A Supreme Court review on 30 Oct was reported but could not be verified."
+          }
+        ],
+        "links": [
+          {
+            "label": "Gujarat Samachar",
+            "url": "https://english.gujaratsamachar.com/news/ahmedabad/17-districts-missing-data-gujarat-high-court-slams-government-and-nhai-over-stray-cattle-and-dog-menace-after-fatal-highway-crash-46378650574"
+          }
+        ]
+      }
+    ],
+    "justBefore": {
+      "title": "J&K High Court: cattle smuggling isn't automatically a public-order threat",
+      "text": "In Din Mohd Wani v. UT of J&K, 2026 LiveLaw (JKL) 447, Justice M.A. Chowdhary quashed the preventive detention of a 65-year-old accused of cattle smuggling. Without communal tension or a law-and-order problem, the allegations did not meet the public-order test. Reported 8 Oct.",
+      "link": {
+        "label": "LiveLaw report",
+        "url": "https://www.livelaw.in/high-court/jammu-kashmir/bovine-smuggling-allegations-without-communal-tension-or-law-order-problem-cannot-establish-public-order-jk-high-court-quashes-detention-of-65-year-old-man-553769"
+      }
+    },
+    "quiet": [
+      "No Supreme Court or National Green Tribunal animal-law rulings found for 19–25 Oct. LiveLaw's daily round-ups for 19–21 and 24 Oct couldn't be found, so a High Court ruling may have been missed.",
+      "Government: the only notice found was Kerala's crop-loss compensation order (see the [feature](#feature)). We found no new central notifications from DAHD, MoEFCC, AWBI, the Central Zoo Authority, NTCA or WCCB, and no official response to objections on the lab rules. State gazettes aren't indexed by search engines, so treat this as provisional.",
+      "Side note: in [ICICI Lombard v. Satish Chandra Gupta](https://www.livelaw.in/high-court/delhi-high-court/driver-cant-escape-negligence-by-citing-sudden-appearance-of-stray-animal-must-anticipate-road-hazards-delhi-high-court-555778) (reported 23 Oct), the Delhi High Court held that a driver who swerves for a stray dog can't claim 'agony of the moment', because drivers must expect such hazards. It is a motor-accident case, not animal law.",
+      "Editor's notes: this issue covers 19–25 Oct, so it overlaps last week's on 19–20 Oct. Items reported last week aren't repeated. No dated updates were found this week from ALPN, Vegan Outreach, Vegan India Movement, Mercy For Animals India, Veganuary India, Shrimp Welfare Project, One Just World or CALF. 'BIA' couldn't be identified with confidence and was skipped."
+    ]
+  },
+  "movement": [
+    {
+      "art": "lab",
+      "actNow": true,
+      "tag": "Peedu's People and others · Draft lab rules",
+      "date": "19–25 Oct",
+      "title": "Objections pile up against the draft lab-animal rules",
+      "text": "Peedu's People held awareness drives in Chandigarh against the draft rules ([Tribune, 25 Oct](https://www.tribuneindia.com/news/chandigarh/activists-flag-risks-to-community-animals-under-draft-lab-rules/)). Maneka Gandhi and PETA India also spoke out. The draft is reportedly G.S.R. 864(E), published on 6 Oct. Most sources give a 5 Nov deadline (6 Nov in one compliance tracker), but [one report says 30 Oct](https://ourgov.live/2026/10/19/suggestions-invited-on-draft-prevention-of-cruelty-to-animals-rules-2026-submit-by-30th-october/). We couldn't open the official Gazette copy, so filing by 30 Oct is the safe choice. Objections go to cpcsea-mef@gov.in. A claim of more than 50,000 objections so far is unverified. Background is in [last week's feature](https://claude.ai/artifact/5iKe8kwm641P9qVnwmMs86#issue-01).",
+      "links": [
+        {
+          "label": "Rule-by-rule guide (Animal Writes)",
+          "url": "https://animalwrites.in/campaigns/lab-animals-rules-2026/"
+        },
+        {
+          "label": "TeamLease summary",
+          "url": "https://teamleaseregtech.com/updates/article/60214/draft-prevention-of-cruelty-to-animals-control-and-supervision-of-expe/"
+        },
+        {
+          "label": "Free Press Journal, 19 Oct",
+          "url": "https://www.freepressjournal.in/mumbai/maneka-gandhi-raises-alarm-over-centres-draft-animal-testing-rules-alleges-proposals-favour-companies"
+        }
+      ]
+    },
+    {
+      "art": "heart",
+      "tag": "Humane World for Animals India · Disaster response",
+      "date": "19 Oct",
+      "title": "Foundation stone laid for an animal evacuation shelter in Wayanad",
+      "text": "The organisation calls it India's first emergency evacuation shelter for animals. Built with Kerala's disaster management authority and the local panchayat at Kottathara, it will hold up to 150 animals and include a vet clinic, a quarantine area and about a week's food and water. The state disaster authority has set aside ₹10 lakh for upkeep, and the shelter is expected to open by 2027. This comes from the organisation's own press release.",
+      "links": [
+        {
+          "label": "Press release",
+          "url": "https://www.humaneworld.org/india/en/news/indias-first-emergency-animal-evacuation-shelter"
+        }
+      ]
+    },
+    {
+      "art": "fish",
+      "tag": "Fish Welfare Initiative · Transparency",
+      "date": "21 Oct",
+      "title": "FWI retracts its Nellore farm data",
+      "text": "FWI found that water-quality data from its Nellore region (Andhra Pradesh) was fabricated on at least one day in September. It has retracted all Nellore data from November 2024 onward, about 1,100 records from 45 ponds. Its lifetime impact estimate falls from about 5.7M to 5.3M fish. FWI plans unannounced audits. This is a rare public correction and worth reading for anyone running field programmes.",
+      "links": [
+        {
+          "label": "FWI blog post",
+          "url": "https://www.fishwelfareinitiative.org/post/data-issues"
+        }
+      ]
+    },
+    {
+      "art": "elephant",
+      "tag": "PETA India · Captive elephants",
+      "date": "22 Oct",
+      "title": "Mechanical elephants offered after Shivamogga Dasara incident",
+      "text": "After an elephant ran amok at the 21 Oct procession, PETA India wrote to Karnataka's forest minister. It offered a fleet of mechanical elephants and asked that this be the last Dasara with live elephants. See the [feature sidebar](#feature).",
+      "links": [
+        {
+          "label": "PETA India post",
+          "url": "https://www.petaindia.com/blog/after-elephant-runs-amok-at-shivamogga-dasara-peta-india-offers-fleet-of-mechanical-elephants-to-karnataka-to-replace-live-elephants/"
+        }
+      ]
+    },
+    {
+      "art": "dog",
+      "tag": "PETA India · Legal action",
+      "date": "21 & 23 Oct",
+      "title": "FIRs over killings of puppies, and training for railway police",
+      "text": "Police in Tiruvarur (Tamil Nadu) and Bengaluru registered FIRs under BNS s.325 and the PCA Act. One case involves puppies allegedly burned to death; the other, a puppy killed by a municipal garbage truck whose driver didn't stop. Both followed PETA India's intervention and CCTV evidence. Separately, about 100 Mumbai railway police attended a PETA India workshop on cruelty to animals on trains. These are PETA India's own accounts.",
+      "links": [
+        {
+          "label": "Tiruvarur FIR",
+          "url": "https://www.petaindia.com/blog/fir-registered-against-tiruvarur-man-for-burning-three-puppies-to-death-following-peta-india-intervention/"
+        },
+        {
+          "label": "Bengaluru FIR",
+          "url": "https://www.petaindia.com/blog/fir-registered-for-bengaluru-municipal-garbage-truck-running-over-and-killing-dog-following-peta-india-intervention/"
+        },
+        {
+          "label": "Railway police workshop",
+          "url": "https://www.petaindia.com/blog/mumbai-government-railway-police-welcome-peta-india-in-leading-workshop-to-combat-cruelty-to-animals-following-bird-seizure-from-train/"
+        }
+      ]
+    },
+    {
+      "art": "leaf",
+      "tag": "Animal Ethics · Education",
+      "date": "21 Oct",
+      "title": "An animal-ethics fellowship at Delhi University",
+      "text": "Animal Ethics is running a pilot fellowship for University of Delhi students from September to December, with about 300 sign-ups. It is looking for guest speakers, host organisations and campus organisers, who can write to fellowship@animal-ethics.org.",
+      "links": [
+        {
+          "label": "EA Forum post",
+          "url": "https://forum.effectivealtruism.org/posts/xXgMAWgT3svBcNyHD/bringing-animal-ethics-into-indian-universities-a-fellowship"
+        },
+        {
+          "label": "Animal Ethics",
+          "url": "https://www.animal-ethics.org/bringing-animal-ethics-into-indian-universities-a-fellowship-at-delhi-university/"
+        }
+      ]
+    },
+    {
+      "art": "globe",
+      "tag": "Sinergia Animal · Finance",
+      "date": "22 Oct",
+      "title": "World Bank lender drops a $20M factory-farm loan",
+      "text": "The IFC withdrew a proposed loan for an animal-feed mill in Brazil. Indigenous leaders and 109 groups in the Stop Financing Factory Farming coalition had opposed it. Campaigners are now targeting a $100M IFC loan to a Brazilian soy and corn company. Development finance also supports livestock projects in South Asia, so this is a tactic worth watching.",
+      "links": [
+        {
+          "label": "Sinergia Animal blog",
+          "url": "https://sinergiaanimal.org/blog/ifc-factory-farming-finance"
+        }
+      ]
+    },
+    {
+      "art": "search",
+      "tag": "Faunalytics · Research",
+      "date": "19–23 Oct",
+      "title": "Speciesism in AI models, and plant-based meat's limited effect",
+      "text": "Faunalytics summarised five new studies this week. One finds speciesist bias in large language models. Another, using three years of US grocery data, finds plant-based meat has barely reduced demand for meat. None is India-specific, but both matter for strategy here.",
+      "links": [
+        {
+          "label": "Faunalytics",
+          "url": "https://faunalytics.org/"
+        }
+      ]
+    }
+  ],
+  "forum": {
+    "pick": {
+      "art": "search",
+      "label": "Pick of the week",
+      "date": "22 Oct",
+      "title": "Drugs to shift food preferences",
+      "author": "Ronen Bar",
+      "text": "The movement has worked on beliefs and on the food supply but has largely ignored cravings. Bar points to GLP-1 appetite drugs, conditioned taste aversion and the food aversions of pregnancy. He suggests voluntary aids for people who already want to eat less meat, starting cheaply with a survey and a scoping review. He weighs the risks openly, including safety, people switching to chicken or fish, and turning a moral choice into a medical one. He says he found no group working on this.",
+      "url": "https://forum.effectivealtruism.org/posts/fi5iWXJeNQ4K7mnZM/drugs-to-shift-food-preferences"
+    },
+    "posts": [
+      {
+        "art": "leaf",
+        "date": "21 Oct",
+        "category": "India · Movement-building",
+        "title": "Bringing animal ethics into Indian universities: a fellowship at Delhi University",
+        "author": "Animal Ethics",
+        "text": "A pilot fellowship running September to December with about 300 students signed up. There are no results yet, but it is one of the first structured efforts of its kind in India and is looking for speakers and campus organisers.",
+        "url": "https://forum.effectivealtruism.org/posts/xXgMAWgT3svBcNyHD/bringing-animal-ethics-into-indian-universities-a-fellowship"
+      },
+      {
+        "art": "chat",
+        "date": "23 Oct",
+        "category": "Careers",
+        "title": "Exactly what I'd do if I had to get a job in animal advocacy now",
+        "author": "Sofia Balderson (Hive)",
+        "text": "AI-polished applications now flood hiring rounds, some with more than 1,300 applicants. Employers therefore rely on judgment and track records they have seen first-hand. Her advice: become visible through skilled volunteering, small projects and writing in public, and plan for a search of a year or more.",
+        "url": "https://forum.effectivealtruism.org/posts/6j4XMxcKWCSfjmJS4/exactly-what-i-d-do-if-i-had-to-get-a-job-in-animal-advocacy"
+      },
+      {
+        "art": "lab",
+        "date": "22 Oct",
+        "category": "Insect welfare",
+        "title": "Bioconversion using insects",
+        "author": "Denis",
+        "text": "Should insect larvae be used to process organic waste? Commenters argue the welfare risk comes on top of an already weak case, and that cheaper options such as anaerobic digestion exist. Relevant as insect farming grows in India.",
+        "url": "https://forum.effectivealtruism.org/posts/rbJXDqkFERa2rmbKJ/bioconversion-using-insects"
+      },
+      {
+        "art": "cow",
+        "date": "22 Oct",
+        "category": "Farmed animals · Question",
+        "title": "Artificially induced lactation in cows",
+        "author": "fencebuilder",
+        "text": "Could hormone-induced lactation without pregnancy improve welfare on dairy farms? The one reply doubts it would cut much breeding, since farms still need replacement cows. It's a short thread, but an interesting question for India's huge dairy sector.",
+        "url": "https://forum.effectivealtruism.org/posts/oAPE8JfJPkJjApkaN/artificially-induced-lactation-in-cows"
+      }
+    ],
+    "alsoPosted": "[When is shaming justified?](https://forum.effectivealtruism.org/posts/h8u6NEAjEKHH4DHsp/when-is-shaming-justified) by Laura Thomas-Walters (23 Oct) · Vasco Grilo's [linkpost of Brian Tomasik on consciousness](https://forum.effectivealtruism.org/posts/3NTPtDBnodvhRLQ9Q/dissolving-confusion-about-consciousness) (23 Oct) · An update on last week's [Every.org 2:1 match](https://forum.effectivealtruism.org/posts/vYgzjvwaS4t2Z8ZDB/counterfactual-2-1-match-for-usd250k-in-animal-welfare): the post says the $250k ran out in about 35 minutes on 22 Oct. It was a quiet week overall. We found no second post from CALF."
+  },
+  "global": {
+    "items": [
+      {
+        "art": "scroll",
+        "tag": "US · New York City",
+        "title": "NYC votes to end horse-drawn carriages",
+        "text": "On 22 Oct, the City Council passed 'Romanch's Law' 40–7. For-hire carriage rides end by June 2028. The mayor's office says he will sign it; the Transport Workers Union plans to sue.",
+        "link": {
+          "label": "NY1",
+          "url": "https://ny1.com/nyc/all-boroughs/politics/2026/10/22/city-council-central-park-carriage-ban-vote"
+        }
+      },
+      {
+        "art": "globe",
+        "tag": "Denmark · Fur farming",
+        "title": "Denmark will close its last mink farms by 2029",
+        "text": "The government won't seek an exemption from the EU-wide ban, which stops breeding from August 2027. Its seven remaining farms must close by 7 Aug 2029. Compensation hasn't been set.",
+        "link": {
+          "label": "Copenhagen Post, 23 Oct",
+          "url": "https://cphpost.dk/2026-10-23/news/round-up/denmark-to-end-mink-farming-by-august-2029-under-eu-ban/"
+        }
+      },
+      {
+        "art": "lab",
+        "tag": "US · Pennsylvania",
+        "title": "Animal-testing reform reaches the governor",
+        "text": "The bill bans the sale of cosmetics newly tested on animals and requires labs to offer dogs and cats used in testing for adoption. It also adds enforcement by the Attorney General and passed both chambers. It now awaits Governor Shapiro's signature.",
+        "link": {
+          "label": "Erie News Now",
+          "url": "https://www.erienewsnow.com/news/animal-testing-reform-bill-heads-to-governor-shapiro-s-desk/article_9a38b7a5-20ff-4872-97ba-4424a9f3f5c9.html"
+        }
+      }
+    ],
+    "source": {
+      "label": "Rise for Animals roundup, 23 Oct",
+      "url": "https://riseforanimals.org/news/news-oct-23-2026/"
+    }
+  },
+  "watchlist": [
+    {
+      "date": "30 Oct",
+      "text": "Earliest reported deadline for [objections to the draft lab-animal rules](https://ourgov.live/2026/10/19/suggestions-invited-on-draft-prevention-of-cruelty-to-animals-rules-2026-submit-by-30th-october/). File by now to be safe."
+    },
+    {
+      "date": "30 Oct",
+      "text": "Supreme Court review of the stray-animal case, [as reported by Gujarat Samachar](https://english.gujaratsamachar.com/news/ahmedabad/17-districts-missing-data-gujarat-high-court-slams-government-and-nhai-over-stray-cattle-and-dog-menace-after-fatal-highway-crash-46378650574). Unverified."
+    },
+    {
+      "date": "31 Oct",
+      "text": "[Legal Impact for Chickens member match](https://forum.effectivealtruism.org/posts/J5tuB3uw5Fyrrwqqj/become-a-legal-impact-for-chickens-member-and-help-lic-earn) closes"
+    },
+    {
+      "date": "2–6 Nov",
+      "text": "CITES Standing Committee, Geneva ([background](https://riseforanimals.org/news/news-oct-16-2026/))"
+    },
+    {
+      "date": "3 Nov",
+      "text": "[Delhi HC stray-dogs hearing](https://www.livelaw.in/high-court/delhi-high-court/stray-dogs-delhi-high-court-directs-mcd-ndmc-to-hold-training-camp-for-veterinary-staff-dog-catchers-553144): MCD and NDMC sterilisation affidavits due"
+    },
+    {
+      "date": "5 Nov",
+      "text": "Most widely cited deadline for [lab-rules objections](https://animalwrites.in/campaigns/lab-animals-rules-2026/), to cpcsea-mef@gov.in"
+    },
+    {
+      "date": "13 Nov",
+      "text": "Expressions of interest close for the [Who Let the Docs Out fund](https://docsout.org)"
+    }
+  ],
+  "careers": {
+    "intro": "Paid roles, calls for proposals and volunteering that people in India can apply for. Few organisations post India roles publicly, so the job boards below are worth checking yourself.",
+    "items": [
+      {
+        "art": "briefcase",
+        "actNow": true,
+        "org": "Animal Advocacy Careers",
+        "title": "Chief Operating Officer",
+        "location": "Remote, worldwide (Europe time zones preferred)",
+        "deadline": "6 Nov, 12 pm CET (4:30 pm IST)",
+        "text": "A senior operations role at the organisation that runs career advising and training for animal advocates. Listed in the [EA Forum's October organisation updates](https://forum.effectivealtruism.org/posts/fCWJ9pGcL7itbJ6pm/ea-organisation-updates-thread-october-2026).",
+        "links": [
+          {
+            "label": "Job details",
+            "url": "https://animaladvocacycareers.org/chief-operating-officer/"
+          }
+        ]
+      },
+      {
+        "art": "fish",
+        "org": "Fish Welfare Initiative",
+        "title": "Call for proposals: farmed fish welfare in India",
+        "location": "India-focused; open to applicants in India or abroad",
+        "deadline": "Not stated",
+        "text": "FWI is inviting academics, NGOs, industry and individuals to propose projects that improve the welfare of farmed fish in India. Funding amounts aren't given in the announcement; check the call before applying.",
+        "links": [
+          {
+            "label": "The call",
+            "url": "https://www.fishwelfareinitiative.org/post/rfp-india"
+          }
+        ]
+      },
+      {
+        "art": "leaf",
+        "org": "GFI India",
+        "title": "Roles across GFI's global affiliates",
+        "location": "Varies by affiliate, including India",
+        "deadline": "Rolling",
+        "text": "The Good Food Institute lists openings for all its country affiliates, including GFI India, on one careers page. No specific India role was advertised when we checked.",
+        "links": [
+          {
+            "label": "GFI global careers",
+            "url": "https://gfi.org/global/#global-careers"
+          }
+        ]
+      },
+      {
+        "art": "heart",
+        "org": "Vegan Outreach",
+        "title": "Volunteer with Vegan Outreach in India",
+        "location": "India",
+        "deadline": "Rolling",
+        "text": "No paid openings right now, but Vegan Outreach takes volunteers for its India programmes and accepts speculative applications.",
+        "links": [
+          {
+            "label": "Openings and volunteer form",
+            "url": "https://veganoutreach.org/job-openings/"
+          }
+        ]
+      },
+      {
+        "art": "hen",
+        "org": "Mercy For Animals India",
+        "title": "No current openings",
+        "location": "India",
+        "deadline": "—",
+        "text": "MFA India isn't hiring at the moment but invites CVs for future roles.",
+        "links": [
+          {
+            "label": "Work with MFA India",
+            "url": "https://mercyforanimals.in/work-with-us/"
+          }
+        ]
+      }
+    ],
+    "boards": [
+      {
+        "label": "Animal Advocacy Careers job board",
+        "url": "https://animaladvocacycareers.org/job-board/"
+      },
+      {
+        "label": "Connect for Animals: list of job boards",
+        "url": "https://connectforanimals.com/resources-jobs"
+      },
+      {
+        "label": "Hive newsletter (jobs each issue)",
+        "url": "https://joinhive.substack.com/"
+      },
+      {
+        "label": "EA Forum: open job listings",
+        "url": "https://forum.effectivealtruism.org/topics/job-listing-open"
+      }
+    ]
+  }
+}

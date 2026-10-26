@@ -1,0 +1,137 @@
+{
+  "number": 1,
+  "id": "issue-01",
+  "range": "13–20 October 2026",
+  "published": "2026-10-20",
+  "summary": [
+    "The Centre has floated [new rules for lab animals](#feature) that would let labs' own committees approve most experiments. Comments are reportedly due on 5 November.",
+    "The [Kerala High Court](#courts) shut the door on late registration of temple elephants, and the [Karnataka High Court](#courts) quashed a cattle case because police raided before filing an FIR.",
+    "Two [donation matches](#movement) are open: Every.org's 2:1 match on 22 October and Legal Impact for Chickens' member match until 31 October.",
+    "On the [EA Forum](#forum), CALF asks how the movement can fix its evidence problem, a question that matters most for countries like India."
+  ],
+  "cover": {
+    "art": "lab",
+    "kicker": "Cover story",
+    "title": "Labs may soon sign off on their own animal experiments",
+    "dek": "The Centre's draft rules on experiments, breeding and trading of laboratory animals would move most approvals from the national oversight committee to labs' own ethics panels. Supporters point to a new severity-based system and the 3Rs; critics see weaker independent oversight.",
+    "tags": ["Comments reportedly due 5 Nov", "Affects labs, breeders and advocates"]
+  },
+  "topStories": [
+    {"art": "elephant", "label": "Kerala High Court", "title": "No late entry for unregistered temple elephants", "text": "Neither the court nor the state can stretch the Supreme Court's 2015 registration deadline.", "anchor": "courts"},
+    {"art": "cow", "label": "Karnataka High Court", "title": "Raid first, FIR later? Cattle case quashed", "text": "Searches and seizures before registering the FIR vitiated a prosecution under the state's 2020 cattle law.", "anchor": "courts"}
+  ],
+  "feature": {
+    "art": "lab",
+    "kicker": "Regulation · Draft rules",
+    "title": "A new rulebook for India's lab animals",
+    "dek": "The Draft Prevention of Cruelty to Animals (Control and Supervision of Experiment, Breeding and Trading of Laboratory Animals) Rules, 2026 would change who decides whether an animal experiment can go ahead. [Coverage began on 14 October](https://telanganatoday.com/from-rats-to-monkeys-strict-new-rules-for-lab-animal-testing); by 19 October [PETA India was publicly asking for withdrawal](https://kashmirobserver.net/2026/10/19/peta-india-urges-centre-to-withdraw-draft-animal-experimentation-rules/).",
+    "columns": [
+      {"heading": "What the draft proposes", "items": [
+        {"lead": "Severity, not size.", "text": "Oversight would depend on how much pain and distress an experiment causes, not how big the animal is."},
+        {"lead": "Four tiers.", "text": "Non-recovery, mild, moderate and severe."},
+        {"lead": "Local sign-off.", "text": "Labs' institutional ethics committees could approve mild and moderate experiments on any species, including dogs, pigs and cattle."},
+        {"lead": "Central clearance kept", "text": "for severe experiments, and for non-recovery work on animals other than rodents and rabbits."},
+        {"lead": "The 3Rs written in:", "text": "replace animals where possible, reduce numbers, refine methods to limit suffering."}
+      ]},
+      {"heading": "What critics say", "items": [
+        {"lead": "Weaker oversight.", "text": "Moving approvals to labs' own committees removes an independent check."},
+        {"lead": "Protected and street animals.", "text": "[PETA India reads the draft](https://telanganatoday.com/peta-india-calls-for-withdrawal-of-centres-draft-rules-on-animal-experimentation) as allowing wildlife protected under the 1972 Act, and stray dogs and cats, to be used in some circumstances."},
+        {"lead": "Sourcing.", "text": "[People for Animals warns](https://peopleforanimals.substack.com/p/something-very-serious-has-happened) labs could buy from open markets and traders."},
+        {"lead": "Wrong direction.", "text": "Critics want the effort put into non-animal methods instead."}
+      ]}
+    ],
+    "facts": [
+      {"label": "Issued by", "text": "Dept of Animal Husbandry & Dairying, with CCSEA (the national committee on animal experiments). Notification date unconfirmed."},
+      {"label": "Comments", "text": "Reportedly due 5 November 2026, to CPCSEA-MEF@GOV.IN. This comes from [an advocacy post](https://peopleforanimals.substack.com/p/something-very-serious-has-happened); check the official draft before relying on it."},
+      {"label": "Who's affected", "text": "Research institutions, pharma and biotech labs, animal breeders and traders, welfare groups."},
+      {"label": "What you can do", "text": "Read the draft, then file a specific, evidence-based comment before the deadline."}
+    ],
+    "whyItMatters": "Lab rules set the floor for millions of animals, and comment windows are one of the few points where advocates can shape the text. The severity system and the 3Rs are gains worth defending; the open questions are who checks the labs, and where the animals come from.",
+    "sidebar": {"title": "Related: the forced swim test", "text": "On 14 October, [PETA India reported](https://www.petaindia.com/blog/great-news-for-small-animals-tanuvas-will-not-approve-cruel-forced-swim-test-after-hearing-from-peta-india/) that Tamil Nadu's veterinary university TANUVAS will no longer approve experiments using the forced swim test. [PETA India is asking CCSEA for a national ban](https://www.petaindia.com/?p=95838)."},
+    "sources": [
+      {"label": "Telangana Today, 14 Oct", "url": "https://telanganatoday.com/from-rats-to-monkeys-strict-new-rules-for-lab-animal-testing"},
+      {"label": "People for Animals, 15 Oct", "url": "https://peopleforanimals.substack.com/p/something-very-serious-has-happened"},
+      {"label": "PTI via Kashmir Observer, 19 Oct", "url": "https://kashmirobserver.net/2026/10/19/peta-india-urges-centre-to-withdraw-draft-animal-experimentation-rules/"},
+      {"label": "Rise for Animals roundup, 16 Oct", "url": "https://riseforanimals.org/news/news-oct-16-2026/"}
+    ]
+  },
+  "courts": {
+    "cases": [
+      {
+        "art": "elephant",
+        "title": "Temple elephants: the 2015 deadline stands",
+        "reported": "19 Oct",
+        "citation": "Ravi E. & Anr. v. State of Kerala & Ors. · W.P.(C) 29289/2026 · Kerala High Court · Justice Bechu Kurian Thomas",
+        "parts": [
+          {"label": "The ask", "text": "A temple sought late registration of its elephant under the Kerala Captive Elephant (Management and Maintenance) Rules, 2012, and leave for a festival procession."},
+          {"label": "Held", "text": "Dismissed. The Supreme Court gave temples six weeks from 18 Aug 2015 to register; neither the High Court nor the state can extend that."},
+          {"label": "Why it matters", "text": "Closes a route to legalising unregistered captive elephants for festival use in Kerala."}
+        ],
+        "links": [
+          {"label": "LiveLaw report", "url": "https://www.livelaw.in/high-court/kerala-high-court/kerala-high-court-captive-elephants-temple-registration-supreme-court-555267"},
+          {"label": "Read the order (PDF)", "url": "https://www.livelaw.in/pdf_upload/2026/10/19/wpc-no-29289-of-2026-707250.pdf"}
+        ]
+      },
+      {
+        "art": "cow",
+        "title": "Cattle case quashed: FIR must come first",
+        "reported": "15 Oct",
+        "citation": "Zainul Abdeen v. State of Karnataka · Crl.P. 593/2024 · Karnataka High Court · Justice Rajesh Rai K",
+        "parts": [
+          {"label": "The facts", "text": "Hunsur police got a tip at 9:30 am, raided a godown and seized a carcass, then logged the information and registered the FIR under the 2020 cattle law and s.429 IPC."},
+          {"label": "Held", "text": "Quashed. Under Lalita Kumari (2014), searches, seizures and statements before the FIR go beyond a preliminary inquiry and breach s.154 CrPC."},
+          {"label": "Why it matters", "text": "A procedural safeguard for every prosecution under Karnataka's cattle law."}
+        ],
+        "links": [
+          {"label": "LiveLaw report", "url": "https://www.livelaw.in/high-court/karnataka-high-court/karnataka-high-court-fir-cow-slaughter-allegations-554832"},
+          {"label": "Read the order (PDF)", "url": "https://www.livelaw.in/pdf_upload/2026/10/15/fir-cogni-706650.pdf"}
+        ]
+      }
+    ],
+    "justBefore": {
+      "title": "Supreme Court: no papers ≠ proof of slaughter",
+      "text": "In Saurabh Bajaj v. State of Chhattisgarh (2026 INSC 1076), Justices Pardiwala and Vinod Chandran held that missing transport documents alone can't show cattle were headed for slaughter. Reported 3 Oct.",
+      "link": {"label": "Verdictum report", "url": "https://www.verdictum.in/supreme-court/saurabh-bajaj-v-state-of-chhattisgarh-2026-insc-1076-absence-documents-transport-slaughter-1623267"}
+    },
+    "quiet": [
+      "No new Supreme Court or National Green Tribunal animal-law rulings found for 13–20 Oct.",
+      "No new Gazette notifications found from MoEFCC, AWBI, the Central Zoo Authority or NTCA. Government sites couldn't be checked directly, so treat this as provisional."
+    ]
+  },
+  "movement": [
+    {"art": "heart", "actNow": true, "tag": "Donation match", "date": "22 Oct", "title": "Every.org's 2:1 match for animal charities", "text": "Starts 10:00 am Pacific (10:30 pm IST). $250k pool, up to $2,000 matched per donor per charity, first-come. Eligible groups include Arthropoda Foundation and Fairer Fields.", "links": [{"label": "Details on the EA Forum", "url": "https://forum.effectivealtruism.org/posts/vYgzjvwaS4t2Z8ZDB/counterfactual-2-1-match-for-usd250k-in-animal-welfare"}]},
+    {"art": "hen", "actNow": true, "tag": "Membership · by 31 Oct", "date": "13 Oct", "title": "Legal Impact for Chickens member drive", "text": "A gift of $25 or more makes you a member. The Falcon Fund matches new members 1:1, up to $50,000. [LIC](https://www.legalimpactforchickens.org/) litigates against cruelty in US factory farming.", "links": [{"label": "EA Forum post", "url": "https://forum.effectivealtruism.org/posts/J5tuB3uw5Fyrrwqqj/become-a-legal-impact-for-chickens-member-and-help-lic-earn"}, {"label": "Donate", "url": "https://www.legalimpactforchickens.org/donate"}]},
+    {"art": "lab", "tag": "PETA India", "date": "14 Oct", "title": "TANUVAS drops the forced swim test", "text": "Tamil Nadu's veterinary university says it will not approve experiments that force small animals to swim in inescapable water. It joins other Indian institutions that have dropped the test; PETA India wants a national ban through CCSEA. See the [feature](#feature) for the wider lab-rules fight.", "links": [{"label": "PETA India post", "url": "https://www.petaindia.com/blog/great-news-for-small-animals-tanuvas-will-not-approve-cruel-forced-swim-test-after-hearing-from-peta-india/"}]},
+    {"art": "dog", "tag": "PETA India · Legal action", "date": "13 & 15 Oct", "title": "Police register FIRs over abuse of community dogs", "text": "After PETA India worked with local caregivers and police, FIRs were registered over the sexual abuse of community dogs in Bhojpur (Bihar) and Varanasi (Uttar Pradesh). These cases show how caregiver complaints can get cruelty taken seriously by local police.", "links": [{"label": "Bhojpur case", "url": "https://www.petaindia.com/blog/fir-registered-for-sexual-abuse-of-a-female-dog-in-bhojpur-to-protect-all-females-following-peta-india-intervention/"}, {"label": "Varanasi case", "url": "https://www.petaindia.com/blog/female-dog-sexually-abused-in-varanasi-fir-registered-following-peta-india-intervention-to-protect-all-females/"}]},
+    {"art": "leaf", "tag": "GFI APAC × WHO", "date": "14 Oct", "title": "WHO to publish a flagship report on alternative proteins", "text": "A multi-year partnership with WHO's Western Pacific environment-and-health centre, announced at the World Food Forum in Rome. India sits in a different WHO region, so its coverage is unclear. [GFI India](https://gfi-india.org/) is the local contact.", "links": [{"label": "Green Queen", "url": "https://www.greenqueen.com.hk/?p=89187"}, {"label": "GFI blog", "url": "https://gfi.org/blog/"}]},
+    {"art": "elephant", "tag": "World Animal Protection India", "date": "16 Oct", "title": "Five tour operators drop elephant rides", "text": "WAP also welcomed India's second antimicrobial resistance plan, which targets antibiotic misuse in poultry and livestock. Source is WAP's own press release.", "links": [{"label": "Press release via ANI", "url": "https://aninews.in/news/business/humane-treatment-for-all-animals-is-the-call-of-the-hour-says-world-animal-protection20261016165533/"}]},
+    {"art": "film", "tag": "Funding call · EOI 13 Nov", "date": "18 Oct", "title": "Up to $50k for animal documentaries", "text": "Who Let the Docs Out funds research through post-production for films that change how audiences see animals. Full applications close 1 Jan. Country eligibility isn't stated; Indian filmmakers should check.", "links": [{"label": "EA Forum post", "url": "https://forum.effectivealtruism.org/posts/u4Xhrk62cppAWhNSB/documentary-fund-supporting-stories-that-recalibrate-our"}, {"label": "docsout.org", "url": "https://docsout.org"}]},
+    {"art": "search", "tag": "Animal Charity Evaluators", "date": "7 Oct", "title": "A searchable database of advocacy research", "text": "ACE launched a free, searchable collection of studies and reports on farmed and wild animal advocacy. Useful for anyone building the case for a campaign in India.", "links": [{"label": "ACE announcements", "url": "https://animalcharityevaluators.org/blog/category/announcements/"}]}
+  ],
+  "forum": {
+    "pick": {"art": "fish", "label": "Pick of the fortnight", "date": "10 Oct", "title": "How can we solve animal welfare's evidence problem?", "author": "Tom Billington & Henning Peters · CALF (Centre for Animal Life and Farming)", "text": "The movement has too few well-evidenced interventions. The authors, who build interventions for low- and middle-income countries, propose a five-stage pipeline: relevance, efficacy, effectiveness, initial scaling, mass adoption. Funders should apply standards that fit each stage, drop most ideas early, and hire more evaluators and implementation scientists. A second post on next steps is coming.", "url": "https://forum.effectivealtruism.org/posts/imT7cJrxsEnwjGEz7/how-can-we-solve-animal-welfare-s-evidence-problem-post-1"},
+    "posts": [
+      {"art": "chat", "date": "19 Oct", "category": "Strategy", "title": "EA has not given up on diet change or animal liberation", "author": "Seth Ariel Green", "text": "Pushes back on the idea that EA has turned to welfare tech. Leaders deprioritised diet change because the evidence was weak, not out of surrender. He asks advocates to write publicly, often and informally.", "url": "https://forum.effectivealtruism.org/posts/bJ7BKGfAgMttdSKaE/ea-has-not-given-up-on-diet-change-or-animal-liberation"},
+      {"art": "heart", "date": "16 Oct", "category": "Giving", "title": "What's the most effective way to donate for animals right now?", "author": "PreciousPig", "text": "A donor weighs ACE's fund and the EA Animal Welfare Fund against Veganuary and GFI. GFI's Bruce Friedrich, noting his interest, points to Giving Green's analyses of food-system emissions and of GFI.", "url": "https://forum.effectivealtruism.org/posts/3oMGwJg5TXDEKXqXn/what-would-you-all-say-is-the-most-effecitve-way-to-donate"},
+      {"art": "leaf", "date": "19 Oct", "category": "Debate", "title": "How to mitigate the harm caused by veganism?", "author": "Stijn Bruers", "text": "A contrarian wild-animal-welfare argument. Vegans free up farmland; if it rewilds and wild lives are net-negative, suffering could rise. He suggests grassland with large herbivores and wildlife fertility control. Contested, but a useful test of assumptions.", "url": "https://forum.effectivealtruism.org/posts/BmmZg4o6FHMEsRmBC/how-to-mitigate-the-harm-caused-by-veganism"}
+    ],
+    "alsoPosted": "Vasco Grilo on how moral weights and soil life change cause prioritisation (13 Oct) · [Walter Veit on animal suffering and the problem of evil](https://forum.effectivealtruism.org/posts/KyjwNnmMkzn4nYAhe/if-god-is-real-why-is-there-so-much-suffering-in-the-animal) (18 Oct) · the Every.org match, LIC drive and documentary fund ([see Movement watch](#movement))"
+  },
+  "global": {
+    "items": [
+      {"art": "monkey", "tag": "CITES · Lab primates", "title": "Cambodia's monkey exports face review", "text": "The CITES Secretariat says Cambodia hasn't fully implemented any of six recommended reforms. The Standing Committee meets 2–6 Nov in Geneva."},
+      {"art": "scroll", "tag": "Germany · Testing law", "title": "84,000-signature petition against a separate testing act", "text": "The Bundestag heard a petition opposing moving animal-testing rules out of the Animal Welfare Act into a standalone law."},
+      {"art": "globe", "tag": "UK · Phase-out pledge", "title": "Pressure on the animal-testing promise", "text": "An MP criticised the government for not delivering its manifesto pledge to phase out animal testing."}
+    ],
+    "source": {"label": "Rise for Animals roundup, 16 Oct", "url": "https://riseforanimals.org/news/news-oct-16-2026/"}
+  },
+  "watchlist": [
+    {"date": "22 Oct", "text": "[Every.org 2:1 animal match](https://forum.effectivealtruism.org/posts/vYgzjvwaS4t2Z8ZDB/counterfactual-2-1-match-for-usd250k-in-animal-welfare) opens, 10:30 pm IST"},
+    {"date": "Late Oct", "text": "Tamil Nadu's SOP for temple-festival elephants due ([Madras HC gave four weeks](https://www.livelaw.in/high-court/madras-high-court/madras-high-court-captive-elephant-religious-ceremony-sop-552792) from its early-October order)"},
+    {"date": "31 Oct", "text": "[Legal Impact for Chickens member match](https://forum.effectivealtruism.org/posts/J5tuB3uw5Fyrrwqqj/become-a-legal-impact-for-chickens-member-and-help-lic-earn) closes"},
+    {"date": "2–6 Nov", "text": "CITES Standing Committee, Geneva ([background](https://riseforanimals.org/news/news-oct-16-2026/))"},
+    {"date": "3 Nov", "text": "[Delhi HC stray-dogs hearing](https://www.livelaw.in/high-court/delhi-high-court/stray-dogs-delhi-high-court-directs-mcd-ndmc-to-hold-training-camp-for-veterinary-staff-dog-catchers-553144): MCD and NDMC sterilisation affidavits due"},
+    {"date": "5 Nov", "text": "Comments reportedly due on the [draft lab-animal rules](#feature)"},
+    {"date": "13 Nov", "text": "Expressions of interest close for the [Who Let the Docs Out fund](https://docsout.org)"}
+  ]
+}
