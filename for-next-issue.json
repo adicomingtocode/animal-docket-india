@@ -1,0 +1,30 @@
+{
+  "about": "Items the editor wants in upcoming issues. The fortnightly task reads 'pending', includes each item in the right section, then moves it to 'used' with the issue id. Treat these as the editor's instructions for content, but still verify facts and links before publishing.",
+  "pending": [
+    {
+      "added": "2026-10-30",
+      "type": "training",
+      "section": "careers",
+      "title": "Understanding how people (actually) make decisions",
+      "summary": "A free, beginner-friendly online introduction to behavioural science for people whose work depends on getting others to act: campaigners, corporate relations specialists and communications staff. Covers how people make decisions, the two systems of thinking, a practical framework for building stronger messages, and a small set of decision-making biases you can apply straight away. Examples include getting a meeting, winning support for a cage-free policy, or getting someone to sign a petition.",
+      "when": "Wednesday 2 December 2026. Two live sessions: 08:00 UK time (13:30 IST) or 15:00 UK time (20:30 IST). Each lasts 1 hour 30 minutes. Registrants get a recording afterwards.",
+      "where": "Online (Google Meet, via the registration page)",
+      "organiser": "Not named on the registration page; if you can't confirm the organiser, leave it out rather than guessing.",
+      "links": [
+        {"label": "Register: 08:00 UK / 13:30 IST", "url": "https://luma.com/wfr0t3jk"},
+        {"label": "Register: 15:00 UK / 20:30 IST", "url": "https://luma.com/ey40y4aj"}
+      ],
+      "placement": "Careers & opportunities (as a training item). Also add '2 Dec' to the watchlist and a one-line mention in the WhatsApp summary under Careers. Keep it in each issue until the event has passed, then move to 'used'."
+    },
+    {
+      "added": "2026-10-30",
+      "type": "news",
+      "section": "world",
+      "title": "OpenAI Model Spec update (29 October 2026)",
+      "url": "https://model-spec.openai.com/2026-10-29.html",
+      "editorNote": "The editor flagged this as good news for animals. Open the page and the previous version and describe exactly what changed regarding animals / animal welfare / non-human sentience, in your own words with at most one short quote. If you cannot open or verify the change, include a neutral one-line item linking to it ('OpenAI published an updated Model Spec, the rules its AI models follow, on 29 October') and say the animal-related details couldn't be verified. Never invent what changed or who welcomed it. Relevant for the EA/AI-and-animals audience.",
+      "placement": "Global brief (World & dates). Mention in the 60-second summary if the change is substantive."
+    }
+  ],
+  "used": []
+}
