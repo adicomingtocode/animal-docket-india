@@ -15,14 +15,14 @@
 <title>Animal Docket India</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
 <style>
 /* Layout: a calm fortnightly reader. Soft sage page, white story cards, one illustration per story, a 60-second summary up top, timeline watchlist at the end. */
 :root{
   --bg:#FFFFFF; --surface:#FFFFFF; --tint:#F6F8F5; --ink:#1D2420; --muted:#56605A; --line:#E3E8E1;
   --accent:#A84C08; --accent-soft:#FBEBDD; --green:#2C6A4D; --green-soft:#E1EEE5; --sky:#2B5A85; --sky-soft:#E4ECF6;
   --shadow:0 1px 2px rgba(29,36,32,.04),0 4px 14px rgba(29,36,32,.05);
-  --display:'Lato', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --display:'Source Serif 4', Georgia, 'Times New Roman', serif;
   --body:'Lato', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --r:20px;
 }
@@ -206,6 +206,40 @@ footer p{font-size:16px;color:var(--muted)}
 @keyframes rise{from{transform:translateY(10px)}to{transform:none}}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 @media (prefers-reduced-motion:reduce){.rise{animation:none}.cover,.acard{transition:none}}
+
+/* ---- Editorial override: text-led, no illustrations ---- */
+:root{--r:8px;--shadow:none}
+.story,.case,.pick,.feature-top{grid-template-columns:minmax(0,1fr)!important}
+.story{padding:20px 22px}
+.cover{border-top:4px solid var(--accent)}
+.cover-body{padding:26px 28px 28px}
+.hero h1{font-family:var(--body);font-weight:700;font-size:clamp(15px,1.6vw,17px);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);max-width:none;margin-top:2px}
+.eyebrow{margin-bottom:4px}
+.cover h2,.feature h3,.case h3,.pick h3{font-weight:700;letter-spacing:-.01em}
+.story h3,.gcard h3{font-weight:700;font-size:20px;letter-spacing:-.005em}
+.sec-head{border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:16px}
+.sec-head h2{font-weight:700;font-size:clamp(26px,3.4vw,34px)}
+.meta,.kick,.soft .lbl,.also b,.facts b,.step b,.n{font-family:var(--body);text-transform:uppercase;letter-spacing:.07em;font-size:12.5px!important}
+.meta{color:var(--muted)}
+.cover .meta,.feature .kick{color:var(--accent)}
+.sixty{background:var(--tint);border:1px solid var(--line);border-left:4px solid var(--green)}
+.sixty h2{font-size:20px}
+.pick{border:1px solid var(--line);border-left:4px solid var(--green);background:var(--surface)}
+.story.act{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent)}
+.badge{border-radius:3px;letter-spacing:.06em;font-size:11px}
+.tag{border-radius:4px}
+.src{border-radius:4px;padding:5px 10px;background:var(--surface)}
+.src .fav{display:none}
+.chips a{border-radius:4px}
+.chips a.on{background:var(--ink)}
+.picker select{border-radius:6px}
+.brand-mark{border-radius:6px}
+.acard{border-width:1px}
+.acard.on{border-color:var(--accent);box-shadow:inset 4px 0 0 var(--accent)}
+.acard .t{font-family:var(--display)}
+.cover:hover,.acard:hover{transform:none}
+.hero-grid{align-items:start}
+.tl li::after{border-width:2px;width:10px;height:10px}
 </style>
 
 <header class="top">
@@ -277,7 +311,8 @@ footer p{font-size:16px;color:var(--muted)}
   };
   ART.briefcase = ['t-sand','<path d="M36 32v-8a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v8" stroke="#5E3D1E" stroke-width="5" fill="none"/><rect x="14" y="32" width="68" height="46" rx="8" fill="#8A5A2C"/><rect x="14" y="48" width="68" height="6" fill="#6E4622"/><rect x="42" y="44" width="12" height="13" rx="2" fill="#E7C27A"/>'];
   var DEFAULT_ART = {feature:'lab', courts:'gavel', movement:'heart', forum:'chat', careers:'briefcase', world:'globe'};
-  function art(name, extraClass){
+  function art(){ return null; }
+  function artUnused(name, extraClass){
     var a = ART[name] || ART.scroll;
     var wrap = document.createElement('div');
     wrap.className = 'art ' + a[0] + (extraClass ? ' ' + extraClass : '');
