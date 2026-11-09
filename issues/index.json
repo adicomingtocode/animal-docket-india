@@ -17,6 +17,15 @@
       "headline": "Wild animal attacks: Kerala can't hide behind a ₹75,000 cap",
       "art": "elephant",
       "file": "issues/issue-02.json"
+    },
+    {
+      "id": "issue-03",
+      "number": 3,
+      "range": "26 October – 8 November 2026",
+      "published": "2026-11-09",
+      "headline": "Stray dogs: High Courts turn up the heat before the Supreme Court's review",
+      "art": "dog",
+      "file": "issues/issue-03.json"
     }
   ]
 }

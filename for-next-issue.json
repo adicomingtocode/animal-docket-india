@@ -11,11 +11,22 @@
       "where": "Online (Google Meet, via the registration page)",
       "organiser": "Not named on the registration page; if you can't confirm the organiser, leave it out rather than guessing.",
       "links": [
-        {"label": "Register: 08:00 UK / 13:30 IST", "url": "https://luma.com/wfr0t3jk"},
-        {"label": "Register: 15:00 UK / 20:30 IST", "url": "https://luma.com/ey40y4aj"}
+        {
+          "label": "Register: 08:00 UK / 13:30 IST",
+          "url": "https://luma.com/wfr0t3jk"
+        },
+        {
+          "label": "Register: 15:00 UK / 20:30 IST",
+          "url": "https://luma.com/ey40y4aj"
+        }
       ],
-      "placement": "Careers & opportunities (as a training item). Also add '2 Dec' to the watchlist and a one-line mention in the WhatsApp summary under Careers. Keep it in each issue until the event has passed, then move to 'used'."
-    },
+      "placement": "Careers & opportunities (as a training item). Also add '2 Dec' to the watchlist and a one-line mention in the WhatsApp summary under Careers. Keep it in each issue until the event has passed, then move to 'used'.",
+      "alsoIn": [
+        "issue-03"
+      ]
+    }
+  ],
+  "used": [
     {
       "added": "2026-10-30",
       "type": "news",
@@ -23,8 +34,8 @@
       "title": "OpenAI Model Spec update (29 October 2026)",
       "url": "https://model-spec.openai.com/2026-10-29.html",
       "editorNote": "The editor flagged this as good news for animals. Open the page and the previous version and describe exactly what changed regarding animals / animal welfare / non-human sentience, in your own words with at most one short quote. If you cannot open or verify the change, include a neutral one-line item linking to it ('OpenAI published an updated Model Spec, the rules its AI models follow, on 29 October') and say the animal-related details couldn't be verified. Never invent what changed or who welcomed it. Relevant for the EA/AI-and-animals audience.",
-      "placement": "Global brief (World & dates). Mention in the 60-second summary if the change is substantive."
+      "placement": "Global brief (World & dates). Mention in the 60-second summary if the change is substantive.",
+      "usedIn": "issue-03"
     }
-  ],
-  "used": []
+  ]
 }
