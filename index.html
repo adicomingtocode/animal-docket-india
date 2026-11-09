@@ -260,6 +260,28 @@ figure.ph figcaption a:hover{text-decoration:underline}
 .credits p{font-size:14.5px}
 
 .tl li::after{border-width:2px;width:10px;height:10px}
+
+/* sign-up box */
+.su-back{position:fixed;inset:0;z-index:50;background:rgba(29,36,32,.45);display:flex;align-items:flex-end;justify-content:center;padding:16px}
+@media (min-width:640px){.su-back{align-items:center}}
+.su{background:var(--surface);color:var(--ink);width:100%;max-width:460px;border-top:4px solid var(--accent);padding:26px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.18);position:relative}
+.su h2{font-size:24px;line-height:1.2;margin-bottom:8px}
+.su p{font-size:16px;color:var(--muted);margin:0 0 16px}
+.su .su-k{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.su form{display:grid;gap:10px}
+.su label{font-size:14px;font-weight:700}
+.su input[type=email],.su input[type=text]{font:16px var(--body);padding:11px 12px;border:1px solid var(--line);background:#fff;color:var(--ink);width:100%;box-sizing:border-box;min-height:46px}
+.su input:focus{border-color:var(--accent);outline:none}
+.su .su-go{font:700 16px var(--body);background:var(--ink);color:#fff;border:0;padding:12px 16px;min-height:46px;cursor:pointer}
+.su .su-go:hover{background:var(--accent)}
+.su .su-no{font:15px var(--body);background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;padding:6px;justify-self:center}
+.su .su-x{position:absolute;top:8px;right:8px;width:40px;height:40px;border:0;background:none;font-size:24px;line-height:1;color:var(--muted);cursor:pointer}
+.su .su-fine{font-size:13px;color:var(--muted);margin:6px 0 0}
+.su .su-msg{font-size:15px;color:var(--green);font-weight:700}
+.su .su-err{font-size:15px;color:#A3261B}
+.su-hp{position:absolute;left:-9999px}
+.foot-su{font:700 15px var(--body);background:none;border:1px solid var(--ink);color:var(--ink);padding:9px 16px;cursor:pointer;margin-top:6px}
+.foot-su:hover{border-color:var(--accent);color:var(--accent)}
 </style>
 
 <header class="top">
@@ -307,6 +329,7 @@ figure.ph figcaption a:hover{text-decoration:underline}
   <div class="wrap credits" id="photoCredits" hidden></div>
   <div class="wrap grid2">
     <div><h4>How it's made</h4><p>Gathered every two weeks from law reports, court orders, government notices, organisation updates and the EA Forum. Everything is summarised in our own words, with links to the originals.</p></div>
+    <div><h4>Get it by email</h4><p>Optional, and free. Leave your email and each new issue reaches your inbox every other Monday.</p><button type="button" class="foot-su" id="footSignup">Sign up for the email edition</button></div>
     <div><h4>Share it, correct it</h4><p>Free to share with EA India and animal welfare groups. Spotted a mistake or a ruling we missed? Say so in your group. This is not legal advice.</p></div>
   </div>
 </footer>
@@ -692,5 +715,55 @@ figure.ph figcaption a:hover{text-decoration:underline}
 })();
 </script>
 
+
+<div class="su-back" id="signup" hidden role="dialog" aria-modal="true" aria-labelledby="suTitle">
+  <div class="su">
+    <button type="button" class="su-x" data-close aria-label="Close">&times;</button>
+    <div class="su-k">Optional</div>
+    <h2 id="suTitle">Get the Docket in your inbox</h2>
+    <p>One email every other Monday with the new issue: the rulings, notifications and movement news from the fortnight. No spam, and you can leave whenever you like. You can keep reading here without signing up.</p>
+    <form name="subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="suForm">
+      <input type="hidden" name="form-name" value="subscribe">
+      <p class="su-hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <label for="suName">Name <span class="muted">(optional)</span></label>
+      <input type="text" id="suName" name="name" autocomplete="name">
+      <label for="suEmail">Email</label>
+      <input type="email" id="suEmail" name="email" required autocomplete="email" placeholder="you@example.com">
+      <button type="submit" class="su-go">Sign me up</button>
+      <div class="su-msg" id="suOk" hidden>Thank you, you're on the list. The next issue will reach your inbox.</div>
+      <div class="su-err" id="suErr" hidden>That didn't go through. Please try again in a moment.</div>
+      <button type="button" class="su-no" data-close>No thanks, just reading</button>
+    </form>
+    <p class="su-fine">Your email is used only to send the Docket and is never shared.</p>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('signup'),form=document.getElementById('suForm'),KEY='adi-signup';
+  function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function set(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  var last=null;
+  function open(){if(!box.hidden)return;last=document.activeElement;box.hidden=false;setTimeout(function(){document.getElementById('suEmail').focus()},30)}
+  function close(){box.hidden=true;if(get()!=='done')set('dismissed:'+Date.now());if(last&&last.focus)last.focus()}
+  box.addEventListener('click',function(e){if(e.target===box||e.target.hasAttribute('data-close'))close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!box.hidden)close()});
+  document.getElementById('footSignup').addEventListener('click',open);
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('suErr').hidden=true;
+    var body=new URLSearchParams(new FormData(form)).toString();
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
+      .then(function(r){if(!r.ok)throw 0;set('done');document.getElementById('suOk').hidden=false;form.querySelector('.su-go').hidden=true;form.querySelector('.su-no').textContent='Close';setTimeout(function(){box.hidden=true},2500)})
+      .catch(function(){document.getElementById('suErr').hidden=false});
+  });
+  // Show once, after 25 seconds or after reading about half the page. Ask again after 30 days if dismissed.
+  var st=get();
+  if(st==='done')return;
+  if(st&&st.indexOf('dismissed:')===0&&Date.now()-Number(st.slice(10))<30*864e5)return;
+  var shown=false;function maybe(){if(shown)return;shown=true;open();window.removeEventListener('scroll',onScroll)}
+  function onScroll(){var h=document.documentElement;if((h.scrollTop+innerHeight)/h.scrollHeight>.5)maybe()}
+  setTimeout(maybe,25000);window.addEventListener('scroll',onScroll,{passive:true});
+})();
+</script>
 </body>
 </html>
