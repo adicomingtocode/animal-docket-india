@@ -62,6 +62,35 @@
       ],
       "editorNote": "Introduce the collective once, as a short 'worth following' item for readers interested in the scholarship on animals in India. Lead with any new event, call for papers or Table Talk episode if there is one; otherwise describe what it does in the house style.",
       "placement": "Movement watch, tag 'Indian Animal Studies Collective · Research' (art: search)."
+    },
+    {
+      "added": "2026-11-09",
+      "type": "event",
+      "section": "movement",
+      "title": "Registration open: Animal Liberation Conference (ALC) India, Indore",
+      "summary": "The editor reports that registration is open for the Animal Liberation Conference India in Indore, Madhya Pradesh. An earlier listing for 'ALC India 2026' (Indore) was on Townscript, which has since shut down.",
+      "links": [],
+      "editorNote": "Find the current registration page, the dates, venue, organiser and price, and include them. If the dates or registration link can't be confirmed, write a short item saying registration has reportedly opened and give whatever is confirmed, with no guessed details. Add the conference dates to the watchlist if they fall within about six weeks.",
+      "placement": "Movement watch with actNow: true if there is a registration deadline (tag 'ALC India · Conference', art: heart). Also one line under Careers & learning in the WhatsApp summary. Keep it in each issue until the conference has taken place."
+    },
+    {
+      "added": "2026-11-09",
+      "type": "news",
+      "section": "movement",
+      "title": "Vegan India Movement protests against the draft laboratory animal rules",
+      "summary": "The editor reports protests by Vegan India Movement against the draft Prevention of Cruelty to Animals (Control and Supervision of Experiment, Breeding and Trading of Laboratory Animals) Rules, 2026 (G.S.R. 864(E)). Related protests already reported: Fergusson College students with Peedus People and Simba Animal Save marched in Pune on October 29 (Punekar News); Aloha Ahimsa Foundation and Ojuswani Foundation held a press conference in New Delhi (PTI via ThePrint, November 6).",
+      "links": [
+        {
+          "label": "Punekar News: Pune march, October 29",
+          "url": "https://www.punekarnews.in/?p=248065"
+        },
+        {
+          "label": "ThePrint (PTI): Delhi press conference",
+          "url": "https://theprint.in/india/animal-rights-activists-oppose-draft-rules-on-lab-experiments-seek-stronger-safeguards/3092408/"
+        }
+      ],
+      "editorNote": "Confirm the Vegan India Movement protests (cities, dates) from news reports or VIM's own channels (veganindiamovement.com, its Instagram). Write one Movement watch item on the street campaign against the draft lab rules, leading with VIM if confirmed and mentioning the Pune march and the Delhi press conference. If the VIM protests can't be confirmed, keep the item about the other protests and don't name VIM. Also give the status of the draft rules' comment period.",
+      "placement": "Movement watch, tag 'Vegan India Movement · Lab rules' (art: lab). One line in the WhatsApp summary."
     }
   ],
   "used": [
