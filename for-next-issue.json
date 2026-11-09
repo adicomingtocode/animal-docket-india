@@ -24,6 +24,44 @@
       "alsoIn": [
         "issue-03"
       ]
+    },
+    {
+      "added": "2026-11-09",
+      "type": "news",
+      "section": "movement",
+      "title": "Woofly: Maneka Gandhi's vegan dog food brand",
+      "summary": "Maneka Gandhi has launched Woofly, a vegan dog food made by Compassion Foods, a company she owns. According to Business Line, it was unveiled at CINEKIND on World Animal Day (October 4), costs ₹40 for a 100-gram packet that expands to about 300 grams when mixed with water, is made at a vegan-only facility in Jaipur, and is to be sold on Zepto, Amazon, Flipkart and the brand's own website. She said profits would support People for Animals, giving it a steady source of income.",
+      "links": [
+        {
+          "label": "Business Line, via TradingView",
+          "url": "https://www.tradingview.com/news/moodys:6a6254841a806:0-maneka-gandhi-turns-entrepreneur-launches-vegan-pet-food-brand-woofly/"
+        }
+      ],
+      "editorNote": "Confirm the launch year and date before publishing (the republished article carries no date). If it launched on October 4, 2026, present it as a recent launch the docket had not yet covered. Add any newer Woofly news (availability, reviews) and Woofly's own site if you find it.",
+      "placement": "Movement watch, tag 'People for Animals · Woofly' (art: food). One line in the WhatsApp summary."
+    },
+    {
+      "added": "2026-11-09",
+      "type": "org",
+      "section": "movement",
+      "title": "Indian Animal Studies Collective (IASC)",
+      "summary": "An interdisciplinary academic collective studying animals in India through critical animal studies, run by scholars including Anu Pande (EFLU Hyderabad) and Susan Haris (BITS Pilani). It hosts the 'Table Talk' conversation series, the 'Between Theory and Praxis' podcast and panels such as 'Fifty Years of Project Tiger'.",
+      "links": [
+        {
+          "label": "IASC website",
+          "url": "https://indiananimalstudiescollective.com/"
+        },
+        {
+          "label": "Upcoming events",
+          "url": "https://indiananimalstudiescollective.com/index.php/upcoming-events/"
+        },
+        {
+          "label": "Podcast on Spotify",
+          "url": "https://open.spotify.com/show/1G8TvqsqXLVqMw0MOxKDLF"
+        }
+      ],
+      "editorNote": "Introduce the collective once, as a short 'worth following' item for readers interested in the scholarship on animals in India. Lead with any new event, call for papers or Table Talk episode if there is one; otherwise describe what it does in the house style.",
+      "placement": "Movement watch, tag 'Indian Animal Studies Collective · Research' (art: search)."
     }
   ],
   "used": [
