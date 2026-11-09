@@ -239,6 +239,20 @@ footer p{font-size:16px;color:var(--muted)}
 .acard .t{font-family:var(--display)}
 .cover:hover,.acard:hover{transform:none}
 .hero-grid{align-items:start}
+/* ---- Photos ---- */
+figure.ph{margin:0;position:relative;overflow:hidden;background:var(--tint)}
+figure.ph img{display:block;width:100%;height:100%;object-fit:cover}
+figure.ph figcaption{position:absolute;right:8px;bottom:8px;font-size:11.5px;line-height:1;padding:5px 7px;border-radius:3px;background:rgba(20,24,22,.62);color:#fff}
+figure.ph figcaption a{color:#fff;text-decoration:none}
+figure.ph figcaption a:hover{text-decoration:underline}
+.ph-cover{aspect-ratio:16/8;max-width:100%}
+.ph-feature{aspect-ratio:21/8;max-width:100%;order:-1;border-radius:6px}
+.ph-thumb{aspect-ratio:16/8;max-width:100%;margin:-20px -22px 4px;border-bottom:1px solid var(--line)}
+.ph-mini{width:72px;height:72px;flex:none;border-radius:6px}
+.credits{padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.credits h4{font-family:var(--display);font-size:18px;margin:0 0 6px}
+.credits p{font-size:14.5px}
+
 .tl li::after{border-width:2px;width:10px;height:10px}
 </style>
 
@@ -283,6 +297,7 @@ footer p{font-size:16px;color:var(--muted)}
 </section>
 
 <footer>
+  <div class="wrap credits" id="photoCredits" hidden></div>
   <div class="wrap grid2">
     <div><h4>How it's made</h4><p>Gathered every two weeks from law reports, court orders, government notices, organisation updates and the EA Forum. Everything is summarised in our own words, with links to the originals.</p></div>
     <div><h4>Share it, correct it</h4><p>Free to share with EA India and animal welfare groups. Spotted a mistake or a ruling we missed? Say so in your group. This is not legal advice.</p></div>
@@ -312,6 +327,44 @@ footer p{font-size:16px;color:var(--muted)}
   ART.briefcase = ['t-sand','<path d="M36 32v-8a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v8" stroke="#5E3D1E" stroke-width="5" fill="none"/><rect x="14" y="32" width="68" height="46" rx="8" fill="#8A5A2C"/><rect x="14" y="48" width="68" height="6" fill="#6E4622"/><rect x="42" y="44" width="12" height="13" rx="2" fill="#E7C27A"/>'];
   var DEFAULT_ART = {feature:'lab', courts:'gavel', movement:'heart', forum:'chat', careers:'briefcase', world:'globe'};
   function art(){ return null; }
+
+  /* ---------- Photos: freely licensed, from Wikimedia Commons ---------- */
+  var PHOTOS = {
+    dog: [['Stray_dogs_from_Kozhikode,_Kerala,_India.jpg','Community dogs on a street in Kozhikode, Kerala'],['An_Indian_Street_Dog.jpg','An Indian street dog'],['Stray_dog_in_the_streets_of_Pune.jpg','A street dog in Pune']],
+    elephant: [['Wild_elephants,_Munnar.jpg','Wild elephants near Munnar, Kerala'],['Kerala_Elephant_at_Festival.JPG','A captive elephant at a festival in Kerala']],
+    tiger: [['Royal_Bengal_Tiger_Kanha.JPG','A Bengal tiger in Kanha National Park']],
+    cow: [['Female_zebu_cattle.JPG','Zebu cattle']],
+    hen: [['Poultry_Farm_in_Namakkal,_Tamil_Nadu.jpg','A poultry farm in Namakkal, Tamil Nadu']],
+    fish: [['Cage_fish_farming_in_lake.jpg','Cage fish farming in a lake']],
+    monkey: [['Rhesus_Macaque,_Red_Fort,_Agra,_India.jpg','A rhesus macaque at the Red Fort, Agra']],
+    lab: [['White_lab_mouse_in_nest.JPG','A white laboratory mouse in its nest']],
+    gavel: [['Building_of_The_Supreme_Court_of_India.jpg','The Supreme Court of India, New Delhi']],
+    scroll: [['New_Parliament_Building,_New_Delhi.jpg','The Parliament building, New Delhi']],
+    food: [['Indian_Veg_Thali.JPG','A vegetarian Indian thali']]
+  };
+  var photoUse = {}, photoCredits = [];
+  function resetPhotos(){ photoUse = {}; photoCredits = []; }
+  function commons(file, w){ return 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(file) + '?width=' + w; }
+  function photo(key, cls, opts){
+    var list = PHOTOS[key]; if (!list) return null;
+    var i = photoUse[key] || 0; photoUse[key] = i + 1;
+    var p = list[i % list.length], page = 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(p[0]);
+    if (!photoCredits.some(function(c){ return c.file === p[0]; })) photoCredits.push({file: p[0], alt: p[1], page: page});
+    var img = h('img', {src: commons(p[0], (opts && opts.w) || 1200), alt: p[1], loading: 'lazy', decoding: 'async'});
+    var fig = h('figure', {class: 'ph ' + (cls || '')}, img,
+      (opts && opts.noCredit) ? null : ((opts && opts.inLink) ? h('figcaption', {text: 'Photo: Wikimedia Commons'}) : h('figcaption', null, h('a', {href: page, target: '_blank', rel: 'noopener', text: 'Photo: Wikimedia Commons'}))));
+    img.addEventListener('error', function(){ if (fig.parentNode) fig.parentNode.removeChild(fig); });
+    return fig;
+  }
+  function renderCredits(){
+    var box = document.getElementById('photoCredits'); if (!box) return;
+    box.textContent = '';
+    if (!photoCredits.length){ box.hidden = true; return; }
+    box.hidden = false;
+    box.appendChild(h('h4', {text: 'Photo credits'}));
+    box.appendChild(h('p', null, 'Photos from Wikimedia Commons, used under their free licences. Click a photo for its author and licence: ',
+      photoCredits.map(function(c, i){ return [i ? ' · ' : '', h('a', {href: c.page, target: '_blank', rel: 'noopener', text: c.alt})]; })));
+  }
   function artUnused(name, extraClass){
     var a = ART[name] || ART.scroll;
     var wrap = document.createElement('div');
@@ -385,7 +438,7 @@ footer p{font-size:16px;color:var(--muted)}
       h('h1', {text: 'The latest in animal law and advocacy'}),
       h('div', {class: 'hero-grid'},
         h('a', {class: 'cover', href: '#feature'},
-          art(c.art || 'lab'),
+          photo(c.art, 'ph-cover', {inLink: true}),
           h('div', {class: 'cover-body'},
             h('div', {class: 'meta', style: 'color:var(--accent)', text: c.kicker || 'Cover story'}),
             h('h2', {text: c.title || ''}),
@@ -399,7 +452,7 @@ footer p{font-size:16px;color:var(--muted)}
         ) : null
       ),
       arr(is.topStories).length ? h('div', {class: 'sides'}, arr(is.topStories).map(function(s){
-        return h('article', {class: 'story'}, art(s.art || 'gavel'),
+        return h('article', {class: 'story'}, photo(s.art, 'ph-thumb', {w: 800}),
           h('div', null, h('div', {class: 'meta', text: s.label || ''}), h('h3', null, h('a', {href: '#' + (s.anchor || 'courts'), text: s.title || ''})), h('p', {class: 'muted', text: s.text || ''})));
       })) : null
     );
@@ -412,7 +465,7 @@ footer p{font-size:16px;color:var(--muted)}
       h('article', {class: 'feature'},
         h('div', {class: 'feature-top'},
           h('div', null, h('div', {class: 'kick', text: f.kicker || ''}), hl(f.title || '', firstUrl(f.sources)), h('p', {class: 'dek'}, rich(f.dek))),
-          art(f.art || 'lab')
+          photo(f.art, 'ph-feature')
         ),
         h('div', {class: 'feature-body'},
           arr(f.columns).length ? h('div', {class: 'two'}, arr(f.columns).map(function(col, i){
@@ -544,14 +597,17 @@ footer p{font-size:16px;color:var(--muted)}
 
   function render(is){
     main.textContent = '';
+    resetPhotos();
     [hero(is), feature(is.feature), courts(is.courts), movement(is.movement), forum(is.forum), careers(is.careers), world(is)].forEach(function(s){ if (s) main.appendChild(s); });
+    renderArchive(is.id);
+    renderCredits();
     watchSections();
   }
   function renderArchive(currentId){
     archiveList.textContent = '';
     index.forEach(function(it){
       archiveList.appendChild(h('a', {href: '#' + it.id, class: 'acard' + (it.id === currentId ? ' on' : ''), 'data-issue': it.id},
-        art(it.art || 'scroll'),
+        photo(it.art, 'ph-mini', {w: 240, noCredit: true}),
         h('div', null, h('div', {class: 'n', text: 'Issue ' + pad(it.number) + (it.id === currentId ? ' · reading now' : '')}), h('div', {class: 't', text: it.headline || ''}), h('div', {class: 'r', text: it.range || ''}))
       ));
     });
