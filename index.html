@@ -239,6 +239,12 @@ footer p{font-size:16px;color:var(--muted)}
 .acard .t{font-family:var(--display)}
 .cover:hover,.acard:hover{transform:none}
 .hero-grid{align-items:start}
+.mi{display:flex;gap:6px}
+.mi button{font:700 14px var(--body);color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 10px;min-height:42px;cursor:pointer}
+.mi button.on{color:var(--surface);background:var(--ink);border-color:var(--ink)}
+.mi:empty{display:none}
+.arch-h{grid-column:1/-1;font-family:var(--display);font-size:20px;margin:8px 0 -4px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+@media (max-width:560px){.picker label{display:none}}
 /* ---- Photos ---- */
 figure.ph{margin:0;position:relative;overflow:hidden;background:var(--tint)}
 figure.ph img{display:block;width:100%;height:100%;object-fit:cover}
@@ -264,8 +270,9 @@ figure.ph figcaption a:hover{text-decoration:underline}
         Animal Docket India
       </a>
       <div class="picker">
-        <label for="issuePicker">Issue</label>
+        <label for="issuePicker">Month</label>
         <select id="issuePicker"></select>
+        <div class="mi" id="monthIssues" role="group" aria-label="Issues this month"></div>
       </div>
     </div>
     <nav class="chips" id="chips" aria-label="Sections">
@@ -290,8 +297,8 @@ figure.ph figcaption a:hover{text-decoration:underline}
 
 <section id="archive" class="block">
   <div class="wrap">
-    <div class="sec-head"><h2>Every issue</h2></div>
-    <p class="sec-intro">A new issue arrives every other Monday morning. Pick any issue to read it.</p>
+    <div class="sec-head"><h2>Archive</h2></div>
+    <p class="sec-intro">A new issue is published every other Monday. Earlier issues are listed below by month.</p>
     <div class="arch" id="archiveList"></div>
   </div>
 </section>
@@ -447,7 +454,7 @@ figure.ph figcaption a:hover{text-decoration:underline}
           )
         ),
         arr(is.summary).length ? h('div', {class: 'sixty'},
-          h('h2', null, 'In 60 seconds'),
+          h('h2', null, 'In brief'),
           h('ul', null, arr(is.summary).map(function(s){ return h('li', null, rich(s)); }))
         ) : null
       ),
@@ -474,7 +481,7 @@ figure.ph figcaption a:hover{text-decoration:underline}
           })) : null,
           arr(f.facts).length ? h('div', {class: 'facts'}, arr(f.facts).map(function(x){ return h('div', null, h('b', {text: x.label || ''}), rich(x.text)); })) : null,
           (f.whyItMatters || f.sidebar) ? h('div', {class: 'two'},
-            f.whyItMatters ? h('div', {class: 'why'}, h('h4', {text: 'Why it matters'}), h('p', null, rich(f.whyItMatters))) : null,
+            f.whyItMatters ? h('div', {class: 'why'}, h('h4', {text: 'What it means'}), h('p', null, rich(f.whyItMatters))) : null,
             f.sidebar ? h('div', {class: 'note'}, h('h4', {text: f.sidebar.title || ''}), h('p', null, rich(f.sidebar.text))) : null
           ) : null,
           arr(f.sources).length ? h('div', null, h('div', {class: 'meta', text: 'Sources'}), srcs(f.sources)) : null
@@ -487,7 +494,7 @@ figure.ph figcaption a:hover{text-decoration:underline}
     if (!ct) return null;
     var cases = arr(ct.cases);
     return h('section', {class: 'block', id: 'courts'},
-      secHead('courts', 'In the courts', cases.length ? 'Rulings and orders reported in this issue, with the order itself where it is public.' : 'No animal-law rulings found for this period.'),
+      secHead('courts', 'In the courts', cases.length ? 'Key rulings and orders from the courts, with links to the orders where they are public.' : 'No significant animal-law rulings were reported in this period.'),
       h('div', {class: 'cases'}, cases.map(function(cs){
         return h('article', {class: 'case'}, art(cs.art || 'gavel'),
           h('div', null,
@@ -502,8 +509,8 @@ figure.ph figcaption a:hover{text-decoration:underline}
         );
       })),
       (ct.justBefore || arr(ct.quiet).length) ? h('div', {class: 'duo'},
-        ct.justBefore ? h('div', {class: 'soft a'}, h('div', {class: 'lbl', text: 'Just before this period'}), h('h4', {text: ct.justBefore.title || ''}), h('p', null, rich(ct.justBefore.text)), ct.justBefore.link ? srcs([ct.justBefore.link]) : null) : null,
-        arr(ct.quiet).length ? h('div', {class: 'soft b'}, h('div', {class: 'lbl', text: 'Quiet this time'}), arr(ct.quiet).map(function(q){ return h('p', null, rich(q)); })) : null
+        ct.justBefore ? h('div', {class: 'soft a'}, h('div', {class: 'lbl', text: 'Earlier'}), h('h4', {text: ct.justBefore.title || ''}), h('p', null, rich(ct.justBefore.text)), ct.justBefore.link ? srcs([ct.justBefore.link]) : null) : null,
+        arr(ct.quiet).length ? h('div', {class: 'soft b'}, h('div', {class: 'lbl', text: 'Also noted'}), arr(ct.quiet).map(function(q){ return h('p', null, rich(q)); })) : null
       ) : null
     );
   }
@@ -511,11 +518,11 @@ figure.ph figcaption a:hover{text-decoration:underline}
   function movement(items){
     items = arr(items).slice().sort(function(a, b){ return (b.actNow ? 1 : 0) - (a.actNow ? 1 : 0); });
     return h('section', {class: 'block', id: 'movement'},
-      secHead('movement', 'Movement watch', items.length ? 'What effective and prominent animal organisations have been up to. Things with a deadline come first.' : 'No organisation updates this time.'),
+      secHead('movement', 'Movement watch', items.length ? 'News from organisations working for animals in India and beyond.' : 'No significant updates from organisations in this period.'),
       h('div', {class: 'grid2'}, items.map(function(m){
         return h('article', {class: 'story' + (m.actNow ? ' act' : '')}, art(m.art || 'heart'),
           h('div', null,
-            h('div', {class: 'meta'}, m.actNow ? h('span', {class: 'badge', text: 'Act now'}) : null, h('span', {text: m.tag || ''}), h('span', {class: 'muted', style: 'font-weight:400', text: m.date ? '· ' + m.date : ''})),
+            h('div', {class: 'meta'}, m.actNow ? h('span', {class: 'badge', text: 'Deadline'}) : null, h('span', {text: m.tag || ''}), h('span', {class: 'muted', style: 'font-weight:400', text: m.date ? '· ' + m.date : ''})),
             hl(m.title || '', firstUrl(m.links)),
             h('p', null, rich(m.text)),
             srcs(m.links)
@@ -529,7 +536,7 @@ figure.ph figcaption a:hover{text-decoration:underline}
     if (!fm) return null;
     var p = fm.pick;
     return h('section', {class: 'block', id: 'forum'},
-      secHead('forum', 'From the EA Forum', 'The animal-focused posts most worth your time, summarised in a few lines each.'),
+      secHead('forum', 'From the EA Forum', 'Notable writing on animals from the Effective Altruism Forum.'),
       p ? h('article', {class: 'pick'},
         h('div', null,
           h('div', {class: 'meta'}, h('span', {text: p.label || 'Pick of the week'}), h('span', {class: 'muted', style: 'font-weight:400', text: p.date ? '· ' + p.date : ''})),
@@ -577,13 +584,13 @@ figure.ph figcaption a:hover{text-decoration:underline}
   function world(is){
     var g = is.global || {};
     return h('section', {class: 'block', id: 'world'},
-      secHead('world', 'World & dates', arr(g.items).length ? 'Only the news from outside India that is worth knowing.' : 'Nothing essential from outside India this time.'),
+      secHead('world', 'World & dates', arr(g.items).length ? 'Developments abroad with a bearing on the debate in India.' : 'No major developments abroad in this period.'),
       arr(g.items).length ? h('div', {class: 'grid3'}, arr(g.items).map(function(x){
         return h('article', {class: 'gcard'}, art(x.art || 'globe'), h('div', {class: 'meta', text: x.tag || ''}), hl(x.title || '', firstUrl([x.link, g.source])), h('p', null, rich(x.text)), srcs([x.link || g.source]));
       })) : null,
       g.source ? srcs([g.source]) : null,
       arr(is.watchlist).length ? h('div', {class: 'watch'},
-        h('h3', {text: 'Dates to watch'}),
+        h('h3', {text: 'Coming up'}),
         h('ol', {class: 'tl'}, arr(is.watchlist).map(function(w){ return h('li', null, h('span', {class: 'd', text: w.date || ''}), h('span', null, rich(w.text))); }))
       ) : null
     );
@@ -603,20 +610,40 @@ figure.ph figcaption a:hover{text-decoration:underline}
     renderCredits();
     watchSections();
   }
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function monthKey(it){ return String(it.published || '').slice(0, 7); }
+  function monthLabel(k){ var y = k.slice(0, 4), m = parseInt(k.slice(5, 7), 10); return (MONTHS[m - 1] || '') + ' ' + y; }
+  function dayLabel(it){ var p = String(it.published || ''), m = parseInt(p.slice(5, 7), 10), d = parseInt(p.slice(8, 10), 10); return (MONTHS[m - 1] || '').slice(0, 3) + ' ' + d; }
+  function monthsList(){ var seen = {}, out = []; index.forEach(function(it){ var k = monthKey(it); if (!seen[k]){ seen[k] = 1; out.push(k); } }); return out; }
   function renderArchive(currentId){
+    var cur = index.find(function(x){ return x.id === currentId; }) || index[0];
+    var curMonth = cur ? monthKey(cur) : '';
     archiveList.textContent = '';
-    index.forEach(function(it){
-      archiveList.appendChild(h('a', {href: '#' + it.id, class: 'acard' + (it.id === currentId ? ' on' : ''), 'data-issue': it.id},
-        photo(it.art, 'ph-mini', {w: 240, noCredit: true}),
-        h('div', null, h('div', {class: 'n', text: 'Issue ' + pad(it.number) + (it.id === currentId ? ' · reading now' : '')}), h('div', {class: 't', text: it.headline || ''}), h('div', {class: 'r', text: it.range || ''}))
-      ));
+    monthsList().forEach(function(k){
+      archiveList.appendChild(h('h3', {class: 'arch-h', text: monthLabel(k)}));
+      index.filter(function(it){ return monthKey(it) === k; }).forEach(function(it){
+        archiveList.appendChild(h('a', {href: '#' + it.id, class: 'acard' + (it.id === currentId ? ' on' : ''), 'data-issue': it.id},
+          photo(it.art, 'ph-mini', {w: 240, noCredit: true}),
+          h('div', null, h('div', {class: 'n', text: 'Issue ' + pad(it.number) + ' · ' + dayLabel(it) + (it.id === currentId ? ' · now reading' : '')}), h('div', {class: 't', text: it.headline || ''}), h('div', {class: 'r', text: it.range || ''}))
+        ));
+      });
     });
     picker.textContent = '';
-    index.forEach(function(it, i){
-      var o = h('option', {value: it.id, text: pad(it.number) + ' · ' + (it.range || '') + (i === 0 ? ' (latest)' : '')});
-      if (it.id === currentId) o.selected = true;
+    monthsList().forEach(function(k, i){
+      var o = h('option', {value: k, text: monthLabel(k) + (i === 0 ? ' (latest)' : '')});
+      if (k === curMonth) o.selected = true;
       picker.appendChild(o);
     });
+    var box = document.getElementById('monthIssues');
+    if (box){
+      box.textContent = '';
+      var inMonth = index.filter(function(it){ return monthKey(it) === curMonth; }).slice().reverse();
+      if (inMonth.length > 1) inMonth.forEach(function(it){
+        var b = h('button', {type: 'button', class: it.id === currentId ? 'on' : null, 'aria-pressed': it.id === currentId ? 'true' : 'false', text: dayLabel(it)});
+        b.addEventListener('click', function(){ load(it.id, true); });
+        box.appendChild(b);
+      });
+    }
   }
   function showError(msg){
     main.textContent = '';
@@ -652,7 +679,7 @@ figure.ph figcaption a:hover{text-decoration:underline}
   }
 
   function idFromHash(){ var x = (location.hash || '').slice(1); return /^issue-\d+$/.test(x) ? x : null; }
-  picker.addEventListener('change', function(){ load(picker.value, true); });
+  picker.addEventListener('change', function(){ var first = index.find(function(it){ return monthKey(it) === picker.value; }); if (first) load(first.id, true); });
   window.addEventListener('hashchange', function(){ var id = idFromHash(); if (id) load(id, true); });
   document.addEventListener('click', function(e){
     var a = e.target.closest && e.target.closest('a.acard');

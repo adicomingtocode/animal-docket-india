@@ -4,68 +4,68 @@
   "range": "26 October – 8 November 2026",
   "published": "2026-11-09",
   "summary": [
-    "Ahead of the Supreme Court's stray-dog review, the [Kerala, Goa and Jharkhand High Courts](#feature) pressed local bodies: no excuses for missing shelters, disciplinary action against defaulting officials, and a new suo motu case on dogs and cattle on highways.",
-    "The [Supreme Court](#courts) said future transfers of captive elephants must strictly follow its earlier directions, after five elephants were moved from Assam to Tamil Nadu temples in a hurry.",
-    "Objections to the [draft lab-animal rules](#movement) closed on 5 Nov amid a broad coalition calling for withdrawal; we found no official response yet.",
-    "OpenAI's [29 October Model Spec](#world) reportedly asks its models, for the first time, to weigh effects on animals. On the [EA Forum](#forum), Lotte de Lint explains why academia produces so little good evidence on cutting meat consumption."
+    "Ahead of the Supreme Court's review of the stray-dog case, the [Kerala, Goa and Jharkhand High Courts](#feature) have stepped up pressure on local bodies, rejecting excuses for the lack of shelters, ordering action against defaulting officials and opening a fresh case on animals on highways.",
+    "The [Supreme Court](#courts) has said future transfers of captive elephants must strictly follow its earlier directions, after five elephants were moved in haste from Assam to temples in Tamil Nadu.",
+    "The window for objections to the [draft rules on laboratory animals](#movement) closed on November 5, with scientists, veterinarians, lawmakers and more than 60 organisations calling for their withdrawal. The Centre is yet to respond.",
+    "OpenAI's revised [Model Spec](#world), released on October 29, reportedly asks its AI models to take animals into account for the first time. On the [EA Forum](#forum), researcher Lotte de Lint examines why academia produces so little reliable evidence on reducing meat consumption."
   ],
   "cover": {
     "art": "dog",
     "kicker": "Cover story",
-    "title": "Stray dogs: High Courts turn up the heat before the Supreme Court's review",
-    "dek": "Acting on the Supreme Court's May 2026 directions, the Kerala High Court said local opposition is no excuse for failing to build shelters, the Bombay High Court at Goa ordered disciplinary action against officials who kept missing deadlines, and the Jharkhand High Court opened its own case on stray dogs and cattle on highways. The compliance reports feed a Supreme Court review reportedly listed for 17 November.",
+    "title": "Stray dogs: High Courts tighten the screws ahead of Supreme Court review",
+    "dek": "Acting on directions issued by the Supreme Court in May, the Kerala High Court has held that local opposition is no excuse for failing to build shelters, the Bombay High Court at Goa has ordered disciplinary action against officials who repeatedly missed deadlines, and the Jharkhand High Court has opened a case of its own on stray dogs and cattle on highways. Their compliance reports will feed into the Supreme Court's review, reportedly listed for November 17.",
     "tags": [
-      "Shelters shared between panchayats",
-      "Officials face disciplinary action"
+      "Shared shelters for panchayats",
+      "Action against officials"
     ]
   },
   "topStories": [
     {
       "art": "lab",
-      "label": "Draft lab-animal rules",
-      "title": "Objections closed on 5 Nov; calls for withdrawal grow",
-      "text": "Scientists, vets, MPs, actors and 60+ groups asked the Centre to withdraw G.S.R. 864(E). No extension or official response has been reported.",
+      "label": "Draft laboratory rules",
+      "title": "Objections close as calls for withdrawal grow",
+      "text": "Scientists, veterinarians, MPs, actors and more than 60 groups have urged the Centre to withdraw G.S.R. 864(E). No extension has been announced.",
       "anchor": "movement"
     },
     {
       "art": "elephant",
       "label": "Supreme Court",
-      "title": "No more hasty elephant transfers",
-      "text": "The bench couldn't order five elephants returned to Assam, but said future transfers must strictly follow its directions.",
+      "title": "Court cautions against hasty elephant transfers",
+      "text": "The Bench declined to order the return of five elephants to Assam, but said future transfers must strictly follow its directions.",
       "anchor": "courts"
     },
     {
       "art": "search",
       "label": "AI and animals",
-      "title": "OpenAI's Model Spec now mentions animals",
-      "text": "Reviewers say the 29 Oct update is the first to ask OpenAI's models to weigh effects on animals.",
+      "title": "OpenAI's rulebook for its AI now mentions animals",
+      "text": "Reviewers say the October 29 update is the first to ask OpenAI's models to weigh the effect of their answers on animals.",
       "anchor": "world"
     }
   ],
   "feature": {
     "art": "dog",
-    "kicker": "Stray dogs · High Courts",
-    "title": "The High Courts are now enforcing the Supreme Court's stray-dog order",
-    "dek": "In its May 2026 judgment in the national stray-dogs case, the Supreme Court asked High Courts to monitor how states carry out its directions and report back. This fortnight, three High Courts showed what that looks like in practice. The [Kerala High Court](https://www.livelaw.in/high-court/kerala-high-court/kerala-high-court-joint-shelters-for-stray-dogs-panchayats-identify-suitable-land-556530) rejected excuses from local bodies, the [Bombay High Court at Goa](https://nenews.in/goa/goa-hc-orders-disciplinary-action-against-8-panchayat-secretaries-over-stray-dog-reports/70158/) went after individual officials, and the [Jharkhand High Court](https://www.thehansindia.com/news/national/jharkhand-hc-seeks-compliance-report-from-state-centre-over-stray-dogs-and-cattle-on-roads-1139521) opened a new case of its own.",
+    "kicker": "Stray dogs | High Courts",
+    "title": "High Courts step in to enforce the Supreme Court's stray-dog order",
+    "dek": "In its May 2026 judgment in the nationwide stray-dog case, the Supreme Court asked the High Courts to monitor how States carry out its directions. Over the past fortnight, three of them have shown what that oversight looks like in practice. The [Kerala High Court](https://www.livelaw.in/high-court/kerala-high-court/kerala-high-court-joint-shelters-for-stray-dogs-panchayats-identify-suitable-land-556530) rejected the explanations offered by local bodies, the [Bombay High Court at Goa](https://nenews.in/goa/goa-hc-orders-disciplinary-action-against-8-panchayat-secretaries-over-stray-dog-reports/70158/) turned its attention to individual officials, and the [Jharkhand High Court](https://www.thehansindia.com/news/national/jharkhand-hc-seeks-compliance-report-from-state-centre-over-stray-dogs-and-cattle-on-roads-1139521) opened a fresh case on its own.",
     "columns": [
       {
-        "heading": "Kerala High Court, 29 Oct",
+        "heading": "Kerala High Court, October 29",
         "items": [
           {
-            "lead": "No excuses.",
-            "text": "Local bodies said they couldn't find land for shelters or faced resistance from residents. The bench said public opposition does not justify failing to comply, and defaulters risk contempt before the Supreme Court."
+            "lead": "Opposition no excuse.",
+            "text": "Local bodies told the court they could not find land for shelters or had faced resistance from residents. The Bench held that public opposition did not justify non-compliance, and warned that defaulters could face contempt proceedings before the Supreme Court."
           },
           {
             "lead": "Shared shelters.",
-            "text": "Two or three panchayats may set up a common shelter together."
+            "text": "The court allowed two or three panchayats to set up a common shelter."
           },
           {
-            "lead": "Release rules.",
-            "text": "Sterilised dogs removed from public premises must be released as the Supreme Court directed: not back into those premises, and not held in shelters in breach of the order."
+            "lead": "Release of sterilised dogs.",
+            "text": "Dogs removed from public premises must be released as the Supreme Court directed, neither returned to those premises nor kept in shelters in breach of its order."
           },
           {
-            "lead": "Kochi and amici.",
-            "text": "Kochi Corporation must explain how it runs its ABC programme. Advocates Shruthi Bhat and Pooja Omanakuttan were appointed amici, and the Registry was to send a consolidated compliance report to the Supreme Court by 6 Nov."
+            "lead": "Kochi under scrutiny.",
+            "text": "The Kochi Corporation was asked to explain how it runs its Animal Birth Control programme. Advocates Shruthi Bhat and Pooja Omanakuttan were appointed amici curiae, and the Registry was to send a consolidated compliance report to the Supreme Court by November 6."
           }
         ]
       },
@@ -73,16 +73,16 @@
         "heading": "Goa and Jharkhand",
         "items": [
           {
-            "lead": "Goa, 26 Oct.",
-            "text": "The Bombay High Court at Goa noted \"clear remissness\", including by the Panaji Corporation, and told the Directors of Panchayats and Municipal Administration to start disciplinary action against officials who repeatedly failed to comply. Contempt remains possible separately ([Daijiworld](https://daijiworld.com/news/newsDisplay?newsID=1333598))."
+            "lead": "Goa, October 26.",
+            "text": "Noting what it called “clear remissness”, including on the part of the Panaji Corporation, the Bombay High Court at Goa directed the Directors of Panchayats and Municipal Administration to begin disciplinary action against officials who had repeatedly failed to comply. Contempt proceedings remain open separately ([Daijiworld](https://daijiworld.com/news/newsDisplay?newsID=1333598))."
           },
           {
-            "lead": "Goa, about 4 Nov.",
-            "text": "Disciplinary proceedings were ordered against the secretaries of eight defaulting village panchayats, which get a final chance to report by 16 Nov. The Animal Husbandry Department now has until 1 Dec for a shelter action plan. The order date is inferred from the report."
+            "lead": "Goa, early November.",
+            "text": "The court ordered disciplinary proceedings against the secretaries of eight panchayats that had not filed reports, giving them a final opportunity to do so by November 16. The Animal Husbandry Department has until December 1 to submit an action plan for shelters."
           },
           {
-            "lead": "Jharkhand, about 5 Nov.",
-            "text": "Taking suo motu notice of road-safety risks from stray dogs and cattle on roads and national highways, the court sought responses from the Centre and the state and a compliance report. Next date: 3 Dec. The bench wasn't named in the report."
+            "lead": "Jharkhand, early November.",
+            "text": "Taking suo motu cognisance of the risk to road users from stray dogs and cattle on roads and national highways, the court sought responses from the Centre and the State, along with a compliance report. The matter will be heard next on December 3."
           }
         ]
       }
@@ -98,33 +98,33 @@
       },
       {
         "label": "Supreme Court",
-        "text": "Main judgment 19 May 2026, 2026 SCC OnLine SC 894 ([SCC Online summary](https://www.scconline.com/blog/post/2026/05/19/sc-stray-dogs-abc-rules-nationwide-sterilisation-directions-may-2026/)). A review of state-wise compliance is reported for 17 Nov; check the cause list."
+        "text": "Main judgment of May 19, 2026, 2026 SCC OnLine SC 894 ([SCC Online summary](https://www.scconline.com/blog/post/2026/05/19/sc-stray-dogs-abc-rules-nationwide-sterilisation-directions-may-2026/)). A review of compliance by the States is reportedly listed for November 17, subject to the cause list."
       },
       {
-        "label": "Not verified",
-        "text": "Outcomes of the Delhi (3 Nov), Madhya Pradesh (3 Nov) and Allahabad (affidavits due 5 Nov) High Court stray-dog hearings. We found no reports."
+        "label": "Awaited",
+        "text": "The outcomes of stray-dog hearings in the Delhi (November 3), Madhya Pradesh (November 3) and Allahabad (affidavits due November 5) High Courts had not been reported at the time of writing."
       }
     ],
-    "whyItMatters": "The Supreme Court's directions only matter if someone checks that municipalities and panchayats follow them. High Courts are now doing that, and they are naming officials rather than just issuing general orders. For advocates, these hearings are where to raise problems on the ground: missing ABC programmes, shelters that don't meet standards, or dogs released in breach of the order. The compliance reports going to the Supreme Court will also shape what it does next, so local evidence filed now can count.",
+    "whyItMatters": "Directions from the Supreme Court carry weight only if someone ensures that municipalities and panchayats follow them. The High Courts have now taken up that task, and they are holding named officials to account rather than issuing general orders. For advocates, these hearings offer a forum to raise problems on the ground, from absent sterilisation programmes to substandard shelters and dogs released in violation of the order. The compliance reports headed to the Supreme Court will shape its next steps, which makes local evidence filed now all the more important.",
     "sources": [
       {
-        "label": "LiveLaw, Kerala HC, 29 Oct",
+        "label": "LiveLaw, Kerala HC, October 29",
         "url": "https://www.livelaw.in/high-court/kerala-high-court/kerala-high-court-joint-shelters-for-stray-dogs-panchayats-identify-suitable-land-556530"
       },
       {
-        "label": "Northeast News, Goa HC, 5 Nov",
+        "label": "Northeast News, Goa HC, November 5",
         "url": "https://nenews.in/goa/goa-hc-orders-disciplinary-action-against-8-panchayat-secretaries-over-stray-dog-reports/70158/"
       },
       {
-        "label": "Daijiworld, Goa HC, 27 Oct",
+        "label": "Daijiworld, Goa HC, October 27",
         "url": "https://daijiworld.com/news/newsDisplay?newsID=1333598"
       },
       {
-        "label": "The Hans India (IANS), Jharkhand HC, 5 Nov",
+        "label": "The Hans India (IANS), Jharkhand HC, November 5",
         "url": "https://www.thehansindia.com/news/national/jharkhand-hc-seeks-compliance-report-from-state-centre-over-stray-dogs-and-cattle-on-roads-1139521"
       },
       {
-        "label": "SCC Online, SC judgment, 19 May",
+        "label": "SCC Online, SC judgment, May 19",
         "url": "https://www.scconline.com/blog/post/2026/05/19/sc-stray-dogs-abc-rules-nationwide-sterilisation-directions-may-2026/"
       }
     ]
@@ -133,21 +133,21 @@
     "cases": [
       {
         "art": "elephant",
-        "title": "Supreme Court: captive-elephant transfers must follow the rules",
-        "reported": "5 Nov",
-        "citation": "Petition by People for Cattle in India (PFCI) · Supreme Court · CJI Surya Kant & Justice Joymalya Bagchi · hearing 5 Nov · case number not reported; linked to the pending captive-elephant case W.P.(C) 743/2014",
+        "title": "Captive elephant transfers must follow rules, says Supreme Court",
+        "reported": "November 5",
+        "citation": "Petition by People for Cattle in India (PFCI) · Supreme Court · CJI Surya Kant & Justice Joymalya Bagchi · hearing on November 5 · case number not reported; linked to the pending captive-elephant case W.P.(C) 743/2014",
         "parts": [
           {
-            "label": "The ask",
-            "text": "PFCI challenged the transfer of five captive elephants from Assam to Tamil Nadu temples. Its counsel said one elephant was moved about 3,000 km in nine days, when the process normally takes around 50."
+            "label": "Background",
+            "text": "People for Cattle in India (PFCI) challenged the transfer of five captive elephants from Assam to temples in Tamil Nadu. Its counsel told the court that one elephant had been moved about 3,000 km in nine days, a process that normally takes around 50."
           },
           {
-            "label": "Held",
-            "text": "All five had already been moved, so the bench said it couldn't order them returned now. It said future transfers must strictly follow the statutory requirements and its earlier directions on identity and ownership checks, and that High Courts and states can't act against those directions. PFCI withdrew, with liberty to apply in the pending case."
+            "label": "The ruling",
+            "text": "As all five elephants had already been moved, the Bench said it could not order their return. It held that future transfers must strictly comply with statutory requirements and its earlier directions on verifying identity and ownership, and that neither High Courts nor State governments may act contrary to them. PFCI withdrew the petition, with liberty to raise the issue in the pending case."
           },
           {
-            "label": "Why it matters",
-            "text": "Long-distance transfers of elephants to temples have been hard to stop once under way. The bench's reminder gives advocates firmer ground to challenge the next one early."
+            "label": "Significance",
+            "text": "Long-distance transfers of elephants to temples have proved hard to halt once under way. The Bench's reminder gives petitioners firmer ground to challenge the next one early."
           }
         ],
         "links": [
@@ -166,22 +166,22 @@
         ]
       },
       {
-        "art": "leaf",
-        "title": "Madras: 87 illegal resorts in Sathyamangalam Tiger Reserve to close",
-        "reported": "4 Nov",
+        "art": "tiger",
+        "title": "Madras High Court orders closure of 87 illegal resorts in Sathyamangalam Tiger Reserve",
+        "reported": "November 4",
         "citation": "Dr. R. Karpagam v. Principal Chief Conservator of Forests & Chief Wildlife Warden · WP No. 13711 of 2022 · 2026 LiveLaw (Mad) 527 · Madras High Court · Justices N. Sathish Kumar & G.K. Muthukumar · order date not stated",
         "parts": [
           {
-            "label": "The background",
-            "text": "The Erode Collector reported 87 resorts in the reserve, none with planning or building approval and no record of the hill-area authority permitting a change of land use."
+            "label": "Background",
+            "text": "The Erode Collector informed the court that 87 resorts were operating inside the reserve, none with planning or building approval and none with permission from the hill-area authority for a change in land use."
           },
           {
-            "label": "Directed",
-            "text": "All illegal buildings to be closed at once, with steps toward demolition; unlicensed resorts to be locked and sealed. Two resorts that got interim protection from another bench without disclosing this case were found not to have come with clean hands."
+            "label": "The ruling",
+            "text": "The court ordered all illegal structures to be closed immediately, with steps towards demolition, and directed that unlicensed resorts be locked and sealed. It also found that two resorts which had obtained interim protection from another Bench, without disclosing the pending case, had not approached the court with clean hands."
           },
           {
-            "label": "Why it matters",
-            "text": "Tourism construction inside tiger reserves is a steady pressure on wildlife habitat, and this is an unusually sweeping order to undo it."
+            "label": "Significance",
+            "text": "Tourism construction inside tiger reserves puts steady pressure on wildlife habitat, and the order is unusually sweeping in its effort to reverse it."
           }
         ],
         "links": [
@@ -193,17 +193,17 @@
       },
       {
         "art": "leaf",
-        "title": "Nahargarh sanctuary boundary dispute goes to the Rajasthan High Court",
-        "reported": "3 Nov",
+        "title": "Supreme Court sends Nahargarh sanctuary boundary dispute to Rajasthan High Court",
+        "reported": "November 3",
         "citation": "Rajendra Tiwari v. Union of India & Ors · Civil Appeal No. 13859/2026 · Supreme Court · CJI Surya Kant, Justices Joymalya Bagchi & V. Mohana",
         "parts": [
           {
-            "label": "The ask",
-            "text": "An appeal from the NGT against revised boundaries of the Nahargarh Wildlife Sanctuary near Jaipur."
+            "label": "Background",
+            "text": "The appeal, filed against an order of the National Green Tribunal, challenged the revised boundaries of the Nahargarh Wildlife Sanctuary near Jaipur."
           },
           {
-            "label": "Held",
-            "text": "The Court didn't rule on the merits and sent the appellant to the Rajasthan High Court, where the revised map is already under challenge. The High Court must consider all objections on how the reserve forest and sanctuary are identified. The bench also asked why a monitoring committee's report hadn't gone to the NGT."
+            "label": "The ruling",
+            "text": "Without going into the merits, the court directed the appellant to the Rajasthan High Court, where the revised map is already under challenge, and asked it to consider all objections on how the reserve forest and sanctuary areas are identified. The Bench also asked why a monitoring committee's report had not been placed before the tribunal."
           }
         ],
         "links": [
@@ -214,14 +214,14 @@
         ]
       },
       {
-        "art": "leaf",
-        "title": "Madhya Pradesh: probe ordered into two more Kanha tiger deaths",
-        "reported": "26 Oct",
+        "art": "tiger",
+        "title": "Madhya Pradesh High Court orders probe into two more tiger deaths in Kanha",
+        "reported": "October 26",
         "citation": "Subit Chakraborty v. Union of India · WP 19398 of 2026 · Madhya Pradesh High Court (Jabalpur) · Chief Justice Alpesh Y. Kogje & Justice Vivek Jain · order date not stated",
         "parts": [
           {
-            "label": "Directed",
-            "text": "The state must investigate two further tiger deaths at Kanha Tiger Reserve and report within two weeks. Next hearing 16 Nov."
+            "label": "The ruling",
+            "text": "The court directed the State to investigate two further deaths of tigers in the Kanha Tiger Reserve and to file a report within two weeks. The case will be heard next on November 16."
           }
         ],
         "links": [
@@ -233,17 +233,21 @@
       },
       {
         "art": "cow",
-        "title": "Gujarat: town drops four-month meat shutdown",
-        "reported": "3 Nov",
+        "title": "Radhanpur drops four-month closure of meat shops before Gujarat High Court",
+        "reported": "November 3",
         "citation": "2026 LiveLaw (Guj) 302 · Gujarat High Court · Justice Nikhil S. Kariel",
         "parts": [
           {
-            "label": "What happened",
-            "text": "Radhanpur Municipality had ordered slaughterhouses, meat shops and non-vegetarian restaurants closed for four months during a Jain leader's stay. In court it admitted there was no legal provision for this and said it would not press its 17 Aug decisions, so the petition was withdrawn with liberty."
+            "label": "Background",
+            "text": "The Radhanpur Municipality had ordered slaughterhouses, meat shops and non-vegetarian restaurants to remain shut for four months during the stay of a Jain religious leader in the town."
           },
           {
-            "label": "Why it matters",
-            "text": "Not an animal-welfare ruling, but a reminder that blanket meat closures need a legal basis."
+            "label": "Outcome",
+            "text": "Before the court, the municipality conceded that no legal provision supported the order and said it would not press its decisions of August 17. The petition was withdrawn with liberty to approach the court again."
+          },
+          {
+            "label": "Significance",
+            "text": "Though not an animal-welfare ruling, the case is a reminder that blanket closures of meat businesses need a basis in law."
           }
         ],
         "links": [
@@ -255,27 +259,26 @@
       }
     ],
     "justBefore": {
-      "title": "J&K High Court: cattle-theft FIRs don't justify preventive detention",
-      "text": "In Tariq Ahmad Dar v. UT of J&K (LPA No. 254/2026), Chief Justice Pushpendra Singh Bhati and Justice Mohd Yousuf Wani quashed a Public Safety Act detention based on cattle-theft FIRs, holding these were law-and-order matters that ordinary criminal law can handle. Reported 25 Oct; it continues this year's run of similar J&K rulings.",
+      "title": "J&K High Court: cattle-theft cases do not justify preventive detention",
+      "text": "In Tariq Ahmad Dar v. UT of J&K (LPA No. 254/2026), a Bench of Chief Justice Pushpendra Singh Bhati and Justice Mohd Yousuf Wani quashed a detention under the Public Safety Act that rested on cattle-theft FIRs, holding that such cases were matters of law and order that ordinary criminal law could address. The ruling, reported on October 25, adds to a series of similar decisions from the court this year.",
       "link": {
         "label": "Verdictum report",
         "url": "https://www.verdictum.in/jammu-ladakh-high-court/tariq-ahmad-dar-v-union-territory-of-j-and-public-disorder-detention-order-cattle-theft-1624611"
       }
     },
     "quiet": [
-      "Unverified outcomes: the Delhi High Court stray-dog hearing on 3 Nov (MCD and NDMC sterilisation affidavits), the MP High Court stray-dog review on 3 Nov, the Allahabad High Court dog-bite hotspots matter (affidavits due 5 Nov) and the Madras High Court temple-elephant SOP listing on 30 Oct. We found no reports. LiveLaw's daily round-ups are partly paywalled, so a High Court ruling may have been missed.",
-      "Government: no new central notifications found from DAHD, MoEFCC, AWBI, the Central Zoo Authority, NTCA or WCCB, and no response yet to objections on the lab rules. Just before the window, the [Animal Feeds and Feed Ingredients (Quality Control) Order 2026](https://www.scconline.com/blog/post/2026/10/16/animal-feeds-feed-ingredients-quality-control-order-2026-bis-certification/) made BIS certification mandatory (reported 16 Oct). FSSAI reportedly issued an approval letter on 27 Oct for a fermentation-derived mycelium ingredient, per a [vegconomist listing](https://vegconomist.com/category/cultivated-cell-cultured-biotechnology/approvals/); we couldn't confirm the details.",
-      "No NGT animal-law ruling found. Nothing new on the Kerala Wildlife Protection (Amendment) Bill, which the Centre told Parliament in August it could not accept.",
-      "Editor's notes: this issue covers 26 Oct – 8 Nov. No dated updates were found from ALPN, Vegan Outreach, Vegan India Movement, Mercy For Animals India, Veganuary India, Shrimp Welfare Project, Animal Ethics, One Just World, FIAPO, Animal Equality India or World Animal Protection India. PETA India's own site wouldn't load, so its items come from news reports. CALF and 'BIA' couldn't be identified with confidence and were skipped. The EA Forum mirror we normally use was down, so the forum section is built from the forum's own digests and is less complete than usual."
+      "Outcomes awaited: the Delhi High Court's stray-dog hearing on November 3, the Madhya Pradesh High Court's review on the same day, the Allahabad High Court's matter on dog-bite hotspots, in which affidavits were due on November 5, and the Madras High Court's listing on temple elephants on October 30 had not been reported at the time of writing.",
+      "No new central notifications were found from the Department of Animal Husbandry and Dairying, the Environment Ministry, the AWBI, the Central Zoo Authority, the NTCA or the Wildlife Crime Control Bureau, and the Centre has not responded to objections on the laboratory-animal rules. Shortly before this period, the [Animal Feeds and Feed Ingredients (Quality Control) Order, 2026](https://www.scconline.com/blog/post/2026/10/16/animal-feeds-feed-ingredients-quality-control-order-2026-bis-certification/) made BIS certification mandatory (reported October 16). FSSAI is reported to have approved a fermentation-derived mycelium ingredient on October 27, according to a [vegconomist listing](https://vegconomist.com/category/cultivated-cell-cultured-biotechnology/approvals/); the details could not be independently confirmed.",
+      "No animal-law ruling from the National Green Tribunal was reported in this period, and there has been no movement on the Kerala Wildlife Protection (Amendment) Bill, which the Centre told Parliament in August it could not accept."
     ]
   },
   "movement": [
     {
       "art": "lab",
-      "tag": "PETA India, Peedu's People and others · Draft lab rules",
-      "date": "26 Oct – 3 Nov",
-      "title": "Objections close on the draft lab-animal rules, with calls to withdraw them",
-      "text": "The comment period on the draft Prevention of Cruelty to Animals (Control and Supervision of Experiment, Breeding and Trading of Laboratory Animals) Rules, 2026 (G.S.R. 864(E), gazetted 6 Oct) closed on 5 Nov, according to [MedBound Times](https://www.medboundtimes.com/daily-pulse/gsr-864-e-draft-animal-experimentation-rules-2026-objections) and most other reports. In the final days, scientists, vets, cross-party lawmakers and more than 60 groups demanded withdrawal ([Telangana Today, 3 Nov](https://telanganatoday.com/scientists-animal-welfare-groups-demand-withdrawal-of-draft-animal-testing-rules)), objecting to self-approval by in-house ethics committees, exceptions for wild-caught and stray animals, and inspections with advance notice. PETA India says more than 18,000 people and several actors and MPs back it ([OrissaPOST/PTI, 2 Nov](https://www.orissapost.com/?p=904809); PETA's own figures). Peedu's People joined a student march in Pune on 29 Oct ([Punekar News](https://www.punekarnews.in/?p=248065)), and former Assam opposition leader Debabrata Saikia filed a formal objection ([Sentinel, 26 Oct](https://www.sentinelassam.com/north-east-india-news/assam-news/assam-debabrata-saikia-seeks-withdrawal-of-animal-experiment-rules)). For the legal argument, read Shreya Bajpai's [LiveLaw piece](https://www.livelaw.in/articles/self-approval-another-name-2026draft-animal-testing-rules-pca-act-556696) (1 Nov), which says the draft fails Section 17 of the PCA Act and calls for targeted amendments. No extension or official response has been reported.",
+      "tag": "PETA India, Peedu's People and others · Draft laboratory rules",
+      "date": "October 26 – November 3",
+      "title": "Objections close on draft lab-animal rules amid calls for withdrawal",
+      "text": "The period for objections to the draft Prevention of Cruelty to Animals (Control and Supervision of Experiment, Breeding and Trading of Laboratory Animals) Rules, 2026, notified as G.S.R. 864(E) on October 6, closed on November 5, according to [MedBound Times](https://www.medboundtimes.com/daily-pulse/gsr-864-e-draft-animal-experimentation-rules-2026-objections) and most other reports. In the final days, scientists, veterinarians, legislators across parties and more than 60 organisations sought the withdrawal of the rules ([Telangana Today, November 3](https://telanganatoday.com/scientists-animal-welfare-groups-demand-withdrawal-of-draft-animal-testing-rules)). Their objections centre on the self-approval of experiments by in-house ethics committees, exemptions for wild-caught and stray animals, and inspections with advance notice. PETA India says more than 18,000 people, along with several actors and MPs, back its campaign ([OrissaPOST/PTI, November 2](https://www.orissapost.com/?p=904809)). Peedu's People joined a student march in Pune on October 29 ([Punekar News](https://www.punekarnews.in/?p=248065)), and former Assam Leader of the Opposition Debabrata Saikia filed a formal objection ([Sentinel, October 26](https://www.sentinelassam.com/north-east-india-news/assam-news/assam-debabrata-saikia-seeks-withdrawal-of-animal-experiment-rules)). In a [piece for LiveLaw](https://www.livelaw.in/articles/self-approval-another-name-2026draft-animal-testing-rules-pca-act-556696) on November 1, Shreya Bajpai argues that the draft fails the test of Section 17 of the PCA Act and calls for targeted amendments. No extension or official response has been announced.",
       "links": [
         {
           "label": "Telangana Today, 3 Nov",
@@ -298,9 +301,9 @@
     {
       "art": "dog",
       "tag": "Humane World for Animals India · Stray dogs",
-      "date": "28 Oct",
-      "title": "A training centre for Animal Birth Control staff opens in Lucknow",
-      "text": "UP's urban development minister opened the centre at Jarhara, set up by Lucknow Municipal Corporation and the AWBI and run by Humane World under a three-year agreement. It offers a 15-day course for vets, para-vets and dog handlers working on ABC programmes. The organisation calls it India's first such centre and says more than 100,000 Lucknow dogs have been sterilised and vaccinated since 2019; these are its own claims. Timely, given the courts' push on ABC compliance (see the [feature](#feature)).",
+      "date": "October 28",
+      "title": "Training centre for Animal Birth Control staff opens in Lucknow",
+      "text": "Uttar Pradesh's Urban Development Minister inaugurated the centre at Jarhara, set up by the Lucknow Municipal Corporation and the Animal Welfare Board of India and run by Humane World for Animals India under a three-year agreement, the organisation said in a statement. It offers a 15-day course for veterinarians, para-veterinarians and dog handlers working in sterilisation programmes. The organisation describes it as the first such centre in the country and says more than one lakh dogs in Lucknow have been sterilised and vaccinated since 2019. The opening comes as the courts step up scrutiny of ABC compliance (see [Feature](#feature)).",
       "links": [
         {
           "label": "Press release",
@@ -311,9 +314,9 @@
     {
       "art": "dog",
       "tag": "ALPN · Research",
-      "date": "date unconfirmed",
-      "title": "Who's doing what for community dogs in Mumbai and Thane",
-      "text": "ALPN mapped community-dog welfare NGOs and government veterinary services across Mumbai Suburban and Thane, and assessed eight interventions, including sterilisation, vaccination and shelters. The aim is to show funders and NGOs where their money and effort would do the most good. It's useful context for this issue's [stray-dog cover story](#feature). ALPN's site lists it under ongoing projects and doesn't give a publication date.",
+      "date": "Date not stated",
+      "title": "ALPN maps community-dog services in Mumbai and Thane",
+      "text": "The Animal Law and Policy Network has mapped the NGOs and government veterinary services working with community dogs in Mumbai Suburban and Thane, and assessed eight interventions, among them sterilisation, vaccination and shelters. The study is meant to help funders and NGOs direct money and effort where it will do the most good. ALPN lists the work among its ongoing projects and has not given a publication date.",
       "links": [
         {
           "label": "Read the report",
@@ -328,9 +331,9 @@
     {
       "art": "dog",
       "tag": "Humane World for Animals India · Dog-meat trade",
-      "date": "28 Oct",
-      "title": "26 dogs rescued from a truck in Assam",
-      "text": "Police in Karbi Anglong stopped a truck carrying 26 dogs in sacks, suspected to be headed for the dog-meat trade. Local groups including JBF (Just Be Friendly) took part in the rescue and the dogs went to JBF's centre in Guwahati. The release mentions no FIR or legal sections. From the organisation's own press release.",
+      "date": "October 28",
+      "title": "26 dogs rescued from truck in Assam",
+      "text": "Police in Karbi Anglong intercepted a truck carrying 26 dogs packed in sacks, suspected to be bound for the dog-meat trade, according to a statement from Humane World for Animals India. Local groups including Just Be Friendly (JBF) took part in the rescue, and the dogs were taken to JBF's centre in Guwahati. The statement does not say whether an FIR was registered.",
       "links": [
         {
           "label": "Press release",
@@ -339,11 +342,11 @@
       ]
     },
     {
-      "art": "search",
+      "art": "food",
       "tag": "GFI India · Research",
-      "date": "27 Oct",
-      "title": "Plant-based meat beats chicken on absorbable protein in a lab study",
-      "text": "GFI India and CSIR-IHBT tested five commercial products with simulated digestion. Plant-based products showed 57–86% protein bioavailability against 21–43% for chicken. The authors note lab results don't show real-world absorption. The report also says India imports nearly 90% of its plant protein isolates, a gap for domestic industry.",
+      "date": "October 27",
+      "title": "Plant-based meat outperforms chicken on absorbable protein, finds lab study",
+      "text": "A study by GFI India and CSIR-IHBT, which tested five commercial products using simulated digestion, found protein bioavailability of 57-86% in plant-based products against 21-43% in chicken. The authors caution that laboratory results may not reflect absorption in the human body. The report also notes that India imports nearly 90% of its plant protein isolates, a gap that domestic industry has yet to fill.",
       "links": [
         {
           "label": "AgroSpectrum report",
@@ -358,9 +361,9 @@
     {
       "art": "fish",
       "tag": "Fish Welfare Initiative · Research",
-      "date": "3 Nov",
-      "title": "Fortified feed grew fish faster but didn't improve welfare",
-      "text": "FWI tested a fortified pellet feed against de-oiled rice bran on 12 farms in Nellore and in earlier pond and tank studies. Fish gained 73% more weight, but water quality, health and stress didn't differ, and about 45% of early-morning oxygen readings were below 3 mg/L whatever the feed. The feed also cost farmers more, so FWI won't build a programme on it. A useful negative result, published openly. FWI's [India grants call](#careers) closes 18 Nov.",
+      "date": "November 3",
+      "title": "Fortified feed speeds fish growth but does not improve welfare, finds FWI",
+      "text": "Fish Welfare Initiative compared a fortified pellet feed with de-oiled rice bran on 12 farms in Nellore, building on earlier pond and tank trials. Fish on the fortified feed gained 73% more weight, but water quality, health and stress levels did not differ, and about 45% of early-morning oxygen readings fell below 3 mg/L regardless of the feed. As the feed also cost farmers more, FWI has decided against building a programme around it and has published the results openly. Its [grants call for India](#careers) closes on November 18.",
       "links": [
         {
           "label": "FWI blog post",
@@ -371,9 +374,9 @@
     {
       "art": "heart",
       "tag": "Animal Charity Evaluators · Recommendations",
-      "date": "Due 10 Nov",
-      "title": "ACE's 2026 charity recommendations are out tomorrow",
-      "text": "ACE says it will announce its recommended charities on 10 Nov. This year's evaluations covered Aquatic Life Institute, Kafessiz Türkiye, Dansk Vegetarisk Forening, Sinergia Animal, Crustacean Compassion and Greener by Default; none is described as working in India. We'll cover the results next issue.",
+      "date": "November 10",
+      "title": "ACE to announce 2026 charity recommendations",
+      "text": "Animal Charity Evaluators will name its recommended charities on November 10. This year's evaluations covered Aquatic Life Institute, Kafessiz Türkiye, Dansk Vegetarisk Forening, Sinergia Animal, Crustacean Compassion and Greener by Default, none of which is described as working in India. The results will be covered in the next issue.",
       "links": [
         {
           "label": "ACE announcement (June)",
@@ -386,45 +389,45 @@
     "pick": {
       "art": "search",
       "label": "Pick of the fortnight",
-      "date": "29 Oct",
+      "date": "October 29",
       "title": "Takes on why academia underproduces high-quality evidence on reducing animal product consumption",
       "author": "Lotte de Lint",
-      "text": "A Wageningen PhD researcher lists six ways academic incentives work against useful evidence on diet change. Studies often don't answer the questions advocates face, focus on health and climate rather than animals, and are concentrated in Western countries. Easy-to-test interventions crowd out more promising ones, and field data on real behaviour goes unrewarded. Of 637 outcomes in one library of studies, more than half measured intentions or attitudes rather than behaviour. For India, the point about Western-centred research is the key one: there is very little local evidence to design campaigns on.",
+      "text": "Lotte de Lint, a PhD researcher at Wageningen University, sets out six ways in which academic incentives work against useful evidence on diet change. Studies often fail to answer the questions advocates face, concentrate on health and climate rather than animals, and are largely confined to Western countries. Interventions that are easy to test crowd out more promising ones, and field data on actual behaviour goes unrewarded. Of 637 outcomes in one library of studies, more than half measured intentions or attitudes rather than behaviour. Her point about the Western focus of research is especially relevant to India, where there is little local evidence on which to base campaigns.",
       "url": "https://forum.effectivealtruism.org/posts/beCaDf8TG8kT33n3k/takes-on-why-academia-underproduces-high-quality-evidence-on"
     },
     "posts": [
       {
         "art": "chat",
-        "date": "26 Oct",
+        "date": "October 26",
         "category": "Messaging research",
         "title": "We tested 14 meat-reduction messages with real money at stake. Celebrities and history did best.",
         "author": "Laura Thomas-Walters",
-        "text": "An online experiment with 4,761 Americans measured how much people valued a plant-based gift basket after short messages. The 'right side of history' and celebrity messages had the biggest effects; trend and pandemic messages barely moved anything. It measures one choice right after the message, not lasting diet change, and the sample is US-only.",
+        "text": "In an online experiment with 4,761 Americans, researchers measured how much participants valued a plant-based gift basket after reading short messages. Appeals to being on the 'right side of history' and messages featuring celebrities had the strongest effect, while those citing trends or pandemics made little difference. The study measured a single choice made immediately after the message rather than any lasting change in diet, and its sample was limited to the United States.",
         "url": "https://forum.effectivealtruism.org/posts/vuYSYonpyZLTLWiET/we-tested-14-meat-reduction-messages-with-real-money-at"
       },
       {
         "art": "scroll",
-        "date": "28 Oct",
+        "date": "October 28",
         "category": "Policy · Polling",
         "title": "Votos Pelos Animais: How Farmed Animal Policy Wins Votes In Brazil",
         "author": "JLRiedi (Faunalytics)",
-        "text": "A survey experiment with 1,908 Brazilian adults tested nine farmed-animal policy proposals. Banning destruction of the Amazon and Cerrado for industrial animal farming, and tougher penalties for mistreating farmed animals, won the most support; every pro-industry proposal fell below 50%. A similar study would be valuable for India's state elections.",
+        "text": "A survey experiment with 1,908 Brazilian adults tested nine policy proposals on farmed animals. A ban on clearing the Amazon and Cerrado for industrial animal farming and tougher penalties for cruelty to farmed animals drew the most support, while every proposal favouring the industry fell below 50%. A similar study could prove valuable ahead of State elections in India.",
         "url": "https://forum.effectivealtruism.org/posts/cLWwE4TrhgxJ8aFxS/votos-pelos-animais-how-farmed-animal-policy-wins-votes-in"
       },
       {
         "art": "globe",
-        "date": "2 Nov",
+        "date": "November 2",
         "category": "AI and animals",
         "title": "An ASI that's bad for animal welfare is probably bad for humans, too",
         "author": "Michael Dickens",
-        "text": "Dickens argues that a superintelligent AI aligned with human preferences but harmful to animals is a narrow target: simply satisfying human preferences would also produce outcomes that are terrible for many humans. He concludes that getting AI values right matters for both. Pairs well with the [OpenAI Model Spec item](#world).",
+        "text": "Michael Dickens argues that a superintelligent AI aligned with human preferences yet harmful to animals is a narrow target, since an AI that simply satisfied human preferences would also produce outcomes that are terrible for many people. Getting AI values right, he concludes, matters for humans and animals alike. The piece is a useful companion to the [item on OpenAI's Model Spec](#world).",
         "url": "https://forum.effectivealtruism.org/posts/YHuaorSHdaSGo2Cr9/an-asi-that-s-bad-for-animal-welfare-is-probably-bad-for"
       }
     ],
-    "alsoPosted": "[Make diet change a Millennium Prize Problem for animal advocacy](https://forum.effectivealtruism.org/posts/TT9jF5corKdHgXXtz/make-diet-change-a-millennium-prize-problem-for-animal) by Pablo Moleman (we couldn't open it to summarise) · [The neglected layer of alternative proteins: institutional infrastructure](https://forum.effectivealtruism.org/posts/twpW7QancECxzbcAB) by Nadja Milivojev · Ariel Simnegar's [quick take on OpenAI's Model Spec](https://forum.effectivealtruism.org/posts/SYprbthckE7pcxPFz/ariel-simnegar-s-quick-takes?commentId=EAdxtd5FHewWuBM7A) (see [World](#world)). Our usual forum mirror was down, so dates and karma come from the forum's own pages and the [EA Forum Digest of 4 Nov](https://eaforumdigest.substack.com/p/ea-forum-digest-316)."
+    "alsoPosted": "[Make diet change a Millennium Prize Problem for animal advocacy](https://forum.effectivealtruism.org/posts/TT9jF5corKdHgXXtz/make-diet-change-a-millennium-prize-problem-for-animal) by Pablo Moleman · [The neglected layer of alternative proteins: institutional infrastructure](https://forum.effectivealtruism.org/posts/twpW7QancECxzbcAB) by Nadja Milivojev · Ariel Simnegar's [quick take on OpenAI's Model Spec](https://forum.effectivealtruism.org/posts/SYprbthckE7pcxPFz/ariel-simnegar-s-quick-takes?commentId=EAdxtd5FHewWuBM7A) (see [World](#world))"
   },
   "careers": {
-    "intro": "Paid roles, grants and trainings that people in India can use, all checked as open on 9 Nov. Fish Welfare Initiative has three India openings this fortnight. GFI APAC is also hiring senior roles open across the region ([Head of Policy](https://gfi.org/resource/head-of-policy/)).",
+    "intro": "Paid roles, grants and training open to people in India, all confirmed as open on November 9. Fish Welfare Initiative has three openings in India this fortnight, and GFI APAC is recruiting for senior roles across the region, including a [Head of Policy](https://gfi.org/resource/head-of-policy/).",
     "items": [
       {
         "art": "fish",
@@ -432,8 +435,8 @@
         "org": "Fish Welfare Initiative",
         "title": "Grants for new ideas on farmed fish welfare in India",
         "location": "Open to anyone; the work must be relevant to Indian aquaculture",
-        "deadline": "18 Nov 2026, 18:00 IST",
-        "text": "Standard grants up to ₹10 lakh, and up to ₹50 lakh for exceptional proposals. Academics, companies, NGOs and individuals can apply using FWI's template; basic research is funded only if it links to a possible FWI programme.",
+        "deadline": "18 November 2026, 6 p.m. IST",
+        "text": "Standard grants of up to ₹10 lakh are on offer, rising to ₹50 lakh for exceptional proposals. Academics, companies, NGOs and individuals may apply using FWI's template; basic research will be funded only if it links to a possible FWI programme.",
         "links": [
           {
             "label": "The call",
@@ -446,16 +449,16 @@
         "actNow": false,
         "org": "Training",
         "title": "Understanding how people (actually) make decisions",
-        "location": "Online (Google Meet) · 13:30 IST (08:00 UK) or 20:30 IST (15:00 UK) · 1 hr 30 min",
-        "deadline": "Wed 2 Dec 2026",
-        "text": "A free, beginner-friendly introduction to behavioural science for campaigners, corporate relations and communications staff. It covers how people make decisions, the two systems of thinking, a framework for stronger messages and a few biases you can use straight away, with examples like winning a cage-free commitment or getting a petition signed. Registrants get a recording. The registration pages don't name an organiser, and the date and times come from the event details we were given, so confirm them when you register.",
+        "location": "Online · 1.30 p.m. or 8.30 p.m. IST (8 a.m. or 3 p.m. UK) · 90 minutes",
+        "deadline": "Wednesday, December 2, 2026",
+        "text": "A free introduction to behavioural science for campaigners and for staff in corporate relations and communications. The session covers how people make decisions, the two systems of thinking, a framework for building stronger messages and a few biases that can be applied right away, with examples such as winning a cage-free commitment or getting a petition signed. Registrants will receive a recording. The registration pages do not name an organiser, so participants should confirm the timings when they sign up.",
         "links": [
           {
-            "label": "Register: 13:30 IST",
+            "label": "Register: 1.30 p.m. IST",
             "url": "https://luma.com/wfr0t3jk"
           },
           {
-            "label": "Register: 20:30 IST",
+            "label": "Register: 8.30 p.m. IST",
             "url": "https://luma.com/ey40y4aj"
           }
         ]
@@ -466,8 +469,8 @@
         "org": "ProVeg International",
         "title": "Strategic Advisor on Food Security",
         "location": "Remote, ideally in or near a focus region (including South/Southeast Asia), with regular overlap with CET hours",
-        "deadline": "12 Nov 2026 (time zone not stated)",
-        "text": "Leads ProVeg's food-security strategy in one region, steering protein growth toward plant-rich and alternative options. 30–40 hours a week, ideally a 12-month freelance contract.",
+        "deadline": "November 12, 2026 (time zone not stated)",
+        "text": "The adviser will lead ProVeg's food-security strategy in one region, steering the growth in protein supply towards plant-rich and alternative sources. The role is for 30-40 hours a week, ideally on a 12-month freelance contract.",
         "links": [
           {
             "label": "Job details",
@@ -481,8 +484,8 @@
         "org": "International Council for Animal Welfare",
         "title": "Director of Digital Campaigns",
         "location": "Fully remote, anywhere (must be able to work legally where you live; no visa sponsorship)",
-        "deadline": "End of day 30 Nov 2026 (time zone not stated)",
-        "text": "Runs digital tactics such as mass emails, actions and creative assets in campaigns pressing food companies on farmed-animal welfare. Needs 3+ years' experience. Pay for non-US applicants is discussed at interview.",
+        "deadline": "November 30, 2026, end of day (time zone not stated)",
+        "text": "The role involves running digital tactics, including mass emails, online actions and creative material, in campaigns that press food companies on farmed-animal welfare. Applicants need at least three years' experience; pay for those outside the United States is discussed at interview.",
         "links": [
           {
             "label": "Job details",
@@ -496,8 +499,8 @@
         "org": "Lever Foundation",
         "title": "Sustainable Poultry Supply Chain Engagement Manager (India)",
         "location": "India, work from home with some travel",
-        "deadline": "Not stated (apply page active)",
-        "text": "Persuades medium and large egg producers to switch to cage-free. Needs 2+ years in sales or similar and fluency in Telugu or Tamil; Hindi strongly preferred.",
+        "deadline": "Not stated; applications open",
+        "text": "The manager will work to persuade medium and large egg producers to switch to cage-free systems. The role calls for at least two years in sales or a similar field and fluency in Telugu or Tamil, with Hindi strongly preferred.",
         "links": [
           {
             "label": "Job details",
@@ -512,7 +515,7 @@
         "title": "Welfare Measurement Lead",
         "location": "Indian nationals only · Eluru, Andhra Pradesh for at least 6 months of year one, otherwise remote within India",
         "deadline": "Rolling",
-        "text": "A senior role building FWI's welfare measurement and M&E systems, designing farm studies and managing 1–2 field staff. ₹1.3–2.7 lakh a month.",
+        "text": "A senior role building FWI's systems for welfare measurement and for monitoring and evaluation, designing farm studies and managing one or two field staff. The salary is ₹1.3-2.7 lakh a month.",
         "links": [
           {
             "label": "Job details",
@@ -526,8 +529,8 @@
         "org": "Fish Welfare Initiative",
         "title": "Human Resources Manager",
         "location": "Right to work in India required · remote, with a preference for time at the Eluru office",
-        "deadline": "Rolling (the page mentions 15 Nov for earlier applicants)",
-        "text": "Covers recruitment, employee relations, compliance and training, working with the Managing Director. ₹50,000–90,000 a month.",
+        "deadline": "Rolling; earlier applicants by November 15",
+        "text": "The role covers recruitment, employee relations, compliance and training, working closely with the Managing Director. The salary is ₹50,000-90,000 a month.",
         "links": [
           {
             "label": "Job details",
@@ -541,8 +544,8 @@
         "org": "Science for Animal Welfare",
         "title": "Centenary Research Award",
         "location": "Worldwide; lead applicant must be at a host research institute or organisation",
-        "deadline": "Concept note 31 Dec 2026",
-        "text": "Up to £250,000 for a 2–4 year project on a major animal-welfare challenge. Full proposals are due 15 May 2027.",
+        "deadline": "Concept note by December 31, 2026",
+        "text": "The award offers up to £250,000 for a two- to four-year project on a major animal-welfare challenge. Full proposals are due on May 15, 2027.",
         "links": [
           {
             "label": "Award details",
@@ -575,8 +578,8 @@
       {
         "art": "search",
         "tag": "AI and animals · OpenAI",
-        "title": "OpenAI's Model Spec now asks its models to consider animals",
-        "text": "OpenAI published an updated Model Spec, the rules its AI models follow, on 29 Oct. According to reviews by [Ariel Simnegar](https://forum.effectivealtruism.org/posts/SYprbthckE7pcxPFz/ariel-simnegar-s-quick-takes?commentId=EAdxtd5FHewWuBM7A) and [Zvi Mowshowitz](https://thezvi.substack.com/p/openai-updates-its-model-spec), the list of side effects models should weigh now includes effects on \"other people, animals, or the environment\". A new example has the model mention the breed's welfare problems when asked to find a Scottish Fold cat breeder, and another tells it to consider animals living in a park being redesigned. Simnegar calls it the first version to explicitly ask the models to weigh animal welfare. We couldn't open the Spec page itself to confirm the wording.",
+        "title": "OpenAI's Model Spec asks AI models to consider animals",
+        "text": "OpenAI released an updated Model Spec, the set of rules its AI models follow, on October 29. According to reviews by [Ariel Simnegar](https://forum.effectivealtruism.org/posts/SYprbthckE7pcxPFz/ariel-simnegar-s-quick-takes?commentId=EAdxtd5FHewWuBM7A) and [Zvi Mowshowitz](https://thezvi.substack.com/p/openai-updates-its-model-spec), the side effects that models are asked to weigh now include effects on “other people, animals, or the environment”. In one new example, a model asked to find a Scottish Fold breeder mentions the welfare problems associated with the breed; in another, it is told to consider the animals living in a park that is being redesigned. Simnegar describes it as the first version to explicitly ask the models to weigh animal welfare. The wording could not be independently checked against the Spec.",
         "link": {
           "label": "Model Spec, 29 Oct 2026",
           "url": "https://model-spec.openai.com/2026-10-29.html"
@@ -585,8 +588,8 @@
       {
         "art": "hen",
         "tag": "EU · Farm animal welfare",
-        "title": "Cage-ban proposals missing from the Commission's 2027 work programme",
-        "text": "The work programme published on 4 Nov doesn't mention the promised welfare laws on laying hens, broilers or pigs, the End the Cage Age commitments. The poultry proposal may still come in December 2026; no reason was given for the pig proposal.",
+        "title": "End the Cage Age proposals missing from EU's 2027 work programme",
+        "text": "The European Commission's work programme for 2027, published on November 4, makes no mention of the promised laws on the welfare of laying hens, broilers and pigs, which formed part of its End the Cage Age commitments. A proposal on poultry may still come in December 2026; no explanation has been offered on the one for pigs.",
         "link": {
           "label": "vegconomist",
           "url": "https://vegconomist.com/politics-law/end-the-cage-age-proposals-left-out-european-commissions-2027-work-programme/"
@@ -595,8 +598,8 @@
       {
         "art": "dog",
         "tag": "Portugal · Companion animals",
-        "title": "Parliament bans permanent chaining of animals",
-        "text": "On 28 Oct, Portugal's parliament passed bills banning permanent tethering, long-term confinement on balconies and restraint or training equipment that causes unnecessary pain. The law still needs presidential approval, then implementing rules within 90 days.",
+        "title": "Portugal bans permanent chaining of animals",
+        "text": "Portugal's Parliament on October 28 passed Bills banning the permanent tethering of animals, their long-term confinement on balconies and the use of restraint or training equipment that causes unnecessary pain. The law awaits presidential assent, after which implementing rules must be framed within 90 days.",
         "link": {
           "label": "The Portugal News",
           "url": "https://theportugalnews.com/news/2026-11-06/how-portugal-ban-on-chaining-animals-will-be-enforced/1111953"
@@ -605,8 +608,8 @@
       {
         "art": "cow",
         "tag": "UK · Cultivated meat",
-        "title": "First cultivated beef approved, for pet food",
-        "text": "Ivy Farm Technologies won approval on 5 Nov to sell cultivated Wagyu beef as a pet-food ingredient in the UK. Its applications to sell it as human food in the UK, EU and US are pending.",
+        "title": "U.K. clears cultivated beef, but only for pet food",
+        "text": "Ivy Farm Technologies on November 5 won approval to sell cultivated Wagyu beef as an ingredient in pet food in the United Kingdom. Its applications to sell the product for human consumption in the U.K., the European Union and the United States are pending.",
         "link": {
           "label": "Food Manufacture",
           "url": "https://www.foodmanufacture.co.uk/Article/2026/11/05/uk-start-up-sees-lab-grown-wagyu-approved-for-pet-food-market/"
@@ -614,49 +617,49 @@
       }
     ],
     "source": {
-      "label": "Rise for Animals roundup, 6 Nov",
+      "label": "Rise for Animals roundup, November 6",
       "url": "https://riseforanimals.org/news/news-nov-06-2026/"
     }
   },
   "watchlist": [
     {
-      "date": "10 Nov",
+      "date": "Nov 10",
       "text": "[Animal Charity Evaluators](https://animalcharityevaluators.org/blog/announcing-the-charities-under-evaluation-in-2026/) announces its 2026 recommended charities"
     },
     {
-      "date": "12 Nov",
+      "date": "Nov 12",
       "text": "Applications close for ProVeg's [Strategic Advisor on Food Security](https://careers.proveg.org/jobs/8546262-strategic-advisor-on-food-security/0159b340-0191-4c05-b7ab-9a2c08cc7bd4)"
     },
     {
-      "date": "13 Nov",
-      "text": "Expressions of interest close for the [Who Let the Docs Out fund](https://docsout.org) (carried over from last issue; not rechecked)"
+      "date": "Nov 13",
+      "text": "Expressions of interest close for the [Who Let the Docs Out fund](https://docsout.org) (as previously announced)"
     },
     {
-      "date": "16 Nov",
+      "date": "Nov 16",
       "text": "MP High Court hearing on [Kanha tiger deaths](https://www.livelaw.in/amp/high-court/madhya-pradesh-high-court/probe-tiger-deaths-kanha-national-park-556013); Goa's eight defaulting panchayats must file [stray-dog reports](https://nenews.in/goa/goa-hc-orders-disciplinary-action-against-8-panchayat-secretaries-over-stray-dog-reports/70158/)"
     },
     {
-      "date": "17 Nov",
-      "text": "Supreme Court review of state compliance in the [stray-dogs case](https://www.scconline.com/blog/post/2026/05/19/sc-stray-dogs-abc-rules-nationwide-sterilisation-directions-may-2026/), as set in the May judgment. Check the cause list."
+      "date": "Nov 17",
+      "text": "Supreme Court review of state compliance in the [stray-dogs case](https://www.scconline.com/blog/post/2026/05/19/sc-stray-dogs-abc-rules-nationwide-sterilisation-directions-may-2026/), as set out in the May judgment; subject to the cause list"
     },
     {
-      "date": "18 Nov",
-      "text": "18:00 IST: [FWI India fish-welfare grants](https://www.fishwelfareinitiative.org/post/rfp-india) close"
+      "date": "Nov 18",
+      "text": "Applications close at 6 p.m. IST for [FWI's fish-welfare grants](https://www.fishwelfareinitiative.org/post/rfp-india)"
     },
     {
-      "date": "30 Nov",
+      "date": "Nov 30",
       "text": "Applications close for ICAW's [Director of Digital Campaigns](https://i-caw.org/digital-campaigns)"
     },
     {
-      "date": "1 Dec",
+      "date": "Dec 1",
       "text": "Goa Animal Husbandry Department's deadline for a [stray-dog shelter action plan](https://nenews.in/goa/goa-hc-orders-disciplinary-action-against-8-panchayat-secretaries-over-stray-dog-reports/70158/)"
     },
     {
-      "date": "2 Dec",
-      "text": "Free online training: [Understanding how people (actually) make decisions](https://luma.com/wfr0t3jk), 13:30 IST or [20:30 IST](https://luma.com/ey40y4aj)"
+      "date": "Dec 2",
+      "text": "Free online training: [Understanding how people (actually) make decisions](https://luma.com/wfr0t3jk), 1.30 p.m. or [8.30 p.m. IST](https://luma.com/ey40y4aj)"
     },
     {
-      "date": "3 Dec",
+      "date": "Dec 3",
       "text": "Jharkhand High Court: [stray dogs and cattle on highways](https://www.thehansindia.com/news/national/jharkhand-hc-seeks-compliance-report-from-state-centre-over-stray-dogs-and-cattle-on-roads-1139521)"
     }
   ]
