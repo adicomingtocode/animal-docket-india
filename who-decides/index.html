@@ -2034,12 +2034,81 @@ dlq({ t: "30m", g: ["culture"], title: "Ask for horse checks at processions and 
 const LOCAL_OVER = { "in-hospital": 1, "in-wedding-food": 1 };
 IN_QUICK.forEach((q) => { if (q.act && LOCAL_OVER[q.act]) q.notIn = ["telangana", "delhi"]; if (/restaurant you eat at/.test(q.title)) q.notIn = ["telangana", "delhi"]; if (/hospital/.test(q.title) && /New York/.test(q.line)) q.line = "Most hospital kitchens already cook vegetarian. Ask for a dairy-free plant-protein option."; });
 
+/* Office canteens, contract caterers, and the groups already doing this work. */
+const VO_SRC = { t: "VeganFirst, Oct 2021: Tech Mahindra joins Vegan Outreach's Green Tuesday, launched at its Hyderabad campus", u: "https://veganfirst.com/article/tech-mahindra-cuts-down-serving-meat-by-20-to-reduce-their-food-related-carbon-footprint" };
+const HETERO_SRC = { t: "VeganFirst: Hetero to make 2 million meals a year meat-free through Green Tuesday", u: "https://veganfirst.com/article/indian-pharmaceutical-company-to-make-2-million-meals-meat-free-every-year" };
+const GT_SRC = { t: "Green Tuesday: how it works and who has joined", u: "https://greentuesday.org/media/" };
+const BRSR_SRC = { t: "Down To Earth: India's ESG rules and value-chain reporting", u: "https://www.downtoearth.org.in/environment/indias-esg-rules-are-redefining-corporate-accountability" };
+const SODEXO_SRC = { t: "Fresh Produce Journal: Sodexo's target of 33% plant-based meals by 2025 (UK and Ireland)", u: "https://fruitnet.com/fresh-produce-journal/plant-free-meal-consumption-rising-reports-sodexo/257904.article" };
+
+const CANTEEN = MK({ id: "in-canteen", title: "Bring a plant-based day or counter to your office canteen", short: "Best done from the inside, with a group that has done it before.", animals: "Chickens, goats, fish, dairy animals", scale: "Thousands of meals a day at a large campus",
+  lens: ["EA"], priority: "High", status: "Vegan Outreach's Green Tuesday has signed up Indian companies, including Tech Mahindra and Hetero", who: "Vegan Outreach (Green Tuesday); ProVeg India and Humane World for Animals India also work with institutions",
+  why: "A large office canteen serves thousands of meals a day, and a few people decide the menu: the facilities head, the caterer and, increasingly, the sustainability team. This has been done in India. Through Vegan Outreach's Green Tuesday, Tech Mahindra set out to cut meat servings in its cafeterias by 20 per cent, launching at its Hyderabad campus in 2021, and Hetero planned to make over 2 million meals a year meat-free. The group offers menus and support free of cost. Large listed companies now report emissions intensity under SEBI's sustainability rules, which gives their sustainability teams a reason to listen, though food is a small part of most companies' footprint, so lead with choice, health and cost.",
+  asks: ["A plant-based day each week (Green Tuesday or similar), or a permanent, clearly labelled plant-based counter", "Track uptake and food waste for three months, and share the results", "Plant milk at the tea and coffee counter at no extra charge"],
+  deciders: [{ n: "Facilities or admin head", r: "Runs the canteen contract" }, { n: "Sustainability or ESG lead", r: "Owns climate goals and the sustainability report" }, { n: "The catering contractor's site manager", r: "Plans menus day to day" }, { n: "HR or wellness lead", r: "Runs employee health programmes" }],
+  suggest: ["Vegan Outreach India's Green Tuesday team, before you approach your company", "Colleagues in an employee green club or wellness group"],
+  email: { to: "The Facilities Head and the Sustainability Lead, [Company], [campus]", subject: "Proposal: a plant-based day in our cafeteria", body: "Dear [Name],\n\nI work in [team] at our [campus] office. Several colleagues and I would like to propose a weekly plant-based day, or a permanent labelled plant-based counter, in the cafeteria, as a three-month pilot.\n\nOther Indian companies have done this: Tech Mahindra introduced a weekly plant-based day across its campuses, starting in Hyderabad, and Hetero committed to making over 2 million meals a year meat-free. Free support with menus and footprint estimates is available from Vegan Outreach's Green Tuesday programme.\n\nIt would support our sustainability goals and offer colleagues more healthy choices, with no change for anyone who prefers other food on other days.\n\n[Number] colleagues have signed in support. Could we meet for 15 minutes?\n\nRegards,\n[Name, team, phone]" },
+  letter: { to: "To\nThe Facilities Head\n[Company, campus]", subject: "Sub: Proposal for a plant-based cafeteria pilot", body: "Respected Sir/Madam,\n\n1. We propose a three-month pilot of a weekly plant-based day, or a labelled plant-based counter.\n\n2. Free support is available from groups that have run such programmes with Indian companies.\n\n3. We will help with a feedback survey and share the results.\n\n[Names and signatures of colleagues]\n[Date]" },
+  rti: [], watch: ["World Environment Day (5 June) and the company's sustainability report: good moments to propose it"],
+  src: [VO_SRC, HETERO_SRC, GT_SRC, BRSR_SRC],
+  groups: ["farmed", "aquatic"], first: "If you work at a large company, contact Vegan Outreach's Green Tuesday team first, then find two colleagues to co-sign.", time: "Ongoing", skills: ["organise", "letters"],
+  risk: "Done by an outsider or as a ban, it can sour a company on the idea for years. Go through an employee, offer a pilot with choice, and work with a group that has done it before.", measure: "A pilot running, with uptake figures." });
+
+const CATERER = MK({ id: "in-caterer", title: "Ask the big contract caterers to set a plant-based target in India", short: "A handful of caterers feed most office and college canteens. One policy reaches hundreds of sites.", animals: "Chickens, goats, fish, dairy animals", scale: "Hundreds of client sites per caterer",
+  lens: ["EA"], priority: "Medium", status: "Sodexo has a plant-based target for the UK and Ireland; no India target found", who: "None known in India",
+  why: "Office and college canteens are mostly run by a few contract caterers. Sodexo set a target of 33 per cent plant-based meals on its UK and Ireland menus by 2025; no comparable India target has been found. A caterer-level policy, such as a plant-based option on every menu or a default at client request, reaches every site at once. This is a corporate campaign, and those work best when run by an organisation with a track record and a long relationship, not by one-off e-mails.",
+  asks: ["A published plant-based target for India menus", "A labelled plant-based option at every site, and a plant-based default when a client asks for it"],
+  deciders: [{ n: "The caterer's India head of culinary or sustainability", r: "Sets menu policy" }],
+  suggest: ["Groups running corporate food campaigns in India, such as Humane World for Animals India or ProVeg India"],
+  email: { to: "[Caterer] India, Head of Sustainability", subject: "Plant-based menus at your India sites", body: "Dear [Name],\n\nYour group has set plant-based targets in other markets, such as 33 per cent of menus in the UK and Ireland by 2025. Would you consider a similar target for India, beginning with a labelled plant-based option at every site?\n\nRegards,\n[Name]" },
+  letter: { to: "[Caterer] India", subject: "Plant-based target for India", body: "We request a published plant-based target for India menus." },
+  rti: [], watch: [], src: [SODEXO_SRC],
+  groups: ["farmed", "aquatic"], first: "Don't start this alone. Ask Humane World for Animals India or ProVeg India whether they're already in talks, and offer help.", time: "Ongoing", skills: ["research"],
+  risk: "Uncoordinated pressure on a company can cut across an organisation's private negotiations. Join an existing campaign instead.", measure: "A published India target." });
+
+[CANTEEN, CATERER].forEach((a) => { IN_ACTIONS.push(a); ALL_ACTIONS.push(a); });
+ACT_TACTICS["in-canteen"] = ["meeting", "outreach", "join"]; ACT_TACTICS["in-caterer"] = ["join"];
+
+/* Local versions with places and precedents */
+const CAMPUS_TG = { kind: "campuses", label: "Where this is most useful in Hyderabad" }, CAMPUS_DL = { kind: "campuses", label: "Where this is most useful in Delhi" };
+PLACES.telangana.campuses = [
+  { n: "HITEC City and Madhapur IT campuses", a: "Cyberabad", k: "Large IT employers; Tech Mahindra's Hitech City campus joined Green Tuesday in 2021" },
+  { n: "Financial District and Nanakramguda", a: "Gachibowli", k: "Big multinational campuses with sustainability teams" },
+  { n: "Genome Valley and pharma companies", a: "Shamirpet and city offices", k: "Hetero, a Hyderabad pharma company, committed meals through Green Tuesday" },
+  { n: "T-Hub and startup offices", a: "Raidurg", k: "Shared food courts; a good place for a plant-based counter and events" },
+  { n: "University hostels", a: "University of Hyderabad, Osmania, IIT Hyderabad", k: "See the campus mess action" }
+];
+PLACES.delhi.campuses = [
+  { n: "Connaught Place, Nehru Place and Saket offices", a: "Central and South Delhi", k: "Corporate offices with shared canteens" },
+  { n: "Government office canteens", a: "Central Secretariat, ITO", k: "Run by departments; harder, but very large" },
+  { n: "University hostels", a: "Delhi University, JNU, IIT Delhi", k: "See the campus mess action" },
+  { n: "Nearby NCR campuses", a: "Gurugram and Noida (outside Delhi)", k: "Tech Mahindra's Noida and Gurgaon campuses joined Green Tuesday" }
+];
+["telangana", "delhi"].forEach((slug) => {
+  const city = slug === "telangana" ? "Hyderabad" : "Delhi", pre = slug === "telangana" ? "tg-" : "dl-";
+  const a = JSON.parse(JSON.stringify(CANTEEN));
+  Object.assign(a, { id: pre + "canteen", guide: slug, title: `Bring a plant-based day to a ${city} office canteen`, places: slug === "telangana" ? CAMPUS_TG : CAMPUS_DL, src: CANTEEN.src });
+  GUIDES[slug].actions.push(a); ALL_ACTIONS.push(a); ACT_TACTICS[a.id] = ACT_TACTICS["in-canteen"];
+});
+GUIDES.telangana.quick.push({ t: "long", g: ["farmed", "aquatic"], title: "Bring a plant-based day to your office canteen", line: "Through an employee, with Vegan Outreach's Green Tuesday team. Tech Mahindra and Hetero have done it.", btn: "See steps", act: "tg-canteen" });
+GUIDES.delhi.quick.push({ t: "long", g: ["farmed", "aquatic"], title: "Bring a plant-based day to your office canteen", line: "Through an employee, with a group that has done it before.", btn: "See steps", act: "dl-canteen" });
+IN_QUICK.push({ t: "long", g: ["farmed", "aquatic"], title: "Bring a plant-based day to your office canteen", line: "Through an employee, with a group that has done it before.", btn: "See steps", act: "in-canteen", notIn: ["telangana", "delhi"] });
+
+/* Eateries: chains reach more people than single famous outlets */
+["tg-eatery", "dl-eatery"].forEach((id) => { const a = findActData(id); if (a) a.why += " Chains reach the most people: a change at one Chutneys, Sagar Ratna or Haldiram's can spread to every outlet."; });
+function findActData(id) { return ALL_ACTIONS.find((x) => x.id === id); }
+
+/* Who's already working on food in institutions */
+TG.orgs.push({ n: "Vegan Outreach (Green Tuesday)", did: ["Launched Green Tuesday with Tech Mahindra at its Hyderabad campus in 2021, aiming to cut meat servings in its cafeterias by 20%", "Signed up Hetero to make over 2 million meals a year meat-free"], u: VO_SRC.u });
+DL.orgs.push({ n: "Vegan Outreach (Green Tuesday)", did: ["Tech Mahindra campuses in Noida and Gurgaon joined Green Tuesday (2021); Gautam Buddha University in Greater Noida moved nearly a million meals a year to plant-based"], u: GT_SRC.u });
+["telangana", "delhi"].forEach((slug) => { const g = GUIDES[slug].d.gaps; const i = g.findIndex((x) => /Plant-based meals in schools/i.test(x)); if (i >= 0) g[i] = "Plant-based meals in schools, hospitals and office canteens (Vegan Outreach has started with companies)"; });
+
 /* Backfire risk: how likely a careless or solo attempt is to set the cause back, and who to talk to first. */
 const BK_SET = {
   low: ["fish", "board", "monkeys", "disaster", "campus", "silk", "prawns", "insects", "bees", "gluetraps", "manja", "rescue", "welfare-bio",
         "dl-shelters", "dl-manja", "dl-fish", "dl-heat", "dl-gluetraps", "dl-zoo", "dl-campus", "in-pca", "in-abc", "in-ccsea", "in-inverts"],
-  med: ["dogs", "labs", "tigers", "abc-city", "boar", "dl-ward-abc", "dl-cattle", "dl-birdtrade", "dl-chickens", "dl-horses", "dl-pigeons", "tg-horses"],
-  high: ["hens", "meals", "procession", "dl-ghazipur", "dl-transport"]
+  med: ["dogs", "labs", "tigers", "abc-city", "boar", "dl-ward-abc", "dl-cattle", "dl-birdtrade", "dl-chickens", "dl-horses", "dl-pigeons", "tg-horses", "in-canteen", "tg-canteen", "dl-canteen"],
+  high: ["hens", "meals", "procession", "dl-ghazipur", "dl-transport", "in-caterer"]
 };
 const BK_WITH = {
   dogs: "Stray Animal Foundation of India and Humane World for Animals India, who are already following the poisoning cases",
@@ -2057,6 +2126,10 @@ const BK_WITH = {
   "tg-horses": "PETA India and the procession committees; ask for the same checks at every event, never one community's",
   "dl-horses": "PETA India, which runs the police drives; suggest to families, don't shame them",
   "dl-pigeons": "feeders at the spots, so a phased plan doesn't turn into a fight",
+  "in-canteen": "Vegan Outreach's Green Tuesday team, and go through an employee of the company",
+  "tg-canteen": "Vegan Outreach's Green Tuesday team, and go through an employee of the company",
+  "dl-canteen": "Vegan Outreach's Green Tuesday team, and go through an employee of the company",
+  "in-caterer": "Humane World for Animals India or ProVeg India, who run corporate food work",
   "dl-ghazipur": "a lawyer or an established group",
   "dl-transport": "an established group; any ask tied to one festival will be read as targeting a community, so ask for year-round checks for all animals"
 };
@@ -2546,7 +2619,8 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
       <div class="signup" id="signup" data-act="${a.id}"></div>
       ${a.places && PLACES[a.guide] ? (() => { const P = PLACES[a.guide][a.places.kind] || []; const isFood = a.places.kind === "food";
         const draftFor = (p) => isFood ? `I ate at ${p.n} (${p.a}) on [date] and enjoyed [dish]. One request: please ${p.ask}. I'd come back more often for it.` : `I was at ${p.n} on [date] as a [patient / visitor]. [What went well.] One suggestion: please add a clearly labelled plant-based meal (no ghee, curd, paneer or egg, with dal, chana or soya) for patients and in the canteen.`;
-        return `<div class="sec"><h3>${num()}${esc(a.places.label)}</h3><p class="small muted">Only write a review about a place you have actually been to, in your own words, once. Google removes copied or coordinated reviews, and a review campaign would put businesses off.</p><div class="contacts">${P.map((p) => `<div><b>${esc(p.n)}</b> <span class="muted">· ${esc(p.a)} · ${esc(p.k)}</span>${p.ask ? `<div class="small">Ask them to ${esc(p.ask)}.</div>` : ""}<div class="tacs" style="margin-top:6px"><a class="more" href="${REVIEW_URL(p.pid)}" target="_blank" rel="noopener">Write a Google review</a><a class="more" href="${MAPS_URL(p.pid, p.n)}" target="_blank" rel="noopener">Open in Maps${isFood ? "" : " (phone, website)"}</a><button class="more" data-copytext="${esc(draftFor(p))}">Copy review draft</button></div></div>`).join("")}</div></div>`; })() : ""}
+        const hasPid = P.some((p) => p.pid);
+        return `<div class="sec"><h3>${num()}${esc(a.places.label)}</h3>${hasPid ? `<p class="small muted">Only write a review about a place you have actually been to, in your own words, once. Google removes copied or coordinated reviews, and a review campaign would put businesses off.</p>` : ""}<div class="contacts">${P.map((p) => `<div><b>${esc(p.n)}</b> <span class="muted">· ${esc(p.a)}</span><div class="small muted">${esc(p.k)}</div>${p.ask ? `<div class="small">Ask them to ${esc(p.ask)}.</div>` : ""}${p.pid ? `<div class="tacs" style="margin-top:6px"><a class="more" href="${REVIEW_URL(p.pid)}" target="_blank" rel="noopener">Write a Google review</a><a class="more" href="${MAPS_URL(p.pid, p.n)}" target="_blank" rel="noopener">Open in Maps${isFood ? "" : " (phone, website)"}</a><button class="more" data-copytext="${esc(draftFor(p))}">Copy review draft</button></div>` : ""}</div>`).join("")}</div></div>`; })() : ""}
       <div class="sec"><h3>${num()}Why it matters</h3><p>${esc(a.why)}</p>${a.risk ? `<p><b>Risk of backlash:</b> ${esc(a.risk)}</p>` : ""}${a.measure ? `<p><b>How you'll know it worked:</b> ${esc(a.measure)}</p>` : ""}<p class="lens">Lens: ${a.lens.map((l) => esc(LENS[l])).join("; ")}</p></div>
       <div class="sec"><h3>${num()}What to ask for</h3><ul>${a.asks.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
       ${(a.doc || []).length ? `<div class="sec"><h3>${num()}What to document</h3><ul>${a.doc.map((x) => `<li>${esc(x)}</li>`).join("")}</ul><p class="note" style="margin-top:8px"><button class="more" data-how="document" data-hg="${gslug}">How to document safely and lawfully</button></p></div>` : ""}
