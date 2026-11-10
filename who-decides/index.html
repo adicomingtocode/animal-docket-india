@@ -76,6 +76,13 @@ ul { margin: 0; }
 .seg button { background: #fff; border: 1px solid var(--line-2); padding: 9px 14px; border-radius: 4px; font-size: 0.95rem; }
 .seg button:hover { border-color: var(--ink); }
 .seg button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+.agrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.agrid button { display: grid; gap: 2px; text-align: left; background: #fff; border: 1px solid var(--line-2); border-radius: 6px; padding: 12px 14px; }
+.agrid button b { font-weight: 600; font-size: 0.98rem; }
+.agrid button span { font-size: 0.82rem; color: var(--muted); }
+.agrid button:hover { border-color: var(--ink); }
+.agrid button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.agrid button[aria-pressed="true"] span { color: #d9d6cf; }
 .filters { display: flex; flex-wrap: wrap; gap: 4px 18px; }
 .filters button { background: none; border: 0; padding: 4px 0; color: var(--muted); font-size: 0.95rem; border-bottom: 2px solid transparent; }
 .filters button:hover { color: var(--ink); }
@@ -2103,11 +2110,65 @@ TG.orgs.push({ n: "Vegan Outreach (Green Tuesday)", did: ["Launched Green Tuesda
 DL.orgs.push({ n: "Vegan Outreach (Green Tuesday)", did: ["Tech Mahindra campuses in Noida and Gurgaon joined Green Tuesday (2021); Gautam Buddha University in Greater Noida moved nearly a million meals a year to plant-based"], u: GT_SRC.u });
 ["telangana", "delhi"].forEach((slug) => { const g = GUIDES[slug].d.gaps; const i = g.findIndex((x) => /Plant-based meals in schools/i.test(x)); if (i >= 0) g[i] = "Plant-based meals in schools, hospitals and office canteens (Vegan Outreach has started with companies)"; });
 
+/* More for farmed animals beyond diet, and bigger food names to ask. */
+PLACES.telangana.food.unshift(
+  { n: "Karachi Bakery", a: "Mozamjahi Market (first outlet)", k: "Bakery chain", pid: "ChIJ47aqamGXyzsRGJq-YWhbiyk", ask: "label which biscuits and cakes are free of butter, milk and egg, and add an eggless, dairy-free range" },
+  { n: "Starbucks", a: "GVK One, Banjara Hills", k: "Coffee chain", pid: "ChIJJxPJmDaXyzsRT3m0W-JiKRc", ask: "offer plant milk at no extra charge and label vegan food items" },
+  { n: "Rajiv Gandhi International Airport", a: "Shamshabad", k: "Airport food courts", pid: "ChIJRRvZsX-7yzsRUajqM-wpIFM", ask: "ask its food outlets to carry and label at least one vegan meal at each food court" },
+  { n: "Almond House", a: "Banjara Hills", k: "Sweets chain", pid: "ChIJy_JsySeXyzsRjRke4QPQEO0", ask: "add sweets made without ghee or milk, and label them" },
+  { n: "Chai Point", a: "Raheja Mindspace, HITEC City", k: "Tea chain in office parks", pid: "ChIJ6Ye3SmqTyzsRSLaLcHTNHKo", ask: "offer plant milk for chai and coffee, and label vegan snacks" }
+);
+PLACES.delhi.food.unshift(
+  { n: "Starbucks", a: "N Block, Connaught Place", k: "Coffee chain", pid: "ChIJHbDBfDb9DDkR0LuEc0pARFU", ask: "offer plant milk at no extra charge and label vegan food items" },
+  { n: "Domino's", a: "Regal Building, Connaught Place", k: "Pizza chain", pid: "ChIJEUk-ZTb9DDkRIqql7nXKwkg", ask: "offer a dairy-free cheese pizza, and label which items are vegan" }
+);
+const tgq2 = GUIDES.telangana.quick.find((q) => q.act === "tg-eatery"); if (tgq2) tgq2.line = "Karachi Bakery, Starbucks, Paradise, Chutneys, Shamshabad airport and more, with a review draft and Google links.";
+const dlq2 = GUIDES.delhi.quick.find((q) => q.act === "dl-eatery"); if (dlq2) dlq2.line = "Starbucks, Domino's, Haldiram's, Bikanervala, Saravana Bhavan and more, with a review draft and Google links.";
+
+const TRANSPORT_SRC = { t: "LiveLaw, 2024: Telangana High Court takes up PILs on fish deaths at Chitkul and livestock starving in transport", u: "https://livelaw.in/high-court/telangana-high-court/telangana-high-court-hearing-pil-chitkul-tank-fish-deaths-and-animal-protection-rules-implementation-262006" };
+const BIRDFLU_SRC = { t: "NewsMeter, Apr 2025: bird flu at a Ranga Reddy poultry farm; culling begins", u: "https://newsmeter.in/hyderabad/ranga-reddy-district-reports-bird-flu-at-poultry-farm-officials-begin-culling-advise-safety-measure-746357" };
+const FARM2 = [
+  { id: "tg-transport", guide: "telangana", title: "Report overloaded trucks carrying animals", short: "Sheep, goats, cattle and chickens are packed in for long journeys. Report, don't stop the vehicle.", animals: "Sheep, goats, cattle, buffaloes, chickens", scale: "Daily, on every highway into Hyderabad", lens: ["WF"], priority: "High",
+    status: "The High Court took up a PIL in 2024 on livestock dying of starvation in transport", who: "Police and animal groups act on complaints",
+    why: "Telangana keeps more sheep than any other State and is a major poultry producer, so animals are on the road every day. The Transport of Animals Rules set limits on how many animals a vehicle can carry and require food, water and rest. In 2024 the High Court took up a PIL after reports of livestock starving in transport. Most violations are never reported. A clear report with a photo, vehicle number, place and time gives police what they need.",
+    asks: ["Police and transport checks on animal vehicles at check posts and highway entries", "Published monthly figures on vehicles checked and cases filed", "A single helpline for reporting overloaded animal vehicles"],
+    deciders: [{ n: "Director General of Police / Commissioners of Police", r: "Highway and city police" }, { n: "Vakiti Srihari", r: "Minister, Animal Husbandry" }, { n: "Transport Commissioner", r: "Vehicle checks" }],
+    contacts: ["prajavani", "prajavaniDist"], suggest: ["Dial 100 or 112 when you see a violation", "Your district SPCA"],
+    email: { to: "The Commissioner of Police, [city], with a copy to the Director of Animal Husbandry", subject: "Overloaded vehicle carrying animals: [vehicle number]", body: "Sir/Madam,\n\nOn [date] at [time] I saw vehicle [number] carrying [number and kind of animals] at [place], packed so tightly that [describe]. This appears to violate the Transport of Animals Rules and the PCA Act, 1960. Photographs are attached.\n\nPlease take action and let me know the case number.\n\n[Name, phone]" },
+    letter: { to: "To\nThe Director General of Police, Telangana\n\nCopy to: The Director of Animal Husbandry", subject: "Sub: Regular checks on vehicles transporting animals", body: "Respected Sir,\n\nWe request regular checks of animal vehicles at check posts, a single helpline for reports, and monthly figures on vehicles checked and cases filed.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    rti: [{ pio: "Public Information Officer, O/o the Director General of Police, Telangana", qs: ["Number of cases registered under the PCA Act and the Transport of Animals Rules for transport of animals in 2024, 2025 and 2026, by district.", "Number of animals seized in those cases, and where they were sent."] }],
+    watch: ["Before Bakrid, Sankranti and wedding seasons, when transport rises"], src: [TRANSPORT_SRC],
+    groups: ["farmed"], scope: ["state"], first: "Save 100/112 and your district SPCA's number. If you see an overloaded vehicle, note the number, place and time from a safe distance.", time: "2 minutes", skills: [],
+    risk: "Never stop, chase or confront a vehicle or its driver. Report from a distance. Ask for checks on all animal transport, never one community's.", measure: "A case number for your report; checks published." },
+  { id: "tg-culling", guide: "telangana", title: "Ask how birds are killed when bird flu strikes", short: "Culling after outbreaks can be brutal. Ask for the method and a humane standard.", animals: "Hens and broiler chickens", scale: "Whole farms culled at each outbreak; several outbreaks in early 2025", lens: ["WF"], priority: "Medium",
+    status: "Culling after outbreaks in 2025", who: "None known",
+    why: "When bird flu is found, every bird on and around the farm is killed. Methods vary, and some cause long suffering. Telangana had several outbreaks in early 2025, including in Ranga Reddy. Asking which method was used, and for a written humane standard before the next outbreak, is a quiet, practical step that farmers and vets can support, since it also protects workers.",
+    asks: ["Publish the culling method used in each outbreak", "Adopt a written humane culling standard and train teams before the next outbreak", "Fair compensation to farmers, so outbreaks are reported early"],
+    deciders: [{ n: "Director of Animal Husbandry", r: "Runs outbreak response" }, { n: "Vakiti Srihari", r: "Minister, Animal Husbandry" }],
+    contacts: ["secretariat", "prajavani"], suggest: ["District Veterinary Officers in the poultry belt"],
+    email: { to: "The Director of Animal Husbandry, Government of Telangana", subject: "Humane methods for culling during bird flu outbreaks", body: "Sir/Madam,\n\nDuring the bird flu outbreaks of 2025, birds were culled on affected farms. I request to know the methods used, and whether the department has a written standard for humane culling and training for response teams.\n\nA humane, well-planned response also protects workers and encourages farmers to report outbreaks early.\n\nYours faithfully,\n[Name]" },
+    letter: { to: "To\nThe Director of Animal Husbandry\nGovernment of Telangana, Hyderabad", subject: "Sub: Humane culling standard for avian influenza", body: "Respected Sir/Madam,\n\nWe request publication of culling methods used in 2025 and adoption of a written humane standard with trained teams.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    rti: [{ pio: "Public Information Officer, O/o the Director of Animal Husbandry, Hyderabad", qs: ["List of bird flu outbreaks in Telangana in 2025 and 2026, with the number of birds culled in each.", "The method of culling used in each case.", "Copy of any standard operating procedure for culling, and the training given to response teams."] }],
+    watch: ["Winter and spring, when outbreaks are more common"], src: [BIRDFLU_SRC],
+    groups: ["farmed"], scope: ["state", "Ranga Reddy", "Siddipet"], first: "File the RTI on culling methods.", time: "30 minutes", skills: ["research", "science"], risk: "Low. Keep it about method and worker safety, not about blaming farmers.", measure: "A published humane culling standard." }
+];
+FARM2.forEach((a) => { GUIDES.telangana.actions.push(a); ALL_ACTIONS.push(a); });
+Object.assign(ACT_TACTICS, { "tg-transport": ["document", "prajavani"], "tg-culling": ["meeting"] });
+DOC["tg-transport"] = ["Vehicle number, place, time and direction", "Photos from a safe distance showing crowding, and any dead or collapsed animals", "The complaint or FIR number"];
+DOC["tg-culling"] = ["News reports of outbreaks and culls, with dates and places", "RTI replies on methods"];
+FARM2.forEach((a) => (a.doc = DOC[a.id]));
+GUIDES.telangana.quick.push(
+  { t: "2m", g: ["farmed"], title: "Save the number to report overloaded animal trucks", line: "Note the vehicle number from a safe distance, then report.", btn: "See steps", act: "tg-transport", lowstep: true },
+  { t: "30m", g: ["farmed"], title: "Ask how birds are killed when bird flu strikes", line: "An RTI on culling methods after the 2025 outbreaks.", btn: "Open RTI", act: "tg-culling" },
+  { t: "30m", g: ["farmed"], title: "File an RTI on sheep and goats dying in transport", line: "The High Court has looked at it. How many cases were filed?", btn: "Open RTI", act: "tg-transport" }
+);
+GUIDES.delhi.quick.push({ t: "2m", g: ["farmed", "culture"], title: "Save the number to report overloaded animal trucks", line: "Note the vehicle number from a safe distance, then report to 112.", btn: "See steps", act: "dl-transport", lowstep: true });
+
 /* Backfire risk: how likely a careless or solo attempt is to set the cause back, and who to talk to first. */
 const BK_SET = {
   low: ["fish", "board", "monkeys", "disaster", "campus", "silk", "prawns", "insects", "bees", "gluetraps", "manja", "rescue", "welfare-bio",
         "dl-shelters", "dl-manja", "dl-fish", "dl-heat", "dl-gluetraps", "dl-zoo", "dl-campus", "in-pca", "in-abc", "in-ccsea", "in-inverts"],
-  med: ["dogs", "labs", "tigers", "abc-city", "boar", "dl-ward-abc", "dl-cattle", "dl-birdtrade", "dl-chickens", "dl-horses", "dl-pigeons", "tg-horses", "in-canteen", "tg-canteen", "dl-canteen"],
+  med: ["dogs", "labs", "tigers", "abc-city", "boar", "dl-ward-abc", "dl-cattle", "dl-birdtrade", "dl-chickens", "dl-horses", "dl-pigeons", "tg-horses", "tg-transport", "in-canteen", "tg-canteen", "dl-canteen"],
   high: ["hens", "meals", "procession", "dl-ghazipur", "dl-transport", "in-caterer"]
 };
 const BK_WITH = {
@@ -2130,6 +2191,7 @@ const BK_WITH = {
   "tg-canteen": "Vegan Outreach's Green Tuesday team, and go through an employee of the company",
   "dl-canteen": "Vegan Outreach's Green Tuesday team, and go through an employee of the company",
   "in-caterer": "Humane World for Animals India or ProVeg India, who run corporate food work",
+  "tg-transport": "the police (100/112) or your district SPCA; report from a distance, never intervene",
   "dl-ghazipur": "a lawyer or an established group",
   "dl-transport": "an established group; any ask tied to one festival will be read as targeting a community, so ask for year-round checks for all animals"
 };
@@ -2302,8 +2364,8 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
   }
 
   /* ---------- QUICK: the front page, for all of India ---------- */
-  let qTime = store.get("qtime") || "30m", qCause = "", showRisky = false;
-  if (!TIME_L[qTime]) qTime = "30m";
+  let qTime = store.get("qtime2") || "any", qCause = "", showRisky = false;
+  if (!TIME_L[qTime] && qTime !== "any") qTime = "any";
   function renderQuick() {
     setNav("quick");
     app.innerHTML = `
@@ -2313,12 +2375,13 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
       <div class="pickrow"><span class="kicker" id="l-place">Where</span><div class="seg" role="group" aria-labelledby="l-place">
         ${[["india", "Anywhere in India"], ["telangana", "Telangana"], ["delhi", "Delhi"]].map(([k, l]) => `<button data-place="${k}" aria-pressed="${place === k}">${l}</button>`).join("")}</div></div>
       <div class="pickrow"><span class="kicker" id="l-time">Time you have</span><div class="seg" role="group" aria-labelledby="l-time">
-        ${Object.entries(TIME_L).map(([k, l]) => `<button data-qtime="${k}" aria-pressed="${qTime === k}">${l}</button>`).join("")}</div></div>
+        ${QT.map(([k, l]) => `<button data-qtime="${k}" aria-pressed="${qTime === k}">${l}</button>`).join("")}</div></div>
       ${photo("dog", "ph-hero")}
     </div></section>
     <section class="band" style="padding-top:8px"><div class="wrap">
-      <div class="filters" role="group" aria-label="Animals" id="qcauses"></div>
-      <div id="qlist" style="margin-top:20px"></div>
+      <span class="kicker" id="l-anim">Which animals</span>
+      <div class="agrid" role="group" aria-labelledby="l-anim" id="qcauses" style="margin-top:10px"></div>
+      <div id="qlist" style="margin-top:28px"></div>
     </div></section>
     <section class="band cream"><div class="wrap">
       <div class="head"><h2>Go deeper</h2><p class="muted">Full guides with every MLA and MP, incidents by area, and ranked interventions.</p></div>
@@ -2330,38 +2393,50 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     </div></section>`;
     drawQuick();
   }
+  const QT = [["any", "Any time"], ...Object.entries(TIME_L)];
+  function quickRisk(q) {
+    if (q.lowstep || /RTI/.test(q.btn || "")) return "low";
+    if (q.act) { const a = findAct(q.act); return a ? a.bk : "low"; }
+    if (q.tactic) { const t = TACTICS.find((x) => x.id === q.tactic); return t ? t.bk : "low"; }
+    return "low";
+  }
   function drawQuick() {
     $$("[data-place]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.place === place));
     $$("[data-qtime]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.qtime === qTime));
-    $("#qcauses").innerHTML = [["", "All animals"], ...CAUSES.map((c) => [c.id, c.l])].map(([k, l]) => `<button data-qcause="${k}" aria-pressed="${qCause === k}">${esc(l)}</button>`).join("");
     const g = GUIDES[place];
     const isGen = (q) => q.g.length >= 5;
-    const fit = (q, t) => q.t === (t || qTime) && (!qCause || (q.g.includes(qCause) && !isGen(q)));
-    const pool = [...(g ? g.quick.map((q) => ({ q, src: place })) : []), ...IN_QUICK.map((q) => ({ q, src: "india" }))];
-    const local = g ? g.quick.filter((q) => fit(q)).map((q) => ({ q, src: place })) : [];
-    const nat = IN_QUICK.filter((q) => fit(q) && !(q.notIn && q.notIn.includes(place)) && !(q.act && local.some((l) => l.q.act === q.act))).map((q) => ({ q, src: "india" }));
-    const gens = qCause ? pool.filter(({ q }) => q.t === qTime && isGen(q) && (showRisky || !(q.tactic && (TACTICS.find((t) => t.id === q.tactic) || {}).bk === "high"))) : [];
-    const row = ({ q, src }, i) => {
-      const a = q.act && findAct(q.act);
-      const rk = (() => { if (q.act) { const x = findAct(q.act); return x ? x.bk : "low"; } if (q.tactic) { const t = TACTICS.find((y) => y.id === q.tactic); return t ? t.bk : "low"; } return "low"; })();
-      const meta = [rk !== "low" ? `<span class="bk-${rk}">${BK[rk].l}</span>` : "", a ? `<span>${esc(a.animals)}</span>` : "", src === "india" && g ? "<span>Anywhere in India</span>" : "", a ? `<span class="who-on" data-wc="${a.id}" hidden></span>` : ""].join("");
-      const key = `${src}:${(src === "india" ? IN_QUICK : g.quick).indexOf(q)}`;
+    const inTime = (q, t) => (t || qTime) === "any" || q.t === (t || qTime);
+    const forCause = (q, c) => !c || (q.g.includes(c) && !isGen(q));
+    const localAll = g ? g.quick.map((q) => ({ q, src: place })) : [];
+    const natAll = IN_QUICK.filter((q) => !(q.notIn && q.notIn.includes(place)) && !(q.act && localAll.some((l) => l.q.act === q.act))).map((q) => ({ q, src: "india" }));
+    const pool = [...localAll, ...natAll];
+    const visible = (x) => showRisky || quickRisk(x.q) !== "high";
+    /* animal picker with counts for the chosen place and time */
+    const countFor = (c) => pool.filter((x) => inTime(x.q) && forCause(x.q, c) && visible(x)).length;
+    $("#qcauses").innerHTML = [["", "All animals"], ...CAUSES.map((c) => [c.id, c.l])].map(([k, l]) => { const n = countFor(k); return `<button data-qcause="${k}" aria-pressed="${qCause === k}"><b>${esc(l)}</b><span>${n} action${n === 1 ? "" : "s"}</span></button>`; }).join("");
+    const keyOf = ({ q, src }) => `${src}:${(src === "india" ? IN_QUICK : g.quick).indexOf(q)}`;
+    const row = (x, i) => {
+      const { q, src } = x, a = q.act && findAct(q.act), rk = quickRisk(q), key = keyOf(x);
+      const meta = [rk !== "low" ? `<span class="bk-${rk}">${BK[rk].l}</span>` : "", qTime === "any" ? "" : "", a ? `<span>${esc(a.animals)}</span>` : "", src === "india" && g ? "<span>Anywhere in India</span>" : "", a ? `<span class="who-on" data-wc="${a.id}" hidden></span>` : ""].join("");
       return `<div class="row"><span class="rk">${i + 1}</span><div><h3><button data-q="${key}">${esc(q.title)}</button></h3><p class="ln">${esc(q.line)}</p><div class="meta">${meta}</div></div><div class="go"><button class="btn ${i ? "ghost " : ""}sm" data-q="${key}">${esc(q.btn)}</button></div></div>`;
     };
-    const riskOf = (q) => { if (q.act) { const a = findAct(q.act); return a ? a.bk : "low"; } if (q.tactic) { const t = TACTICS.find((x) => x.id === q.tactic); return t ? t.bk : "low"; } return "low"; };
-    const allRaw = [...local, ...nat];
-    const hiddenRisky = showRisky ? [] : allRaw.filter(({ q }) => riskOf(q) === "high");
-    const all = allRaw.filter((x) => !hiddenRisky.includes(x)).sort((x, y) => ({ low: 0, med: 1, high: 2 })[riskOf(x.q)] - ({ low: 0, med: 1, high: 2 })[riskOf(y.q)]);
+    const order = { low: 0, med: 1, high: 2 };
+    const matching = pool.filter((x) => inTime(x.q) && forCause(x.q, qCause));
+    const hiddenRisky = matching.filter((x) => !visible(x));
+    const all = matching.filter(visible).sort((x, y) => order[quickRisk(x.q)] - order[quickRisk(y.q)]);
     const causeL = qCause ? (CAUSES.find((c) => c.id === qCause) || {}).l : "";
-    let html;
-    if (all.length) html = `<div class="rows">${all.map(row).join("")}</div>`;
-    else {
-      const other = Object.keys(TIME_L).filter((t) => t !== qTime && pool.some(({ q }) => fit(q, t)));
-      html = `<p class="muted">Nothing specific for ${esc(causeL.toLowerCase() || "this filter")} ${g ? "in " + esc(g.name) + " " : ""}in ${esc(TIME_L[qTime].toLowerCase())}.${other.length ? " Try:" : " This is a gap: if you can research it, that is itself useful work."}</p>${other.length ? `<div class="seg" style="margin-top:10px">${other.map((t) => `<button data-qtime="${t}">${TIME_L[t]}</button>`).join("")}</div>` : ""}`;
-    }
+    let html = "";
+    if (!all.length) {
+      const other = Object.keys(TIME_L).filter((t) => t !== qTime && pool.some((x) => inTime(x.q, t) && forCause(x.q, qCause) && visible(x)));
+      html = `<p class="muted">Nothing specific for ${esc(causeL.toLowerCase() || "this filter")} ${g ? "in " + esc(g.name) + " " : ""}${qTime === "any" ? "yet" : "in " + esc(TIME_L[qTime].toLowerCase())}.${other.length ? " Try:" : " This is a gap: if you can research it, that is itself useful work."}</p>${other.length ? `<div class="seg" style="margin-top:10px">${other.map((t) => `<button data-qtime="${t}">${TIME_L[t]}</button>`).join("")}</div>` : ""}`;
+    } else if (qTime === "any") {
+      let n = 0;
+      Object.entries(TIME_L).forEach(([t, l]) => { const xs = all.filter((x) => x.q.t === t); if (!xs.length) return; html += `<div class="bkhead" style="margin-top:${n ? 34 : 0}px"><h3>${esc(l)}</h3></div><div class="rows" style="margin-top:8px">${xs.map((x) => row(x, n++)).join("")}</div>`; });
+    } else html = `<div class="rows">${all.map(row).join("")}</div>`;
     if (hiddenRisky.length) html += `<p class="small muted" style="margin-top:18px">${hiddenRisky.length} riskier action${hiddenRisky.length > 1 ? "s are" : " is"} hidden. Done alone, they can backfire on others working on the issue. <button class="more" id="showrisky">Show anyway</button></p>`;
     else if (showRisky) html += `<p class="small muted" style="margin-top:18px"><button class="more" id="showrisky">Hide riskier actions</button></p>`;
-    if (gens.length) html += `<h3 style="margin-top:36px;font-size:1.1rem">Works for any cause</h3><div class="rows" style="margin-top:10px">${gens.map(({ q, src }) => { const key = `${src}:${(src === "india" ? IN_QUICK : g.quick).indexOf(q)}`; return `<div class="row compact"><div><h3 style="font-size:1.1rem"><button data-q="${key}">${esc(q.title)}</button></h3><p class="ln">${esc(q.line)}</p></div><div class="go"><button class="more" data-q="${key}">${esc(q.btn)}</button></div></div>`; }).join("")}</div>`;
+    const gens = qCause ? pool.filter((x) => inTime(x.q) && isGen(x.q) && visible(x)) : [];
+    if (gens.length) html += `<h3 style="margin-top:36px;font-size:1.1rem">Works for any cause</h3><div class="rows" style="margin-top:10px">${gens.map((x) => { const key = keyOf(x); return `<div class="row compact"><div><h3 style="font-size:1.1rem"><button data-q="${key}">${esc(x.q.title)}</button></h3><p class="ln">${esc(x.q.line)}</p></div><div class="go"><button class="more" data-q="${key}">${esc(x.q.btn)}</button></div></div>`; }).join("")}</div>`;
     if (!g) html += `<p class="small muted" style="margin-top:20px">In another State? Find your MPs and MLAs in the <button class="more" data-go="home" data-scroll="states">States table</button>. Full guides exist so far for Telangana and Delhi.</p>`;
     $("#qlist").innerHTML = html;
     const sr = $("#showrisky"); if (sr) sr.onclick = () => { showRisky = !showRisky; drawQuick(); };
@@ -2613,7 +2688,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     const html = `<div class="scrim" id="scrim"></div><aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
       <div class="sheet-top"><span class="kicker">${esc(where)} · ${esc(a.priority)} priority</span><button class="x" id="close">Close</button></div>
       ${PHOTO_OF[a.id] ? photo(PHOTO_OF[a.id], "ph-sheet", a.id.length) : ""}<h2 id="sheet-title">${esc(a.title)}</h2><p class="sh">${esc(a.short)}</p>
-      <div class="bkbox ${a.bk}"><b class="bk-${a.bk}">${BK[a.bk].l}</b>${a.bk === "low" ? "Safe to start on your own." : a.bkWith ? "Before you act, talk to " + esc(a.bkWith) + "." : esc(BK[a.bk].d)}${a.risk && a.risk.replace(/^(Low|None)\.\s*/, "") ? " " + esc(a.risk.replace(/^(Low|None)\.\s*/, "")) : ""}</div>
+      <div class="bkbox ${a.bk}"><b class="bk-${a.bk}">${BK[a.bk].l}</b>${a.bk === "low" ? "Safe to start on your own." : a.bkWith ? "Before you act, talk to " + esc(a.bkWith) + "." : esc(BK[a.bk].d)}${a.bk !== "low" && (a.rti || []).length ? " Filing the RTI below is safe to do on your own." : ""}${a.risk && a.risk.replace(/^(Low|None)\.\s*/, "") ? " " + esc(a.risk.replace(/^(Low|None)\.\s*/, "")) : ""}</div>
       <div class="kv"><div><b>Animals</b><span>${esc(a.animals)}</span></div><div><b>Scale</b><span>${esc(a.scale)}</span></div><div><b>Status</b><span>${esc(a.status)}</span></div><div><b>Time</b><span>${esc(a.time || "—")}</span></div></div>
       ${a.first ? `<div class="first"><b>Do this first</b>${esc(a.first)}</div>` : ""}
       <div class="signup" id="signup" data-act="${a.id}"></div>
@@ -2791,7 +2866,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     if (t.closest("#sheet") && t.closest(".copy")) return;
     if (t.closest("[data-pick]")) { openPick(); return; }
     const pl = t.closest("[data-place]"); if (pl) { place = pl.dataset.place; store.set("place", place); if (GUIDES[place]) { lastGuide = place; store.set("lastGuide", place); } drawQuick(); return; }
-    const qt = t.closest("[data-qtime]"); if (qt) { qTime = qt.dataset.qtime; store.set("qtime", qTime); drawQuick(); return; }
+    const qt = t.closest("[data-qtime]"); if (qt) { qTime = qt.dataset.qtime; store.set("qtime2", qTime); drawQuick(); return; }
     const qc = t.closest("[data-qcause]"); if (qc) { qCause = qc.dataset.qcause; drawQuick(); return; }
     const qq = t.closest("[data-q]"); if (qq) { runQuick(qq.dataset.q); return; }
     const how = t.closest("[data-how]"); if (how) { tacticGuide = how.dataset.hg || (G && currentView === G.slug ? G.slug : null); closeModal(true); location.hash = "how-" + how.dataset.how; return; }
