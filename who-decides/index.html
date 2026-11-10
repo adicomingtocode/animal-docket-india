@@ -1892,11 +1892,153 @@ IN_QUICK.push(
   { t: "long", g: ["inverts", "aquatic"], title: "Document how prawns and crabs are sold in your city", line: "Nobody has recorded it. Notes and photos from public markets are a start.", btn: "See steps", tactic: "document" }
 );
 
+/* Local versions for Hyderabad and Delhi: named hospitals and eateries with Google links, local dishes, and horses in processions. */
+const PLACES = {
+  telangana: {
+    hospitals: [
+      { n: "NIMS (Nizam's Institute of Medical Sciences)", a: "Punjagutta", k: "Government", pid: "ChIJ-5dSMDSXyzsRFl4QsYlQ6HQ" },
+      { n: "Osmania General Hospital", a: "Afzal Gunj", k: "Government", pid: "ChIJ71GXQ9iXyzsRpG5Whyolw6I" },
+      { n: "Gandhi Hospital", a: "Secunderabad", k: "Government", pid: "ChIJY5KI-IyZyzsR_wcVyHslQiE" },
+      { n: "Apollo Hospitals", a: "Jubilee Hills", k: "Private", pid: "ChIJNyplNGaXyzsRv9XdgLqPd-s" },
+      { n: "AIG Hospitals", a: "Gachibowli", k: "Private", pid: "ChIJZyT5_umTyzsR1xWsZCiId4s" },
+      { n: "Yashoda Hospitals", a: "Somajiguda", k: "Private", pid: "ChIJjT5TbLOXyzsRUoU5Nhmwzzo" },
+      { n: "KIMS Hospitals", a: "Secunderabad", k: "Private", pid: "ChIJnXfoTASayzsRKx1qMbKZ0OM" },
+      { n: "CARE Hospitals", a: "Banjara Hills", k: "Private", pid: "ChIJWfkf9S-XyzsRN2Yb1aN2UwU" }
+    ],
+    food: [
+      { n: "Chutneys", a: "Banjara Hills", k: "Vegetarian", pid: "ChIJZejIT8uQyzsRRWfTllkKqg4", ask: "mark which dishes are made without ghee, butter or curd, and offer oil instead of ghee on dosas and pongal" },
+      { n: "Ram ki Bandi", a: "Nampally / Begum Bazar", k: "Vegetarian", pid: "ChIJQ-rPzIaXyzsRYJwmTgCQlns", ask: "offer a dosa or idli cooked in oil, without butter, ghee or cheese" },
+      { n: "Paradise", a: "Secunderabad", k: "Biryani", pid: "ChIJG_3xjA-ayzsRFh3aJZ-Rbjg", ask: "offer a veg dum biryani made with oil instead of ghee, with mirchi ka salan" },
+      { n: "Bawarchi", a: "RTC X Roads", k: "Biryani", pid: "ChIJC5GIs-qZyzsRkIIAl7PFxwc", ask: "add a plant-based biryani made with oil instead of ghee, with bagara baingan or mirchi ka salan" },
+      { n: "Shah Ghouse", a: "Tolichowki", k: "Biryani", pid: "ChIJNSA7fT-XyzsRrYhLnbu7KlQ", ask: "add a veg biryani made with oil instead of ghee" },
+      { n: "Cafe Bahar", a: "Himayatnagar", k: "Biryani", pid: "ChIJXwoQ3d6ZyzsRt9dtZ7q3HQE", ask: "add a plant-based biryani and mark which curries have no ghee or cream" },
+      { n: "Mehfil", a: "Himayatnagar", k: "Biryani", pid: "ChIJy7MrtsaZyzsRJGkEGy4JsTA", ask: "add a veg biryani made with oil instead of ghee" },
+      { n: "Pista House", a: "Shah Ali Banda, near Charminar", k: "Hyderabadi", pid: "ChIJOQniFvWXyzsRQ1K83DNOYIE", ask: "add a plant-based biryani and label dishes without ghee or cream" }
+    ],
+    dishes: "Hyderabad already has dishes that are often plant-based: mirchi ka salan, bagara baingan, khatti dal, and veg biryani when it's cooked in oil instead of ghee.",
+    caterMenu: "veg dum biryani cooked in oil instead of ghee, mirchi ka salan, bagara baingan, khatti dal, and double ka meetha made with plant milk",
+    hospDecider: { n: "Damodar Raja Narasimha", r: "Minister, Health, Medical & Family Welfare (government hospitals such as NIMS, Osmania and Gandhi)" }
+  },
+  delhi: {
+    hospitals: [
+      { n: "AIIMS", a: "Ansari Nagar", k: "Central government", pid: "ChIJsyDQUgDjDDkRsuxlYlN9X_Y" },
+      { n: "Safdarjung Hospital", a: "Ansari Nagar", k: "Central government", pid: "ChIJV-snFXviDDkRZMCXH7H5Gvc" },
+      { n: "Dr. Ram Manohar Lohia Hospital", a: "Connaught Place", k: "Central government", pid: "ChIJq0J7iVT9DDkR72iWM61ppas" },
+      { n: "Lok Nayak Hospital (LNJP)", a: "Jawaharlal Nehru Marg", k: "Delhi government", pid: "ChIJbWsxsyf9DDkRd5Xma9ov1qk" },
+      { n: "Sir Ganga Ram Hospital", a: "Rajinder Nagar", k: "Private, charitable", pid: "ChIJBWSwfaECDTkR0BDebp1sGm8" },
+      { n: "Max Super Speciality Hospital", a: "Saket", k: "Private", pid: "ChIJ-8XUJ_ThDDkRwQuX9LtHLVg" },
+      { n: "Indraprastha Apollo Hospital", a: "Jasola / Sarita Vihar", k: "Private", pid: "ChIJmarqE63mDDkRd228dtR6wDs" }
+    ],
+    food: [
+      { n: "Saravana Bhavan", a: "Connaught Place", k: "Vegetarian", pid: "ChIJbX5uVrD9DDkR5PidBBTkaQI", ask: "mark which dishes are made without ghee, butter or curd" },
+      { n: "Sagar Ratna", a: "Defence Colony", k: "Vegetarian", pid: "ChIJH6NnSVfiDDkRjReMz5RJKqQ", ask: "mark dishes made without ghee or butter, and offer oil on dosas" },
+      { n: "Bikanervala", a: "Karol Bagh", k: "Vegetarian", pid: "ChIJxakNQZ4CDTkRVbHw5O37rEE", ask: "offer soya chaap and chole without cream, butter or curd, and label them" },
+      { n: "Haldiram's", a: "Chandni Chowk", k: "Vegetarian", pid: "ChIJowswABv9DDkRlIwWegNm4LA", ask: "label which snacks and meals are free of dairy and ghee" },
+      { n: "Moti Mahal", a: "Daryaganj", k: "North Indian", pid: "ChIJp9jVdiD9DDkRpnMacJBVQvw", ask: "add a dal and a soya chaap made without butter or cream" },
+      { n: "Karim's", a: "Jama Masjid", k: "Mughlai", pid: "ChIJyy_Vxxj9DDkRPXF11X7EfT0", ask: "add one plant-based curry, such as a chana or mushroom dish, made without ghee or cream" },
+      { n: "Al Jawahar", a: "Jama Masjid", k: "Mughlai", pid: "ChIJjwR7wRj9DDkRvaM1y8jg-FY", ask: "add one plant-based curry made without ghee or cream" },
+      { n: "Wenger's", a: "Connaught Place", k: "Bakery", pid: "ChIJX8ehxTf9DDkRqn9PJTQfyGE", ask: "add an egg-free, dairy-free patty or pastry and label it" }
+    ],
+    dishes: "Delhi already has dishes that are easy to make plant-based: chole, rajma, dal tadka, and soya chaap when it's made without cream or butter.",
+    caterMenu: "chole with oil-fried bhature, rajma, dal tadka without butter, soya chaap without cream, and phirni made with plant milk",
+    hospDecider: { n: "Pankaj Kumar Singh", r: "Minister, Health, Delhi government (Delhi government hospitals such as LNJP); AIIMS, Safdarjung and RML answer to the Union Health Ministry" }
+  }
+};
+const REVIEW_URL = (pid) => "https://search.google.com/local/writereview?placeid=" + encodeURIComponent(pid);
+const MAPS_URL = (pid, n) => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(n) + "&query_place_id=" + encodeURIComponent(pid);
+
+/* Indian evidence for hospital meals, instead of foreign examples */
+const ICMR_SRC = { t: "ICMR-NIN Dietary Guidelines for Indians, 2024 (via The South First)", u: "https://thesouthfirst.com/news/icmr-releases-dietary-guidelines-for-indians-after-13-years-says-no-to-protein-supplements" };
+const hosp = IN_ACTIONS.find((a) => a.id === "in-hospital");
+Object.assign(hosp, {
+  short: "Most hospital kitchens already cook vegetarian food. A dairy-free, egg-free plant-protein option is a small step for them.",
+  why: "Hospitals feed thousands of people a day, and a few dietitians and administrators set the menu. Many Indian hospitals already serve vegetarian patient meals, so adding a fully plant-based option, with dal, chana, rajma or soya and no ghee, curd or paneer, is a small change for the kitchen. The Indian Council of Medical Research's 2024 dietary guidelines favour a plant-based diet with pulses and beans as a main protein source, which gives dietitians an Indian reason to say yes.",
+  email: { to: "The Chief Dietitian and the Administrator, [Hospital name]", subject: "Request for a plant-based meal option for patients and staff", body: "Dear Sir/Madam,\n\nI am writing as a [patient / visitor / staff member] at [hospital].\n\nI request that the hospital add a fully plant-based option (no ghee, curd, paneer or egg, with a plant-protein dish such as dal, chana, rajma or soya) to patient and canteen menus, and label it clearly.\n\nThe ICMR-National Institute of Nutrition's Dietary Guidelines for Indians (2024) favour a plant-based diet with pulses and beans as a key protein source. Since the kitchen already cooks vegetarian food, this should be a small change.\n\nI would be glad to share more information.\n\nYours faithfully,\n[Name, phone]" },
+  src: [ICMR_SRC]
+});
+
+/* State versions of the food actions */
+function localCopy(base, slug, extra) {
+  const P = PLACES[slug], G = GUIDES[slug];
+  const a = Object.assign(JSON.parse(JSON.stringify(base)), extra, { guide: slug, places: extra.places });
+  return a;
+}
+const LOCAL = [];
+["telangana", "delhi"].forEach((slug) => {
+  const P = PLACES[slug], city = slug === "telangana" ? "Hyderabad" : "Delhi", pre = slug === "telangana" ? "tg-" : "dl-";
+  LOCAL.push(localCopy(hosp, slug, { id: pre + "hospital", title: `Ask a ${city} hospital to add a plant-based meal`, places: { kind: "hospitals", label: `${city} hospitals to start with` },
+    deciders: [P.hospDecider, { n: "Chief Dietitian", r: "Plans patient menus at each hospital" }, { n: "Medical Superintendent or administrator", r: "Runs the canteen contract" }],
+    suggest: [], first: `Pick a ${city} hospital you or your family use, and send the e-mail to its dietitian and administrator.`, src: [ICMR_SRC] }));
+  LOCAL.push({ id: pre + "eatery", guide: slug, title: `Ask ${city} eateries for a vegan option`, short: `Ask in person, then leave an honest Google review if you've eaten there.`, animals: "Dairy animals, hens, chickens, goats",
+    scale: "Thousands of plates a day at each popular eatery", lens: ["EA"], priority: "Medium", status: "Individual requests", who: "Customers",
+    why: `Popular eateries decide what lakhs of people eat each week, and they read their Google reviews. A specific, friendly request from a real customer, repeated by many real customers over months, is how menus change. ${P.dishes} Vegetarian chains are the easiest place to start, because the ask is only to mark or swap out ghee, butter, curd and paneer.`,
+    asks: ["A clearly marked vegan option, or labels on dishes that already are", "Oil instead of ghee or butter on request"],
+    deciders: [{ n: "The outlet manager or owner", r: "Decides the menu" }],
+    contacts: [], suggest: [], rti: [], watch: [],
+    email: { to: "[Restaurant name] (by message, e-mail or the feedback form)", subject: "Request for a vegan option", body: "Hello,\n\nI ate at your [area] outlet on [date] and enjoyed the [dish]. I'd love to see a vegan option on the menu: no ghee, butter, curd, paneer or egg. Even marking which dishes already qualify would help.\n\nI'd order it, and so would my friends.\n\nThank you,\n[Name]" },
+    letter: { to: "[Restaurant]", subject: "Vegan option", body: "Please consider adding a clearly marked vegan option." },
+    review: true, places: { kind: "food", label: `Popular ${city} eateries` },
+    src: [{ t: "Google's review policy: reviews must be about a real experience", u: "https://support.google.com/contributionpolicy/answer/7400114?hl=EN" }],
+    groups: ["farmed", "aquatic"], scope: ["state"], first: "Next time you eat out, ask the staff in person, then post an honest review in your own words.", time: "2 minutes", skills: [], risk: "Only review places you've actually eaten at, write it in your own words, and post once. Google removes copied, coordinated or off-topic reviews, and a review campaign would look like spam and put restaurants off.", measure: "A vegan option or labels on the menu." });
+  LOCAL.push(localCopy(IN_ACTIONS.find((a) => a.id === "in-wedding-food"), slug, { id: pre + "wedding-food", title: `Ask your caterer for a plant-based ${city} menu`,
+    why: `Weddings and festival feasts are among the largest meals most families order. In ${city} the swaps are easy: ${P.caterMenu}. A caterer who serves it once can offer it to other clients.`,
+    email: { to: "[Caterer's name]", subject: "Plant-based menu for our event", body: `Hi,\n\nFor our [wedding / function] on [date] we'd like the menu to be fully plant-based (no ghee, butter, curd, paneer or egg), or at least a clearly labelled plant-based section.\n\nSome dishes we'd love: ${P.caterMenu}. Could you suggest others and share a quote?\n\nThanks,\n[Name]` },
+    places: null }));
+});
+LOCAL.forEach((a) => { const g = GUIDES[a.guide]; g.actions.push(a); ALL_ACTIONS.push(a); });
+Object.assign(ACT_TACTICS, { "tg-hospital": ["meeting", "media"], "dl-hospital": ["meeting", "media"], "tg-eatery": ["outreach"], "dl-eatery": ["outreach"], "tg-wedding-food": ["outreach"], "dl-wedding-food": ["outreach"] });
+
+/* Horses at weddings, processions and rides */
+const HORSE_SRC = [
+  { t: "Telangana Today, 21 Jul 2024: teenager dies after a procession horse kicks him at Falaknuma", u: "https://telanganatoday.com/hyderabad-teenager-dies-after-being-kicked-by-horse-during-muharram-procession" },
+  { t: "PETA India: spiked bits seized by Delhi Police", u: "https://www.petaindia.com/blog/delhi-police-and-peta-india-display-over-50-seized-spiked-bits-used-to-control-horses-in-weddings/" },
+  { t: "PETA India: national billboard campaign for horse-free weddings", u: "https://www.petaindia.com/blog/take-a-vow-against-cruelty-national-peta-india-billboard-campaign-calls-for-horse-free-weddings/" }
+];
+const tgHorses = { id: "tg-horses", guide: "telangana", title: "Horses at weddings and processions in Hyderabad", short: "Safety checks for every horse in a crowd, and horse-free baraats.", animals: "Horses and ponies",
+  scale: "Weddings through the season; religious and political processions through the year", lens: ["WF", "AB"], priority: "Medium",
+  status: "No routine checks known", who: "PETA India (horse-free weddings campaign; mechanical elephants for Bonalu and Muharram)",
+  why: "Horses hired for baraats and processions are walked for hours through noise and crowds, often controlled with spiked bits, which the 1965 rules on draught animals prohibit. Frightened horses also hurt people: in July 2024 a 17-year-old died after a horse in a procession at Falaknuma kicked him. The safest, least divisive ask is the same one for every event: a vet check before a horse is used in a crowd, no spiked bits, water and rest. For families, a horse-free baraat is the cleanest choice.",
+  asks: ["A vet's fitness certificate for any horse used at a wedding, procession or rally, checked by police when they give permission", "No spiked bits, and water and rest breaks", "Advice to banquet halls and wedding planners on horse-free baraats"],
+  deciders: [{ n: "Hyderabad City Police", r: "Gives permission for processions and can set conditions" }, { n: "District Veterinary & Animal Husbandry Officer", r: "Can issue fitness checks" }, { n: "GHMC veterinary wing", r: "Licenses animals used in the city" }],
+  contacts: ["prajavani", "ghmc"], suggest: ["Procession organising committees, before the season", "Banquet hall associations"],
+  email: { to: "The Commissioner of Police, Hyderabad, with a copy to the District Veterinary Officer", subject: "Safety and welfare checks for horses at weddings and processions", body: "Sir,\n\nHorses are used at weddings, religious processions and rallies across Hyderabad, often in dense crowds. In July 2024 a 17-year-old died after being kicked by a horse in a procession at Falaknuma. Spiked bits, prohibited under the Prevention of Cruelty to Draught and Pack Animals Rules, 1965, are still common.\n\nWe request that when permission is given for any event using horses, police require a veterinary fitness certificate, no spiked bits, and water and rest breaks. Applying the same conditions to every event keeps people and horses safe.\n\nYours faithfully,\n[Name]" },
+  letter: { to: "To\nThe Commissioner of Police\nHyderabad City Police, Basheer Bagh, Hyderabad", subject: "Sub: Conditions for horses used at weddings, processions and rallies", body: "Respected Sir,\n\n1. Horses used in crowded events risk injury to people and animals.\n\n2. We request, as a condition of permission for any event using horses: (a) a veterinary fitness certificate; (b) no spiked bits; (c) water and rest breaks.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+  rti: [], watch: ["Wedding seasons", "Major processions through the year"], src: HORSE_SRC,
+  groups: ["culture"], scope: ["state", "Hyderabad"], first: "If you're going to a wedding, suggest a horse-free baraat. For processions, write to the police with the same ask for every event.", time: "30 minutes", skills: ["letters"],
+  risk: "Never single out one community's procession. Ask for the same conditions at every wedding, procession and rally, and lead with people's safety.", measure: "Fitness checks made a condition of permission." };
+GUIDES.telangana.actions.push(tgHorses); ALL_ACTIONS.push(tgHorses);
+ACT_TACTICS["tg-horses"] = ["document", "meeting"];
+DOC["tg-horses"] = ["Photos of spiked bits, wounds or exhausted horses, from public places", "The event, date and organiser", "Any police permission conditions you can obtain"]; tgHorses.doc = DOC["tg-horses"];
+
+const dlh = DL_ACTIONS.find((a) => a.id === "dl-horses");
+Object.assign(dlh, { title: "Horses at weddings, processions and rides", short: "Spiked bits are banned and still used. Horse-drawn carriages have been banned since 2010.",
+  scale: "Thousands of weddings each season, plus religious and political processions",
+  why: dlh.why + " The same checks should apply at religious and political processions, and the MCD's 2010 ban on horse-drawn carriages near monuments still needs enforcing.",
+  asks: dlh.asks.concat(["A veterinary fitness certificate for horses at processions and rallies, checked when police give permission", "Enforcement of the 2010 ban on horse-drawn carriages near monuments"]),
+  src: dlh.src.concat([{ t: "PETA India, 2013: SDMC upholds the ban on horse-drawn carriages", u: "https://www.petaindia.com/?p=11449" }]),
+  risk: "Weddings are personal and processions are sensitive. Suggest, don't shame, and ask for the same conditions at every event." });
+
+/* Local quick cards */
+const tgq = (o) => GUIDES.telangana.quick.push(o), dlq = (o) => GUIDES.delhi.quick.push(o);
+tgq({ t: "2m", g: ["farmed", "aquatic"], title: "Ask a Hyderabad eatery you've been to for a vegan option", line: "Chutneys, Paradise, Bawarchi and more, with a review draft and Google links.", btn: "Open", act: "tg-eatery" });
+tgq({ t: "30m", g: ["farmed", "aquatic"], title: "Ask a Hyderabad hospital for a plant-based meal", line: "NIMS, Osmania, Apollo, AIG, Yashoda and others.", btn: "Open e-mail", act: "tg-hospital" });
+tgq({ t: "30m", g: ["culture", "farmed"], title: "Ask your caterer for a plant-based Hyderabadi menu", line: "Veg biryani in oil, mirchi ka salan, bagara baingan.", btn: "Open message", act: "tg-wedding-food" });
+tgq({ t: "2m", g: ["culture"], title: "Suggest a horse-free baraat", line: "Horses in crowds get frightened and hurt people too.", btn: "Copy message", act: "tg-horses",
+  text: "Planning a baraat? Horses hired for weddings are often controlled with spiked bits, which are banned, and frightened horses in crowds can hurt people. A decorated car, a vintage bike or a walk with the band is just as joyful. Please consider it." });
+tgq({ t: "30m", g: ["culture"], title: "Ask police for horse safety checks at every event", line: "One condition for weddings, processions and rallies alike.", btn: "Open e-mail", act: "tg-horses" });
+dlq({ t: "2m", g: ["farmed", "aquatic"], title: "Ask a Delhi eatery you've been to for a vegan option", line: "Saravana Bhavan, Bikanervala, Haldiram's and more, with a review draft and Google links.", btn: "Open", act: "dl-eatery" });
+dlq({ t: "30m", g: ["farmed", "aquatic"], title: "Ask a Delhi hospital for a plant-based meal", line: "AIIMS, Safdarjung, RML, LNJP, Ganga Ram and others.", btn: "Open e-mail", act: "dl-hospital" });
+dlq({ t: "30m", g: ["culture", "farmed"], title: "Ask your caterer for a plant-based Delhi menu", line: "Chole, rajma, soya chaap without cream.", btn: "Open message", act: "dl-wedding-food" });
+dlq({ t: "30m", g: ["culture"], title: "Ask for horse checks at processions and weddings", line: "Same conditions for every event.", btn: "Open e-mail", act: "dl-horses" });
+/* the generic India cards stay for other States; hide them where a local one exists */
+const LOCAL_OVER = { "in-hospital": 1, "in-wedding-food": 1 };
+IN_QUICK.forEach((q) => { if (q.act && LOCAL_OVER[q.act]) q.notIn = ["telangana", "delhi"]; if (/restaurant you eat at/.test(q.title)) q.notIn = ["telangana", "delhi"]; if (/hospital/.test(q.title) && /New York/.test(q.line)) q.line = "Most hospital kitchens already cook vegetarian. Ask for a dairy-free plant-protein option."; });
+
 /* Backfire risk: how likely a careless or solo attempt is to set the cause back, and who to talk to first. */
 const BK_SET = {
   low: ["fish", "board", "monkeys", "disaster", "campus", "silk", "prawns", "insects", "bees", "gluetraps", "manja", "rescue", "welfare-bio",
         "dl-shelters", "dl-manja", "dl-fish", "dl-heat", "dl-gluetraps", "dl-zoo", "dl-campus", "in-pca", "in-abc", "in-ccsea", "in-inverts"],
-  med: ["dogs", "labs", "tigers", "abc-city", "boar", "dl-ward-abc", "dl-cattle", "dl-birdtrade", "dl-chickens", "dl-horses", "dl-pigeons"],
+  med: ["dogs", "labs", "tigers", "abc-city", "boar", "dl-ward-abc", "dl-cattle", "dl-birdtrade", "dl-chickens", "dl-horses", "dl-pigeons", "tg-horses"],
   high: ["hens", "meals", "procession", "dl-ghazipur", "dl-transport"]
 };
 const BK_WITH = {
@@ -1912,6 +2054,7 @@ const BK_WITH = {
   "dl-cattle": "gaushala managements and the Animal Husbandry Unit; keep it about welfare and data, never religion",
   "dl-birdtrade": "PFA or PETA India, who run the raids; tip-offs from you, not visits",
   "dl-chickens": "an established group or a lawyer before any publicity; Ghazipur is politically sensitive",
+  "tg-horses": "PETA India and the procession committees; ask for the same checks at every event, never one community's",
   "dl-horses": "PETA India, which runs the police drives; suggest to families, don't shame them",
   "dl-pigeons": "feeders at the spots, so a phased plan doesn't turn into a fight",
   "dl-ghazipur": "a lawyer or an established group",
@@ -2123,7 +2266,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     const fit = (q, t) => q.t === (t || qTime) && (!qCause || (q.g.includes(qCause) && !isGen(q)));
     const pool = [...(g ? g.quick.map((q) => ({ q, src: place })) : []), ...IN_QUICK.map((q) => ({ q, src: "india" }))];
     const local = g ? g.quick.filter((q) => fit(q)).map((q) => ({ q, src: place })) : [];
-    const nat = IN_QUICK.filter((q) => fit(q) && !(q.act && local.some((l) => l.q.act === q.act))).map((q) => ({ q, src: "india" }));
+    const nat = IN_QUICK.filter((q) => fit(q) && !(q.notIn && q.notIn.includes(place)) && !(q.act && local.some((l) => l.q.act === q.act))).map((q) => ({ q, src: "india" }));
     const gens = qCause ? pool.filter(({ q }) => q.t === qTime && isGen(q) && (showRisky || !(q.tactic && (TACTICS.find((t) => t.id === q.tactic) || {}).bk === "high"))) : [];
     const row = ({ q, src }, i) => {
       const a = q.act && findAct(q.act);
@@ -2401,12 +2544,15 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
       <div class="kv"><div><b>Animals</b><span>${esc(a.animals)}</span></div><div><b>Scale</b><span>${esc(a.scale)}</span></div><div><b>Status</b><span>${esc(a.status)}</span></div><div><b>Time</b><span>${esc(a.time || "—")}</span></div></div>
       ${a.first ? `<div class="first"><b>Do this first</b>${esc(a.first)}</div>` : ""}
       <div class="signup" id="signup" data-act="${a.id}"></div>
+      ${a.places && PLACES[a.guide] ? (() => { const P = PLACES[a.guide][a.places.kind] || []; const isFood = a.places.kind === "food";
+        const draftFor = (p) => isFood ? `I ate at ${p.n} (${p.a}) on [date] and enjoyed [dish]. One request: please ${p.ask}. I'd come back more often for it.` : `I was at ${p.n} on [date] as a [patient / visitor]. [What went well.] One suggestion: please add a clearly labelled plant-based meal (no ghee, curd, paneer or egg, with dal, chana or soya) for patients and in the canteen.`;
+        return `<div class="sec"><h3>${num()}${esc(a.places.label)}</h3><p class="small muted">Only write a review about a place you have actually been to, in your own words, once. Google removes copied or coordinated reviews, and a review campaign would put businesses off.</p><div class="contacts">${P.map((p) => `<div><b>${esc(p.n)}</b> <span class="muted">· ${esc(p.a)} · ${esc(p.k)}</span>${p.ask ? `<div class="small">Ask them to ${esc(p.ask)}.</div>` : ""}<div class="tacs" style="margin-top:6px"><a class="more" href="${REVIEW_URL(p.pid)}" target="_blank" rel="noopener">Write a Google review</a><a class="more" href="${MAPS_URL(p.pid, p.n)}" target="_blank" rel="noopener">Open in Maps${isFood ? "" : " (phone, website)"}</a><button class="more" data-copytext="${esc(draftFor(p))}">Copy review draft</button></div></div>`).join("")}</div></div>`; })() : ""}
       <div class="sec"><h3>${num()}Why it matters</h3><p>${esc(a.why)}</p>${a.risk ? `<p><b>Risk of backlash:</b> ${esc(a.risk)}</p>` : ""}${a.measure ? `<p><b>How you'll know it worked:</b> ${esc(a.measure)}</p>` : ""}<p class="lens">Lens: ${a.lens.map((l) => esc(LENS[l])).join("; ")}</p></div>
       <div class="sec"><h3>${num()}What to ask for</h3><ul>${a.asks.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
       ${(a.doc || []).length ? `<div class="sec"><h3>${num()}What to document</h3><ul>${a.doc.map((x) => `<li>${esc(x)}</li>`).join("")}</ul><p class="note" style="margin-top:8px"><button class="more" data-how="document" data-hg="${gslug}">How to document safely and lawfully</button></p></div>` : ""}
       <div class="sec"><h3>${num()}Who decides</h3><div class="contacts">${a.deciders.map((d) => `<div><b>${esc(d.n)}</b><div class="muted">${esc(d.r)}</div></div>`).join("")}</div></div>
       ${contacts || sugg ? `<div class="sec"><h3>${num()}Where to reach them</h3><div class="contacts">${contacts}${sugg}</div><p class="note" style="margin-top:8px">Phone numbers and e-mails change. Check the linked official website on the day you write.</p></div>` : ""}
-      <div class="sec"><h3>${num()}Send an e-mail first</h3><p class="small muted">To: ${esc(a.email.to)}</p>${draft("Subject: " + a.email.subject, a.email.body)}</div>
+      <div class="sec"><h3>${num()}${a.review ? "Or send them a message" : "Send an e-mail first"}</h3><p class="small muted">To: ${esc(a.email.to)}</p>${draft("Subject: " + a.email.subject, a.email.body)}</div>
       <div class="sec"><h3>${num()}Then a formal letter</h3><p class="small muted">${esc(g ? g.letterNote : "Print, sign and post or hand it in; keep proof that it was received.")}</p>${draft("Representation letter", a.letter.to + "\n\n" + a.letter.subject + "\n\n" + a.letter.body)}</div>
       ${rti ? `<div class="sec"><h3>${num()}File an RTI if there's no reply in 30 days</h3>${rti}<p class="note" style="margin-top:8px">${esc(g ? g.rtiNote : "Fee Rs 10 for central bodies; file online at rtionline.gov.in. The PIO must reply within 30 days.")}</p></div>` : ""}
       ${tset.length ? `<div class="sec"><h3>${num()}Other ways to push</h3><div class="tacs">${tset.map((k) => { const tt = tacticFor(k, gslug); return tt ? `<button class="more" data-how="${k}" data-hg="${gslug}">${esc(tt.name)}</button>` : ""; }).join("")}</div></div>` : ""}
@@ -2421,7 +2567,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     $("#close").focus();
     $("#scrim").addEventListener("click", () => closeAct());
     $("#close").addEventListener("click", () => closeAct());
-    $("#sheet").addEventListener("click", (e) => { const b = e.target.closest(".copy"); if (b) copy(b, b.closest(".draft").querySelector("pre").textContent, "Copy"); });
+    $("#sheet").addEventListener("click", (e) => { const b = e.target.closest(".copy"); if (b) copy(b, b.closest(".draft").querySelector("pre").textContent, "Copy"); const c = e.target.closest("[data-copytext]"); if (c) copy(c, c.dataset.copytext, "Copy review draft"); });
   }
   function openTactic(id) {
     const gslug = tacticGuide || (currentView && GUIDES[currentView] ? currentView : (GUIDES[place] ? place : "india"));
