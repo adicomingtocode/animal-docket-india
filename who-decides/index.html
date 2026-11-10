@@ -1777,6 +1777,121 @@ DL_PLAYBOOK.splice(3, 0, { h: "What others have learned", items: [
 ] });
 IN_QUICK.push({ t: "half", g: ["dogs", "farmed", "aquatic", "inverts", "wild", "labs", "culture"], title: "Document a case so officials have to act", line: "Photos, notes, a vet's report and a complaint number. Here's how.", btn: "See steps", tactic: "document" });
 
+/* More low-risk actions: food choices in institutions, lab animals in teaching and drug testing, festivals and weddings, silk. */
+const MK = (o) => Object.assign({ lens: ["WF"], priority: "Medium", contacts: [], suggest: [], rti: [], watch: [], scope: ["state"], skills: ["letters"], guide: "india" }, o);
+const MORE_ACTIONS = [
+  MK({ id: "in-hospital", title: "Ask a hospital to offer a plant-based meal, or make it the default", short: "New York's public hospitals made plant-based the default lunch; 60% of patients kept it.", animals: "Hens, chickens, fish, dairy animals", scale: "Every patient and staff meal served", lens: ["EA", "WF"],
+    status: "No Indian hospital chain known to have tried a default", who: "None known in India",
+    why: "Hospitals feed thousands of people a day, and their menus are set by a few dietitians and administrators. When New York City's public hospitals made plant-based meals the default for inpatients in 2022, 60 per cent of patients kept the plant-based meal and satisfaction was 95 per cent. Many Indian hospitals already serve vegetarian food; the ask is to add a dairy-free, egg-free plant-protein option, or to make it the default.",
+    asks: ["A plant-based (no dairy, no egg) option on every patient and canteen menu", "A plant-based default where patients can still ask for other food", "Clear labelling on the menu"],
+    deciders: [{ n: "Chief Dietitian", r: "Plans patient menus" }, { n: "Hospital administrator or facilities head", r: "Runs the canteen contract" }],
+    suggest: ["Corporate hospital chains' head offices (several are headquartered in Hyderabad and Delhi)", "Government hospital Medical Superintendents"],
+    email: { to: "The Chief Dietitian and the Administrator, [Hospital name]", subject: "Request for a plant-based meal option for patients and staff", body: "Dear Sir/Madam,\n\nI am writing as a [patient / visitor / staff member] at [hospital].\n\nI request that the hospital add a fully plant-based option (no dairy, no egg, with a plant-protein dish such as dal, chana or soya) to patient and canteen menus, and label it clearly.\n\nWhen New York City's public hospitals made plant-based meals the default lunch in 2022, 60 per cent of patients kept the plant-based meal and 95 per cent were satisfied. A similar trial here could be simple and low-cost.\n\nI would be glad to share more information.\n\nYours faithfully,\n[Name, phone]" },
+    letter: { to: "To\nThe Administrator\n[Hospital name, address]", subject: "Sub: Plant-based meal option for patients and staff", body: "Respected Sir/Madam,\n\nI request a clearly labelled plant-based option on patient and canteen menus, and a one-month trial of plant-based as the default.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    src: [{ t: "NYC Mayor's Office, 28 Sep 2022: plant-based default results", u: "https://www.nyc.gov/office-of-the-mayor/news/705-22/mayor-adams-nyc-h-h-ceo-katz-successful-rollout-expansion-plant-based-meals-as" }],
+    groups: ["farmed", "aquatic"], first: "Send the e-mail to a hospital you or your family use.", time: "30 minutes", skills: ["letters", "science"], risk: "Low. Don't argue against anyone's diet; ask for an added option.", measure: "A plant-based option on the menu." }),
+
+  MK({ id: "in-dissection", title: "Check that your college follows the ban on dissection", short: "The UGC told universities to end dissection in zoology and life sciences in 2014. Not all have.", animals: "Frogs, rats, fish, cockroaches and other animals used in teaching", scale: "Every life-sciences classroom", lens: ["AB", "WF"], priority: "Medium",
+    status: "UGC direction of 2014; compliance varies", who: "PETA India has pursued compliance",
+    why: "In 2014 the University Grants Commission asked universities and colleges to end animal dissection and experiments for training in zoology and life-science courses, building on a 2011 partial ban and a 2012 Environment Ministry direction. Software, models and videos now teach the same anatomy. Where a department still dissects, a student's polite letter citing the UGC's own notice often settles it.",
+    asks: ["Confirm in writing that the department follows the UGC's 2014 direction", "Use models, software or videos instead of animals for teaching", "Let students opt out of any animal use without penalty"],
+    deciders: [{ n: "Head of Department", r: "Sets practical classes" }, { n: "Dean or Vice-Chancellor", r: "Ensures UGC compliance" }],
+    suggest: ["Your college's Institutional Animal Ethics Committee", "Students' union"],
+    email: { to: "The Head of Department, [Zoology / Life Sciences], [College]", subject: "Dissection in practical classes and the UGC's 2014 direction", body: "Respected Sir/Madam,\n\nIn 2014 the University Grants Commission asked universities and colleges to end animal dissection and experimentation for training in zoology and life-science courses.\n\nWe request confirmation that our department follows this direction, and that models, software or videos are used in place of animals. We would also welcome a written opt-out for any student who does not wish to take part in animal use.\n\nYours faithfully,\n[Names, course, year]" },
+    letter: { to: "To\nThe Dean\n[College / University]", subject: "Sub: Compliance with the UGC's 2014 direction on dissection", body: "Respected Sir/Madam,\n\nWe request confirmation of compliance with the UGC's 2014 direction to end animal dissection for training, and an opt-out policy for students.\n\nYours faithfully,\n[Names]\n[Date]" },
+    rti: [{ pio: "Public Information Officer, [University / College]", qs: ["Number and species of animals procured for teaching or practical classes in 2024-25 and 2025-26, by department.", "Copy of any circular issued by the institution to implement the UGC's 2014 direction on dissection.", "Minutes of the Institutional Animal Ethics Committee meetings in 2025-26."] }],
+    src: [{ t: "Business Standard/IANS, 5 Aug 2014: UGC tells universities to end dissection", u: "https://www.business-standard.com/amp/article/news-ians/ugc-tells-varsities-to-stop-experiments-on-animals-114080501668_1.html" }],
+    groups: ["labs"], first: "If you're a student, send the e-mail with two classmates.", time: "30 minutes", skills: ["letters"], risk: "Low. Keep it polite and cite the UGC's own notice.", measure: "A written reply confirming compliance." }),
+
+  MK({ id: "in-fst", title: "Ask your university to drop the forced swim test", short: "Tamil Nadu's veterinary university stopped approving it in October 2026.", animals: "Mice and rats", scale: "Labs that test anti-depressants and stress", lens: ["WF", "AB"], priority: "Medium",
+    status: "TANUVAS will no longer approve it; PETA India wants a national ban", who: "PETA India",
+    why: "In the forced swim test, small animals are dropped into water they cannot escape, and how long they keep swimming is recorded. Its value for predicting human depression treatments has been widely questioned, and several institutions have dropped it. TANUVAS, Tamil Nadu's veterinary university, said in October 2026 that it will not approve it. Each university's ethics committee can make the same decision.",
+    asks: ["The Institutional Animal Ethics Committee to stop approving the forced swim test", "Use of non-animal or less harmful methods instead"],
+    deciders: [{ n: "Institutional Animal Ethics Committee (IAEC)", r: "Approves experiments at each institution" }, { n: "Registrar or Dean of Research", r: "Can refer the question to the IAEC" }],
+    suggest: ["Your institution's IAEC chair", "CCSEA, which oversees IAECs"],
+    email: { to: "The Chair, Institutional Animal Ethics Committee, [Institution]", subject: "Request to stop approving the forced swim test", body: "Respected Sir/Madam,\n\nIn October 2026, Tamil Nadu Veterinary and Animal Sciences University (TANUVAS) said it will no longer approve experiments using the forced swim test, joining other institutions that have dropped it.\n\nWe request that the IAEC at [institution] adopt the same position.\n\nYours faithfully,\n[Name]" },
+    letter: { to: "To\nThe Chair\nInstitutional Animal Ethics Committee, [Institution]", subject: "Sub: The forced swim test", body: "Respected Sir/Madam,\n\nWe request that the IAEC stop approving the forced swim test.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    src: [{ t: "PETA India, Oct 2026: TANUVAS will not approve the forced swim test", u: "https://www.petaindia.com/blog/great-news-for-small-animals-tanuvas-will-not-approve-cruel-forced-swim-test-after-hearing-from-peta-india/" }],
+    groups: ["labs"], first: "Find your university's IAEC chair and send the e-mail.", time: "30 minutes", skills: ["letters", "science"], risk: "Low. Researchers respond better to evidence than to outrage.", measure: "A written policy against the test." }),
+
+  MK({ id: "in-nams", title: "Ask how many drugs were cleared without animal tests", short: "Since 2023 India's drug rules allow organ-on-chip and other non-animal methods. Is anyone using them?", animals: "Dogs, monkeys, rabbits, rodents used in drug testing", scale: "Every new drug approved in India", lens: ["EA", "AB"], priority: "Medium",
+    status: "Rules amended in March 2023; uptake not published", who: "PETA India and others pushed the amendment",
+    why: "Until 2023, new drugs in India had to be tested on at least two animal species. The New Drugs and Clinical Trials Rules were amended in March 2023 to accept human-relevant methods such as organoids, organs-on-chips and computer models. A rule on paper changes nothing if regulators and companies don't use it. A count of how many applications relied on these methods tells everyone whether it is working.",
+    asks: ["Publish how many applications used non-animal methods since the 2023 amendment", "Issue guidance on which methods are accepted for which tests"],
+    deciders: [{ n: "Drugs Controller General of India (CDSCO)", r: "Approves new drugs" }, { n: "Your MP", r: "Can ask a question in Parliament" }],
+    email: { to: "The Drugs Controller General of India, CDSCO, New Delhi", subject: "Use of non-animal methods since the 2023 amendment", body: "Sir/Madam,\n\nThe New Drugs and Clinical Trials Rules were amended in March 2023 to allow non-animal methods for testing new drugs. We request publication of how many applications have used these methods since then, and guidance on which methods CDSCO accepts.\n\nYours faithfully,\n[Name]" },
+    letter: { to: "To\nThe Drugs Controller General of India\nCDSCO, FDA Bhawan, New Delhi", subject: "Sub: Uptake of non-animal methods under the NDCT Rules", body: "Respected Sir/Madam,\n\nWe request publication of uptake figures and guidance on accepted non-animal methods.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    rti: [{ pio: "Central Public Information Officer, Central Drugs Standard Control Organisation, New Delhi", qs: ["Number of applications for new drugs or clinical trials since March 2023 that relied wholly or partly on non-animal methods allowed by the amended New Drugs and Clinical Trials Rules.", "Any guidance document issued on accepted non-animal methods."] }],
+    src: [{ t: "inkl: India takes first step to remove animals from drug testing (2023 amendment)", u: "https://inkl.com/news/india-takes-first-step-to-remove-animals-from-drug-testing-process" }],
+    groups: ["labs"], first: "File the RTI to CDSCO.", time: "30 minutes", skills: ["research", "science"], risk: "None.", measure: "Uptake figures published." }),
+
+  MK({ id: "in-wedding-food", title: "Ask your caterer for a plant-based wedding or festival menu", short: "One family meal feeds hundreds. A caterer who learns it once offers it again.", animals: "Hens, chickens, goats, dairy animals", scale: "Hundreds of plates per event", lens: ["EA"], priority: "Medium",
+    status: "Individual choice", who: "Families and caterers",
+    why: "Weddings and festival feasts are among the largest meals most families ever order. Many Indian dishes are already plant-based; swapping ghee, paneer and egg in a few is easy for an experienced caterer. Each caterer who serves it once can offer it to other clients, which spreads further than one meal.",
+    asks: ["A plant-based menu, or a clearly labelled plant-based section", "No live animals as decoration or entertainment"],
+    deciders: [{ n: "The family hosting", r: "Chooses the menu" }, { n: "The caterer", r: "Can suggest swaps" }],
+    email: { to: "[Caterer's name]", subject: "Plant-based menu for our event", body: "Hi,\n\nFor our [wedding / function] on [date] we'd like the menu to be fully plant-based (no dairy, ghee, paneer or egg), or at least a clearly labelled plant-based section. Could you suggest dishes and any swaps, such as oil in place of ghee and tofu or soya in place of paneer?\n\nThanks,\n[Name]" },
+    letter: { to: "[Caterer]", subject: "Plant-based menu request", body: "Please share a plant-based menu for [number] guests on [date]." },
+    src: [{ t: "See also: wedding horses (Delhi guide)", u: "https://www.petaindia.com/blog/delhi-police-and-peta-india-display-over-50-seized-spiked-bits-used-to-control-horses-in-weddings/" }],
+    groups: ["culture", "farmed"], first: "If a wedding or function is coming up in your family, send the message to the caterer.", time: "30 minutes", skills: [], risk: "Low. It's your family's choice; never pressure guests.", measure: "One plant-based event, and a caterer who now offers it." }),
+
+  MK({ id: "in-snakes", title: "Report snakes used by snake charmers at Nag Panchami", short: "Snakes are protected; their mouths are often sealed and teeth broken. Report, don't confront.", animals: "Cobras and other snakes", scale: "Hundreds of snakes each Nag Panchami", lens: ["WF", "AB"], priority: "Medium",
+    status: "Illegal under the Wildlife (Protection) Act; forest departments seize snakes every year", who: "Forest departments, GHSPCA (Hyderabad), PETA India",
+    why: "Cobras and other snakes are protected under the Wildlife (Protection) Act, so catching and displaying them is illegal. Snakes brought out for Nag Panchami have often had their mouths sealed and teeth broken; in Karimnagar, Telangana, forest staff held two snake charmers and rescued two cobras. A quick call to the forest department with the place and time is what leads to seizures.",
+    asks: ["Forest department patrols in markets and temple areas on Nag Panchami", "Public messages that snakes should not be fed milk or handled"],
+    deciders: [{ n: "District Forest Officer", r: "Seizes snakes and books offenders" }],
+    suggest: ["Forest department helpline in your State", "GHSPCA in Hyderabad; PETA India"],
+    email: { to: "The District Forest Officer, [district]", subject: "Snakes displayed by snake charmers on Nag Panchami", body: "Sir/Madam,\n\nOn [date] at [place] I saw [number] snakes being displayed by snake charmers. Snakes are protected under the Wildlife (Protection) Act. Please take action. I can share photographs.\n\n[Name, phone]" },
+    letter: { to: "To\nThe District Forest Officer\n[District]", subject: "Sub: Patrols on Nag Panchami", body: "Respected Sir/Madam,\n\nWe request patrols in markets and temple areas on Nag Panchami to stop the illegal display of snakes.\n\nYours faithfully,\n[Name]\n[Date]" },
+    watch: ["Nag Panchami (July–August)"],
+    src: [{ t: "Deccan Chronicle: two snake charmers held, two cobras rescued in Karimnagar", u: "https://www.deccanchronicle.com/southern-states/telangana/naga-panchami-2-snake-charmers-held-2-cobras-rescued-in-karimnagar-1894465" }, { t: "Free Press Journal: snakes with mouths glued rescued in Jabalpur", u: "https://www.freepressjournal.in/bhopal/mouths-glued-teeth-broken-over-50-snakes-rescued-in-jabalpur-on-nag-panchami" }],
+    groups: ["culture", "wild"], first: "Save your forest department's helpline number before Nag Panchami.", time: "2 minutes", skills: [], risk: "Don't confront or film close to the people involved, and never frame it against the festival. Report and leave it to the forest staff.", measure: "Seizures reported in your district." }),
+
+  MK({ id: "in-silk", title: "Ask a saree or fashion brand to offer and label silk-free options", short: "Silk is made by boiling silkworms in their cocoons. Brands can offer alternatives.", animals: "Silkworms", scale: "India produced 38,913 tonnes of raw silk in 2023-24", lens: ["AB"], priority: "Low",
+    status: "No campaign known in India", who: "None known",
+    why: "To make most silk, cocoons are boiled or steamed with the silkworm still inside. India is one of the world's largest silk producers. Brands rarely change because one customer writes, but a few clear, polite requests asking for labelled silk-free options, from viscose to cotton silk-look weaves, tell them demand exists. Treat this as a low-cost signal, not a campaign.",
+    asks: ["Offer silk-free versions of popular designs", "Label silk and silk-free products clearly"],
+    deciders: [{ n: "The brand's customer team and head of design", r: "Decide ranges" }],
+    email: { to: "[Brand] customer care", subject: "Request for silk-free options", body: "Hello,\n\nI love [brand]'s designs, but I don't buy silk because silkworms are killed to make it. Could you offer silk-free versions of some designs and label them clearly? I would buy them.\n\nThanks,\n[Name]" },
+    letter: { to: "[Brand]", subject: "Silk-free options", body: "Please consider labelled silk-free versions of your designs." },
+    src: [{ t: "Central Silk Board figures as used in the States table", u: "https://csb.gov.in" }],
+    groups: ["inverts"], first: "Send one polite e-mail to a brand you actually buy from.", time: "2 minutes", skills: [], risk: "Low. Don't shame weavers; silk is a livelihood for many families.", measure: "A brand that labels or offers silk-free options." })
+];
+MORE_ACTIONS.forEach((a) => { IN_ACTIONS.push(a); ALL_ACTIONS.push(a); });
+Object.assign(ACT_TACTICS, { "in-hospital": ["meeting", "media"], "in-dissection": ["meeting", "petition"], "in-fst": ["media"], "in-nams": ["meeting", "consult"], "in-wedding-food": ["outreach"], "in-snakes": ["document"], "in-silk": ["outreach"] });
+Object.assign(DOC, {
+  "in-snakes": ["Place, date and time, and how many snakes, photographed from a distance", "The forest department complaint number"],
+  "in-dissection": ["Your course's practical schedule showing any dissection", "The department's written reply"],
+  "in-hospital": ["The hospital's current menu", "Its reply, and whether the option appears"]
+});
+MORE_ACTIONS.forEach((a) => { if (DOC[a.id]) a.doc = DOC[a.id]; });
+
+/* New quick cards, many with ready text */
+IN_QUICK.push(
+  { t: "2m", g: ["farmed", "aquatic"], title: "Ask a restaurant you eat at for a vegan option", line: "Ask in person or by message. Mention it in a review only if you really ate there.", btn: "Copy message",
+    text: "Hi! I eat here often and love [dish]. Could you add a vegan option (no dairy, ghee, paneer or egg), or mark which dishes already are? I'd order it, and so would my friends. Thank you!" },
+  { t: "2m", g: ["farmed", "aquatic"], title: "Ask an airline or office canteen to label vegan meals", line: "Short, polite and specific works better than long.", btn: "Copy message",
+    text: "Hello, I'd like to request that a clearly labelled vegan meal (no dairy, ghee, paneer or egg) be available on [flights / the canteen menu]. Many people now look for it. Thank you." },
+  { t: "2m", g: ["culture", "dogs"], title: "Before fireworks: help street animals through the noise", line: "Diwali, New Year and wedding seasons. Rescue calls rise every time.", btn: "Copy caption",
+    text: "Firecrackers terrify street dogs, cats, birds and cows. Before you celebrate: leave water out, keep gates open so animals can hide, never light crackers near animals, and save your local animal helpline. If you see an animal hurt or crackers tied to one, report it. #SafeCelebrations" },
+  { t: "2m", g: ["culture", "wild"], title: "Save the forest helpline before Nag Panchami", line: "Snake charmers' snakes often have their mouths sealed. Report, don't confront.", btn: "See steps", act: "in-snakes" },
+  { t: "2m", g: ["inverts"], title: "Ask a brand you buy from for silk-free options", line: "A low-cost signal that demand exists.", btn: "Open e-mail", act: "in-silk" },
+  { t: "30m", g: ["farmed", "aquatic"], title: "Ask a hospital to add a plant-based meal", line: "In New York, 60% of patients kept it when it was the default.", btn: "Open e-mail", act: "in-hospital" },
+  { t: "30m", g: ["labs"], title: "Check your college follows the dissection ban", line: "The UGC told colleges to stop in 2014.", btn: "Open e-mail", act: "in-dissection" },
+  { t: "30m", g: ["labs"], title: "Ask your university to drop the forced swim test", line: "Tamil Nadu's veterinary university just did.", btn: "Open e-mail", act: "in-fst" },
+  { t: "30m", g: ["labs"], title: "Ask how many drugs were cleared without animal tests", line: "The rules changed in 2023. Is anyone using them?", btn: "Open RTI", act: "in-nams" },
+  { t: "30m", g: ["culture", "farmed"], title: "Ask your caterer for a plant-based menu", line: "For a family wedding or festival meal.", btn: "Open message", act: "in-wedding-food" },
+  { t: "half", g: ["labs"], title: "Get two classmates to sign the dissection letter", line: "Three students are harder to ignore than one.", btn: "See steps", act: "in-dissection" },
+  { t: "long", g: ["labs"], title: "Push your university toward non-animal methods", line: "Dissection, the forced swim test, then research methods. One ask at a time.", btn: "See steps", act: "in-fst" },
+  { t: "long", g: ["culture", "farmed"], title: "Make your own festival or wedding animal-free", line: "Plant-based food, no horse, no live animals. Others copy what they see.", btn: "See steps", act: "in-wedding-food" },
+  { t: "long", g: ["farmed", "aquatic"], title: "Bring a plant-based default to a hospital or canteen", line: "Find one dietitian or manager willing to try it for a month.", btn: "See steps", act: "in-hospital" }
+);
+IN_QUICK.push(
+  { t: "2m", g: ["labs"], title: "Tell students they can refuse dissection", line: "Many don't know the UGC asked colleges to stop in 2014.", btn: "Copy caption", act: "in-dissection",
+    text: "Studying zoology or life sciences? In 2014 the UGC asked universities and colleges to stop animal dissection and experiments for teaching, and to use models, software and videos instead. If your college still dissects, you can ask it, politely and in writing, to follow the UGC's direction." },
+  { t: "long", g: ["inverts", "aquatic"], title: "Document how prawns and crabs are sold in your city", line: "Nobody has recorded it. Notes and photos from public markets are a start.", btn: "See steps", tactic: "document" }
+);
+
 /* Backfire risk: how likely a careless or solo attempt is to set the cause back, and who to talk to first. */
 const BK_SET = {
   low: ["fish", "board", "monkeys", "disaster", "campus", "silk", "prawns", "insects", "bees", "gluetraps", "manja", "rescue", "welfare-bio",
@@ -2282,7 +2397,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     const html = `<div class="scrim" id="scrim"></div><aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
       <div class="sheet-top"><span class="kicker">${esc(where)} · ${esc(a.priority)} priority</span><button class="x" id="close">Close</button></div>
       ${PHOTO_OF[a.id] ? photo(PHOTO_OF[a.id], "ph-sheet", a.id.length) : ""}<h2 id="sheet-title">${esc(a.title)}</h2><p class="sh">${esc(a.short)}</p>
-      <div class="bkbox ${a.bk}"><b class="bk-${a.bk}">${BK[a.bk].l}</b>${a.bk === "low" ? "Safe to start on your own." : a.bkWith ? "Before you act, talk to " + esc(a.bkWith) + "." : esc(BK[a.bk].d)}${a.risk ? " " + esc(a.risk) : ""}</div>
+      <div class="bkbox ${a.bk}"><b class="bk-${a.bk}">${BK[a.bk].l}</b>${a.bk === "low" ? "Safe to start on your own." : a.bkWith ? "Before you act, talk to " + esc(a.bkWith) + "." : esc(BK[a.bk].d)}${a.risk && a.risk.replace(/^(Low|None)\.\s*/, "") ? " " + esc(a.risk.replace(/^(Low|None)\.\s*/, "")) : ""}</div>
       <div class="kv"><div><b>Animals</b><span>${esc(a.animals)}</span></div><div><b>Scale</b><span>${esc(a.scale)}</span></div><div><b>Status</b><span>${esc(a.status)}</span></div><div><b>Time</b><span>${esc(a.time || "—")}</span></div></div>
       ${a.first ? `<div class="first"><b>Do this first</b>${esc(a.first)}</div>` : ""}
       <div class="signup" id="signup" data-act="${a.id}"></div>
