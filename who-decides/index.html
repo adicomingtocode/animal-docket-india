@@ -117,7 +117,7 @@ ul { margin: 0; }
 .bub b { font-family: var(--display); font-weight: 600; font-size: 1.08rem; }
 .bub span { font-size: 0.85rem; opacity: .8; }
 .bub:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(27,29,31,.12); }
-.bub.c1 { background: #ffe08a; } .bub.c2 { background: #bfe6df; } .bub.c3 { background: #ffd0bf; } .bub.c4 { background: var(--accent); color: #fff; } .bub.c5 { background: #e3dcfb; }
+.bub.c1 { background: #ffe08a; } .bub.c2 { background: #bfe6df; } .bub.c3 { background: #ffd0bf; } .bub.c4 { background: var(--accent); color: #fff; } .bub.c5 { background: #e3dcfb; } .bub.c6 { background: #fff; outline: 2px solid #ef8a6a; outline-offset: -2px; }
 .finder { padding-top: 40px; scroll-margin-top: 70px; }
 .fbar { display: grid; gap: 10px; padding: 16px 18px; border-radius: 14px; background: var(--cream); }
 .frow { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 10px; align-items: center; }
@@ -130,6 +130,32 @@ ul { margin: 0; }
 .ap-dogs { border-left-color: #f2b632 !important; } .ap-farmed { border-left-color: #ef8a6a !important; } .ap-aquatic { border-left-color: #5fb3d9 !important; } .ap-inverts { border-left-color: #9cc96b !important; } .ap-wild { border-left-color: #4fae7f !important; } .ap-labs { border-left-color: #9d87e6 !important; } .ap-culture { border-left-color: #ea7fb0 !important; } .ap-all { border-left-color: var(--ink) !important; }
 @media (max-width: 760px) { .frow { grid-template-columns: 1fr; gap: 6px; } }
 .scrollhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 22px 0 8px; }
+.bub[aria-pressed="true"] { outline: 3px solid var(--ink); outline-offset: 2px; }
+.rwhere { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 22px; }
+.rhint { color: var(--muted); padding: 18px 0 6px; }
+.rsteps { list-style: none; counter-reset: rs; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; }
+.rsteps li { counter-increment: rs; display: grid; grid-template-columns: 34px 1fr; column-gap: 12px; }
+.rsteps li::before { content: counter(rs); grid-row: span 2; width: 30px; height: 30px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-dk); font-weight: 600; display: grid; place-items: center; font-size: .92rem; }
+.rsteps li b { font-family: var(--display); font-weight: 600; }
+.rsteps li span { color: var(--muted); }
+.rdet { margin-top: 16px; border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; background: #fff; }
+.rdet summary { cursor: pointer; font-weight: 600; min-height: 28px; }
+.rdet[open] summary { margin-bottom: 8px; }
+.rprose p { margin: 0 0 10px; max-width: 70ch; }
+.rtypes { margin: 16px 0 18px; }
+.rtypes button { border-left-width: 4px; }
+.rcard { border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; background: #fff; box-shadow: 0 6px 18px rgba(27,29,31,.05); }
+.rcard h3 { font-size: 1.3rem; }
+.rsec { margin-top: 16px; }
+.rsec h4 { margin: 0 0 4px; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.rsec p { margin: 0; max-width: 70ch; }
+.rchk, .rwho { margin: 4px 0 0; padding-left: 20px; }
+.rchk li, .rwho li { margin: 3px 0; }
+.rcare { border-left: 3px solid #f2b632; padding-left: 12px; }
+.rconsult .tag { display: inline-block; font-size: .78rem; font-weight: 600; background: #ffe08a; border-radius: 999px; padding: 3px 10px; margin-bottom: 8px; }
+.rconsult p { max-width: 72ch; }
+@media (max-width: 760px) { .rcard { padding: 16px; } }
+@media (prefers-reduced-motion: reduce) { .bub { transition: none; } .bub:hover { transform: none; } }
 .scroller { max-height: min(68vh, 720px); overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--line); border-radius: 14px; padding: 4px 20px 18px; background: #fff; box-shadow: inset 0 -14px 14px -14px rgba(0,0,0,.12); }
 .scroller .rows { border-top: 0; }
 .scroller:focus-visible { outline: 2px solid var(--accent); }
@@ -2411,6 +2437,155 @@ const BK = {
 const TACTIC_BK = { document: "low", prajavani: "low", meeting: "low", outreach: "low", consult: "low", join: "low", media: "med", petition: "med", demo: "high", pil: "high" };
 TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
 
+/* Report a violation: who to tell, what to check, and how to follow up. Written in a plain newspaper register. */
+const RP_AUTH = {
+  police: { telangana: "The local police station, or Dial 100", delhi: "The local police station, or Dial 112", india: "The local police station, or Dial 112" },
+  sawb: { telangana: "Telangana State Animal Welfare Board, Department of Animal Husbandry", delhi: "Delhi Animal Welfare Board, Animal Husbandry Unit, Government of NCT of Delhi", india: "The State Animal Welfare Board" },
+  muni: { telangana: "Veterinary Wing, Greater Hyderabad Municipal Corporation (GHMC), or the local municipality", delhi: "Veterinary Services Department, Municipal Corporation of Delhi (MCD)", india: "The veterinary wing of the municipal corporation or council" },
+  food: { telangana: "Commissioner of Food Safety, Telangana", delhi: "Department of Food Safety, Government of NCT of Delhi", india: "The State Commissioner of Food Safety" },
+  pcb: { telangana: "Telangana Pollution Control Board, for waste and effluent", delhi: "Delhi Pollution Control Committee, for waste and effluent", india: "The State Pollution Control Board, for waste and effluent" },
+  dvo: { telangana: "District Veterinary and Animal Husbandry Officer", delhi: "Animal Husbandry Unit, Government of NCT of Delhi", india: "The District Animal Husbandry or Veterinary Officer" },
+  forest: { telangana: "Telangana Forest Department (the Divisional Forest Officer)", delhi: "Department of Forests and Wildlife, Government of NCT of Delhi", india: "The State Forest Department" },
+  wccb: { all: "Wildlife Crime Control Bureau, which accepts complaints online at wccb.gov.in" },
+  zoo: { telangana: "Director, Nehru Zoological Park, Hyderabad", delhi: "Director, National Zoological Park, New Delhi", india: "The director of the zoo" },
+  cza: { all: "Central Zoo Authority, New Delhi" },
+  ccsea: { all: "Committee for Control and Supervision of Experiments on Animals (CCSEA), Ministry of Fisheries, Animal Husbandry and Dairying" },
+  awbi: { all: "Animal Welfare Board of India (AWBI)" },
+  transport: { telangana: "Regional Transport Officer, Telangana Transport Department", delhi: "Transport Department, Government of NCT of Delhi", india: "The Regional Transport Officer" },
+  college: { all: "The college principal, and the University Grants Commission" }
+};
+const RP_GRIEV = { telangana: ["Prajavani", "https://www.siasat.com/telangana-to-hold-prajavani-program-at-revenue-division-level-every-monday-3462715/"], delhi: ["Delhi PGMS", "https://pgms.delhi.gov.in/"], india: ["CPGRAMS", "https://pgportal.gov.in/"] };
+
+const RP_PLACES = [
+  { id: "slaughter", n: "Slaughterhouse or meat shop", c: "farmed",
+    law: "The Prevention of Cruelty to Animals (Slaughter House) Rules, 2001, permit slaughter only in a recognised or licensed slaughterhouse, after a veterinary examination. Meat shops also need a licence under the Food Safety and Standards Act, 2006.",
+    lawShort: "the Prevention of Cruelty to Animals (Slaughter House) Rules, 2001, and the Food Safety and Standards Act, 2006",
+    u: "https://awbi.gov.in/uploads/regulations/163309997882(SLAUGHTER%20HOUSE)%20RULES,%202001.pdf",
+    check: ["Animals slaughtered outside a licensed slaughterhouse, for example on the street or behind a shop", "Animals slaughtered within sight of other animals", "Pregnant animals, or animals younger than three months, being slaughtered", "Animals held without water, shade or space before slaughter", "A meat shop with no food-safety licence number on display", "Blood and waste discharged into drains or open land"],
+    who: ["muni", "food", "police", "pcb"],
+    care: "Complain about the practice and the rule it breaks, never about a community or a festival. Complaints that cite rules and evidence are acted upon; those that read as communal are not, and they harm other people's work." },
+  { id: "market", n: "Animal market (shandy)", c: "farmed",
+    law: "Cruelty at markets falls under Section 11 of the Prevention of Cruelty to Animals Act, 1960. Rules framed specifically for livestock markets in 2017 were withdrawn the same year; a revised draft of 2018 does not appear to have been finalised.",
+    lawShort: "Section 11 of the Prevention of Cruelty to Animals Act, 1960",
+    u: "https://awbi.gov.in/Document/rules",
+    check: ["Animals left for long hours without water or shade", "Animals tied by the nose, legs or horns in positions that cause pain", "Sick, injured or very young animals offered for sale", "Animals beaten, dragged or forced to walk when lame"],
+    who: ["dvo", "muni", "police", "sawb"],
+    care: "Markets are crowded workplaces. Observe and record quietly, and leave the response to the authorities." },
+  { id: "transport", n: "Animals in transport", c: "farmed",
+    law: "The Transport of Animals Rules, 1978, require a veterinary fitness certificate, limit the number of animals in each vehicle and require food, water and rest on long journeys.",
+    lawShort: "the Transport of Animals Rules, 1978",
+    u: "https://awbi.gov.in/Document/rules",
+    check: ["Vehicles packed so tightly that animals cannot stand or lie down", "Animals with their legs tied, or hung by the legs", "Poultry crammed into stacked cages in the heat", "Collapsed or dead animals inside the vehicle"],
+    who: ["police", "transport", "sawb"],
+    care: "Never stop, follow or confront a vehicle. Note the registration number, place, time and direction of travel from a safe distance, and report it." },
+  { id: "petshop", n: "Pet shop or dog breeder", c: "dogs",
+    law: "The Prevention of Cruelty to Animals (Pet Shop) Rules, 2018, and the (Dog Breeding and Marketing) Rules, 2017, require every pet shop and breeder to register with the State Animal Welfare Board and set standards for housing, care and the age at which animals may be sold.",
+    lawShort: "the Prevention of Cruelty to Animals (Pet Shop) Rules, 2018, and the Prevention of Cruelty to Animals (Dog Breeding and Marketing) Rules, 2017",
+    u: "https://awbi.gov.in/uploads/circular/163282184507Pet%20Shop%20Rules.pdf",
+    check: ["No registration certificate from the State Animal Welfare Board on display (one may ask to see it)", "Puppies or kittens who appear too young to have left their mothers", "Overcrowded cages, cages without water, or cages in direct sun", "Visibly sick or injured animals on sale", "Litters advertised online by sellers who give no registration number"],
+    who: ["sawb", "muni", "awbi"],
+    care: "Do not buy an animal to 'rescue' it. Each sale tells the shop there is demand, and another animal takes its place.",
+    choice: "Commercial breeding treats animals as stock. Dogs used for breeding are often confined for years, and unsold animals are frequently abandoned. Adopting from a shelter or from the street, and encouraging others to do so, removes the incentive." },
+  { id: "aquarium", n: "Aquarium or fish shop", c: "aquatic",
+    law: "Rules framed for aquarium and fish-tank shops in 2017 were withdrawn the same year, so few specific standards apply. Selling protected species, however, is an offence under the Wild Life (Protection) Act, 1972, and cruelty remains an offence under the Prevention of Cruelty to Animals Act, 1960.",
+    lawShort: "the Wild Life (Protection) Act, 1972, and the Prevention of Cruelty to Animals Act, 1960",
+    u: "https://www.business-standard.com/article/pti-stories/centre-withdraws-rules-to-regulate-fish-aquarium-markets-117120201003_1.html",
+    check: ["Indian star tortoises, Indian freshwater turtles or other protected species on sale", "Fish kept for days in small bags or bowls", "Overcrowded tanks, or tanks with dead and dying fish"],
+    who: ["forest", "wccb", "sawb"],
+    care: "Report protected species to the Forest Department or the Wildlife Crime Control Bureau with a photograph; do not attempt a purchase as proof.",
+    choice: "A fish in a home tank spends its life in a few litres of water, and many die in transit before they are sold. Most ornamental fish are caught or bred for the trade in large numbers. The most compassionate choice is not to buy, and to explain why to friends who are thinking of it." },
+  { id: "wild", n: "Wild birds or animals for sale or show", c: "wild",
+    law: "Capturing, keeping or selling most Indian wild birds and animals is an offence under the Wild Life (Protection) Act, 1972. This includes parakeets, munias, mynas and owls, and the use of monkeys, bears and snakes for performance.",
+    lawShort: "the Wild Life (Protection) Act, 1972",
+    u: "https://wccb.gov.in/",
+    check: ["Parakeets, munias, mynas or owls sold in cages, often in markets or by roadside sellers", "Snake charmers, or monkeys and bears used for performance", "Parts of wild animals, such as monitor lizard parts or porcupine quills, on sale", "Wild animals kept as attractions at resorts or cafés"],
+    who: ["forest", "wccb", "police"],
+    care: "Do not buy birds to release them. It funds further capture, and many caged birds cannot survive release." },
+  { id: "zoo", n: "Zoo, mini-zoo or animal café", c: "wild",
+    law: "Under the Recognition and Regulation of Zoos Rules, 2009, every zoo must be recognised by the Central Zoo Authority and meet standards for enclosures, care and visitor conduct. Many private 'mini-zoos', petting zoos and animal cafés are not recognised.",
+    lawShort: "the Recognition and Regulation of Zoos Rules, 2009",
+    u: "https://cza.nic.in/",
+    check: ["Visitors feeding or teasing animals with no staff intervention", "Animals pacing, swaying or circling repeatedly, which indicates distress", "Dirty water, no shade, or bare concrete enclosures", "A private facility keeping wild animals with no Central Zoo Authority recognition"],
+    who: ["zoo", "cza", "forest"],
+    care: "Record what you see and when. Keepers usually want the same improvements, so address the complaint to the management rather than to individual staff." },
+  { id: "lab", n: "Laboratory or college dissection", c: "labs",
+    law: "The Breeding of and Experiments on Animals (Control and Supervision) Rules, 1998, require every institution using animals to register with the CCSEA and to have an animal ethics committee. The University Grants Commission has asked universities to discontinue dissection for teaching.",
+    lawShort: "the Breeding of and Experiments on Animals (Control and Supervision) Rules, 1998",
+    u: "https://animalwrites.in/campaigns/lab-animals-rules-2026/",
+    check: ["Animals dissected in undergraduate classes despite the UGC's guidance", "An institution using animals with no CCSEA registration", "Animals bought from markets or roadside sellers for experiments", "Animals kept in a laboratory without proper housing"],
+    who: ["ccsea", "college", "awbi"],
+    care: "Students and staff can raise this internally first; an RTI asking for the institution's CCSEA registration and committee minutes is a safe next step." },
+  { id: "dogs", n: "Dogs removed, beaten or poisoned", c: "dogs",
+    law: "The Animal Birth Control Rules, 2023, require sterilised dogs to be returned to the area they were taken from; relocation is not permitted. Killing, poisoning or maiming an animal is an offence under Section 325 of the Bharatiya Nyaya Sanhita, 2023.",
+    lawShort: "the Animal Birth Control Rules, 2023, and Section 325 of the Bharatiya Nyaya Sanhita, 2023",
+    u: "https://awbi.gov.in/Document/rules",
+    check: ["Dogs picked up by a private group or a resident welfare association and not returned", "Dogs found dead in a cluster, which may indicate poisoning", "A dog beaten or injured deliberately", "Feeders threatened or prevented from feeding"],
+    who: ["police", "muni", "sawb", "awbi"],
+    care: "If poisoning is suspected, ask a government veterinary hospital for a post-mortem and keep the report; it is the most important evidence." },
+  { id: "perform", n: "Horses, bullocks or elephants at work or in processions", c: "culture",
+    law: "Animals used in performances must be registered under the Performing Animals (Registration) Rules, 2001. Overworking, overloading or using an unfit animal is an offence under Section 11 of the Prevention of Cruelty to Animals Act, 1960. Captive elephants also need an ownership certificate under the Wild Life (Protection) Act, 1972.",
+    lawShort: "the Performing Animals (Registration) Rules, 2001, and Section 11 of the Prevention of Cruelty to Animals Act, 1960",
+    u: "https://awbi.gov.in/Document/rules",
+    check: ["Horses at weddings or processions with wounds, lameness or visible ribs", "Overloaded carts, or animals worked in extreme heat", "Elephants chained for long hours, or with wounds from hooks", "Animals frightened by fireworks or loud music at close range"],
+    who: ["police", "awbi", "sawb", "forest"],
+    care: "Do not interrupt a wedding or a procession. Note the details, and write to the authorities beforehand when you know a large event is due." }
+];
+
+const RP_URGENT = [
+  ["Keep yourself safe", "Do not confront the person responsible. Your account is more useful than an argument."],
+  ["Call for help", "Dial 112 (or 100 in Telangana). For an injured animal, also call a local rescue group; the State pages list some."],
+  ["Record what you see", "Note the date, time and exact place. Take photographs or video from a distance, and the names and numbers of any witnesses. Do not edit the files."],
+  ["Get it in writing", "Give the police a written complaint and ask for a copy of the FIR, or a receipt with a date and number. Note the name of the officer."],
+  ["Get a vet's report", "Take an injured animal to a government veterinary hospital, or ask for a post-mortem if it has died. The vet's report is strong evidence."]
+];
+
+const RP_POLICE = [
+  "Killing, poisoning or maiming an animal is an offence under Section 325 of the Bharatiya Nyaya Sanhita, 2023, punishable with imprisonment of up to five years. It is a cognizable offence, so the police must register an FIR under Section 173 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS). For offences of this seriousness, the police may first hold a preliminary enquiry, which must be completed within 14 days.",
+  "Most forms of cruelty under Section 11 of the Prevention of Cruelty to Animals Act, 1960, such as neglect or overloading, are non-cognizable. The police will record the complaint and refer it to a magistrate; ask for the entry number.",
+  "If the station refuses to act, send the complaint in writing, by registered post or e-mail, to the Superintendent of Police, or in Hyderabad and Delhi to the Deputy Commissioner of Police for the area (BNSS Section 173(4)). If that fails, a complaint may be made to a magistrate.",
+  "Stay calm and courteous, carry a printed copy of the complaint and the evidence, and go with one other person if possible. A written complaint with an acknowledgement is worth more than an oral assurance."
+];
+
+const RP_LADDER = [
+  ["Complain in writing", "Send it to the authority listed, and keep the acknowledgement or reference number."],
+  ["Follow up after 15 days", "Write again, quoting the reference number and date, and ask what action has been taken."],
+  ["Go one level higher", "Write to the head of the department, such as the Commissioner or Director, and register the complaint on the grievance portal."],
+  ["File an RTI", "Ask for the action taken report on your complaint. A template is below."],
+  ["Write to the Animal Welfare Boards", "Send copies to the State Animal Welfare Board and the Animal Welfare Board of India."],
+  ["Seek legal help", "If the matter remains unresolved, a legal aid group can advise on approaching the court. The Resources page lists some."]
+];
+
+const RP_RTI = "To\nThe Public Information Officer\n[Name of the department to which you complained]\n[Address]\n\nSub: Application under Section 6 of the Right to Information Act, 2005\n\nSir/Madam,\n\nOn [date], I submitted a complaint regarding [subject], reference number [number]. Please provide:\n\n1. A certified copy of the action taken report on the complaint.\n2. The names and designations of the officers to whom the complaint was assigned.\n3. Copies of any inspection report, notice or order issued as a result.\n4. If no action has been taken, the reasons recorded for this.\n\nThe application fee of Rs 10 is enclosed / paid online.\n\nYours faithfully,\n[Name]\n[Address]\n[Date]";
+
+const RP_DRAFT_STEPS = [
+  ["Find the draft", "Draft rules are published in the e-Gazette (egazette.gov.in) and on the ministry's website, with a G.S.R. number and a deadline, usually 30 to 60 days."],
+  ["Read the rules you object to", "Note the rule numbers. The explanatory note at the end often states the purpose of the draft."],
+  ["Write briefly", "Say who you are, cite each rule number, explain what it would do in practice and what you propose instead."],
+  ["Send before the deadline", "E-mail it to the address in the notice, with the G.S.R. number in the subject line."],
+  ["Copy your representative", "Send a copy to your MP, and share it with the groups coordinating a response."]
+];
+const RP_CONSULT = {
+  t: "Draft Laboratory Animals Rules, 2026 (G.S.R. 864(E))",
+  status: "Closed on 5 November 2026",
+  body: "The draft rules were published in the Gazette on 6 October 2026, with objections invited until 5 November. Animal welfare organisations, scientists and veterinarians objected that the draft would allow institutions' own committees to approve many experiments, including on dogs and monkeys, permit animals to be sourced from the open market, and drop the existing requirement for anaesthesia. The consultation has closed, but the rules have not yet been finalised. Citizens may still write to the Ministry of Fisheries, Animal Husbandry and Dairying and to their MP, asking that the final rules retain independent oversight.",
+  src: [["Mongabay India: New draft rules could dilute regulations for animal testing", "https://india.mongabay.com/2026/11/new-draft-rules-could-ease-approvals-for-animal-testing-in-india/"], ["Animal Writes: Draft Laboratory Animals Rules 2026", "https://animalwrites.in/campaigns/lab-animals-rules-2026/"]]
+};
+const RP_OBJECTION = "To\n[The officer named in the notification]\n[Ministry and address, or the e-mail address given in the notice]\n\nSub: Objections and suggestions on the draft [name of rules], G.S.R. [number], dated [date]\n\nSir/Madam,\n\nI am a resident of [city] and submit the following objections to the draft rules.\n\n1. Rule [number]: The draft provides that [what it says]. In practice, this would [effect]. I propose that [change].\n\n2. Rule [number]: [Same format.]\n\nI request that these objections be considered before the rules are finalised.\n\nYours faithfully,\n[Name]\n[Address, e-mail]\n[Date]";
+const RP_LETTER_MP = "Dear [Name of MP],\n\nI am a voter in your constituency. The Ministry of Fisheries, Animal Husbandry and Dairying has published draft rules on experiments on animals (G.S.R. 864(E), October 2026). Many scientists and veterinarians have objected that the draft would weaken independent oversight of experiments, including on dogs and monkeys.\n\nI request you to write to the Ministry asking that the final rules retain approval by the national committee for experiments on larger animals, prohibit sourcing from open markets, and keep the requirement for anaesthesia.\n\nYours sincerely,\n[Name, address, phone]";
+
+const RP_LAWS = [
+  ["Prevention of Cruelty to Animals Act, 1960", "The principal law. Section 11 lists acts of cruelty; penalties for a first offence remain low."],
+  ["Bharatiya Nyaya Sanhita, 2023, Section 325", "Killing, poisoning or maiming an animal; up to five years' imprisonment."],
+  ["Wild Life (Protection) Act, 1972", "Protects wild animals and birds; covers capture, trade, captive elephants and zoos."],
+  ["Slaughter House Rules, 2001", "Slaughter only in licensed slaughterhouses, after veterinary examination."],
+  ["Transport of Animals Rules, 1978", "Fitness certificates, space, food and water during transport."],
+  ["Pet Shop Rules, 2018, and Dog Breeding and Marketing Rules, 2017", "Registration and care standards for shops and breeders."],
+  ["Animal Birth Control Rules, 2023", "Sterilisation and vaccination of community dogs; no relocation."],
+  ["Recognition and Regulation of Zoos Rules, 2009", "Recognition and standards for zoos."],
+  ["Performing Animals (Registration) Rules, 2001", "Registration of animals used in performances, films and shows."],
+  ["Breeding of and Experiments on Animals Rules, 1998", "Registration and ethics committees for laboratories; new draft rules are pending."]
+];
+
 </script>
 <script>
 (function () {
@@ -2485,7 +2660,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
   /* ---------- nav ---------- */
   function setNav(view) {
     const cur = (v) => (view === v ? ' aria-current="page"' : "");
-    nav.innerHTML = `<button class="lnk" data-go="act"${cur("quick")}>Act now</button><button class="lnk" data-go="telangana"${cur("telangana")}>Telangana</button><button class="lnk" data-go="delhi"${cur("delhi")}>Delhi</button><button class="lnk opt-l" data-go="home"${cur("home")}>How it works</button><button class="lnk opt-l" data-go="resources"${cur("resources")}>Resources</button><button class="btn sm" data-pick="1" style="margin-left:8px">Find what to do</button>`;
+    nav.innerHTML = `<button class="lnk" data-go="act"${cur("quick")}>Act now</button><button class="lnk" data-go="telangana"${cur("telangana")}>Telangana</button><button class="lnk" data-go="delhi"${cur("delhi")}>Delhi</button><button class="lnk" data-go="report"${cur("report")}>Report</button><button class="lnk opt-l" data-go="home"${cur("home")}>How it works</button><button class="lnk opt-l" data-go="resources"${cur("resources")}>Resources</button><button class="btn sm" data-pick="1" style="margin-left:8px">Find what to do</button>`;
   }
 
   /* ---------- shared sign-ups ("I'm working on this") ---------- */
@@ -2621,6 +2796,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
         <button class="bub c3" data-bub="delhi"><b>I'm in Delhi</b><span>Local actions and your MLA</span></button>
         <button class="bub c4" data-pick="1"><b>Pick for me</b><span>Four quick questions</span></button>
         <button class="bub c5" data-bub="all"><b>Show me everything</b><span>Every action, any time</span></button>
+        <button class="bub c6" data-go="report"><b>I want to report something</b><span>Cruelty or a place breaking the rules</span></button>
       </div>
       ${photo("dog", "ph-hero")}
     </div></section>
@@ -2639,6 +2815,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
         <button data-go="telangana"><b>Telangana</b><span>33 districts, 119 MLAs, Hyderabad's three corporations, ${GUIDES.telangana.actions.length} interventions.</span></button>
         <button data-go="delhi"><b>Delhi</b><span>70 MLAs in 7 Lok Sabha areas, the MCD, dogs before the courts, ${GUIDES.delhi.actions.length} interventions.</span></button>
         <button data-go="home"><b>How decisions are made</b><span>Who decides what, how States compare, and what has worked before.</span></button>
+        <button data-go="report"><b>Report a violation</b><span>Whom to tell about cruelty or rule-breaking, with a complaint ready to send.</span></button>
         <button data-go="resources"><b>Resources</b><span>Groups, official portals, laws and research to go further.</span></button>
       </div>
     </div></section>`;
@@ -3142,6 +3319,69 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
       <section class="band" style="padding-top:16px"><div class="wrap">${RESOURCES.map((sec) => `<div class="block"><h2>${esc(sec.h)}</h2>${sec.d ? `<p class="intro">${esc(sec.d)}</p>` : ""}<div class="plist">${sec.items.map(([n, u, d]) => `<div><div class="n">${extLink(u, n)}</div><div class="r">${esc(d)}</div></div>`).join("")}</div></div>`).join("")}</div></section>`;
   }
 
+  /* ---------- report a violation ---------- */
+  let rpMode = store.get("rpMode") || "", rpType = store.get("rpType") || "slaughter";
+  const rpWhere = () => (place === "telangana" || place === "delhi" ? place : "india");
+  const rpAuth = (k) => { const a = RP_AUTH[k]; return a.all || a[rpWhere()]; };
+  const rpDraft = (title, txt, id) => `<div class="draft"><div class="draft-h"><b>${esc(title)}</b><button class="copy" aria-label="Copy ${esc(title)}">Copy</button></div><pre${id ? ` id="${id}"` : ""} tabindex="0">${esc(txt)}</pre></div>`;
+  const rpSteps = (arr) => `<ol class="rsteps">${arr.map(([h, d]) => `<li><b>${esc(h)}</b><span>${esc(d)}</span></li>`).join("")}</ol>`;
+  function renderReport() {
+    setNav("report");
+    app.innerHTML = `<section class="hero splash" style="padding-bottom:20px"><span class="blob b1"></span><span class="blob b3"></span><div class="wrap"><span class="kicker">Report a violation</span><h1 style="margin-top:12px;max-width:20ch">Seen something wrong? Here is whom to tell</h1><p class="lede">Choose what you have seen. Each route names the authority responsible, the rule that applies, and a complaint ready to send.</p>
+      <div class="rwhere"><span class="kicker" id="rw-l">Where</span><div class="pills" role="group" aria-labelledby="rw-l">${[["telangana", "Telangana"], ["delhi", "Delhi"], ["india", "Elsewhere in India"]].map(([k, l]) => `<button data-rpw="${k}" aria-pressed="${rpWhere() === k}">${l}</button>`).join("")}</div></div>
+      <div class="bubbles" role="group" aria-label="What have you seen?">
+        <button class="bub c3" data-rpm="urgent" aria-pressed="${rpMode === "urgent"}" aria-controls="rpanel"><b>An animal is being hurt now</b><span>Whom to call and what to record</span></button>
+        <button class="bub c2" data-rpm="places" aria-pressed="${rpMode === "places"}" aria-controls="rpanel"><b>A place is breaking the rules</b><span>Shops, markets, slaughterhouses, zoos, labs</span></button>
+        <button class="bub c5" data-rpm="rules" aria-pressed="${rpMode === "rules"}" aria-controls="rpanel"><b>A rule is being changed</b><span>How to object to a draft rule</span></button>
+      </div></div></section>
+      <section class="band" style="padding-top:8px"><div class="wrap"><div id="rpanel" aria-live="polite"></div>
+      <div class="block" id="ladder"><h2>If nothing happens</h2><p class="intro">Most complaints are settled at the first or second step. Keep copies of everything you send and receive.</p>${rpSteps(RP_LADDER)}
+        <details class="rdet"><summary>RTI on the action taken on your complaint</summary>${rpDraft("RTI application", RP_RTI)}<p class="muted small">File it online at <a href="https://rtionline.gov.in/" target="_blank" rel="noopener">RTI Online</a> for central bodies${rpWhere() === "delhi" ? `, or <a href="https://rtionline.delhi.gov.in/" target="_blank" rel="noopener">RTI Online Delhi</a>` : ""}, or by post to the department.</p></details>
+        <p class="muted small" id="griev"></p></div>
+      <div class="block"><h2>The laws, in one line each</h2><details class="rdet"><summary>Show the ten laws and rules most often used</summary><div class="plist">${RP_LAWS.map(([n, d]) => `<div><div class="n">${esc(n)}</div><div class="r">${esc(d)}</div></div>`).join("")}</div><p class="muted small">The texts of most rules are on the <a href="https://awbi.gov.in/Document/rules" target="_blank" rel="noopener">Animal Welfare Board of India's website</a>. These summaries are a guide, not legal advice.</p></details></div>
+      </div></section>`;
+    drawReport();
+  }
+  function drawReport() {
+    const w = rpWhere(), p = $("#rpanel"); if (!p) return;
+    $$("[data-rpw]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.rpw === w));
+    $$("[data-rpm]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.rpm === rpMode));
+    const g = RP_GRIEV[w]; $("#griev").innerHTML = `Grievance portal for ${w === "india" ? "central departments" : w === "delhi" ? "Delhi" : "Telangana"}: <a href="${g[1]}" target="_blank" rel="noopener">${esc(g[0])}</a>.`;
+    if (!rpMode) { p.innerHTML = `<p class="rhint">Choose one of the three options above to begin.</p>`; return; }
+    if (rpMode === "urgent") {
+      p.innerHTML = `<div class="block"><h2>An animal is being hurt now</h2>${rpSteps(RP_URGENT)}
+        <details class="rdet"><summary>Dealing with the police</summary><div class="rprose">${RP_POLICE.map((x) => `<p>${esc(x)}</p>`).join("")}</div></details>
+        ${rpDraft("Complaint to the police", `To\nThe Station House Officer\n[Name of police station]\n\nSub: Complaint regarding cruelty to an animal at [place]\n\nSir/Madam,\n\nOn [date], at about [time], I saw [describe what happened, and to which animal] at [exact address or landmark]. The person responsible is [name or description, if known].\n\nThis appears to be an offence under Section 11 of the Prevention of Cruelty to Animals Act, 1960, and, where an animal has been killed, poisoned or maimed, under Section 325 of the Bharatiya Nyaya Sanhita, 2023. Photographs, video and the veterinary report are enclosed.\n\nI request that an FIR be registered and that I be given a copy.\n\nYours faithfully,\n[Name]\n[Address, phone]\n[Date]`)}
+        <p class="muted small">For a fuller checklist of what to record, see <button class="more" data-how="document">Document it properly</button>.</p></div>`;
+    } else if (rpMode === "places") {
+      const t = RP_PLACES.find((x) => x.id === rpType) || RP_PLACES[0];
+      p.innerHTML = `<div class="block"><h2>A place is breaking the rules</h2><p class="intro">A violation need not involve visible cruelty. Many problems are failures to follow licensing and care rules, and these are often the easiest to act upon.</p>
+        <div class="pills rtypes" role="group" aria-label="Type of place">${RP_PLACES.map((x) => `<button class="ap ap-${x.c}" data-rpt="${x.id}" aria-pressed="${x.id === t.id}">${esc(x.n)}</button>`).join("")}</div>
+        <div class="rcard"><h3>${esc(t.n)}</h3>
+          <div class="rsec"><h4>What the rules say</h4><p>${esc(t.law)} <a href="${t.u}" target="_blank" rel="noopener">Read more</a></p></div>
+          <div class="rsec"><h4>What you can check</h4><ul class="rchk">${t.check.map((c) => `<li>${esc(c)}</li>`).join("")}</ul></div>
+          <div class="rsec"><h4>Whom to tell${w !== "india" ? ` in ${w === "delhi" ? "Delhi" : "Telangana"}` : ""}</h4><ol class="rwho">${t.who.map((k) => `<li>${esc(rpAuth(k))}</li>`).join("")}</ol></div>
+          <div class="rsec rcare"><h4>A word of caution</h4><p>${esc(t.care)}</p></div>
+          ${t.choice ? `<div class="rsec"><h4>Choosing with care</h4><p>${esc(t.choice)}</p></div>` : ""}
+          ${rpDraft("Complaint", `To\n${rpAuth(t.who[0])}\n[Address]\n\nSub: Complaint regarding ${t.n.toLowerCase()} at [name and address of the place]\n\nSir/Madam,\n\nOn [date], at about [time], I observed the following at [name and address]:\n\n1. [What you saw]\n2. [What you saw]\n\nThis appears to contravene ${t.lawShort}. Photographs taken at the time are enclosed.\n\nI request that the premises be inspected, that appropriate action be taken under the law, and that I be informed in writing of the action taken within 15 days.\n\nYours faithfully,\n[Name]\n[Address, phone, e-mail]\n[Date]\n\nCopy to: ${rpAuth("sawb")}`)}
+        </div></div>`;
+    } else {
+      p.innerHTML = `<div class="block"><h2>A rule is being changed</h2><p class="intro">Before a rule is finalised, the government must publish a draft and invite objections. A clear, specific objection from a citizen is read and recorded.</p>
+        <div class="rcard rconsult"><span class="tag">${esc(RP_CONSULT.status)}</span><h3>${esc(RP_CONSULT.t)}</h3><p>${esc(RP_CONSULT.body)}</p><p class="muted small">${RP_CONSULT.src.map(([n, u]) => `<a href="${u}" target="_blank" rel="noopener">${esc(n)}</a>`).join(" · ")}</p>${rpDraft("Letter to your MP", RP_LETTER_MP)}</div>
+        <h3 style="margin-top:28px">How to respond to the next draft</h3>${rpSteps(RP_DRAFT_STEPS)}
+        ${rpDraft("Objection to a draft rule", RP_OBJECTION)}
+        <p class="muted small">More on this in <button class="more" data-how="consult">Comment on draft rules</button>.</p></div>`;
+    }
+  }
+  document.addEventListener("click", (e) => {
+    const t = e.target;
+    if (!$("#rpanel")) return;
+    const cp = t.closest(".copy"); if (cp && !t.closest("#sheet")) { copy(cp, cp.closest(".draft").querySelector("pre").textContent, "Copy"); return; }
+    const w = t.closest("[data-rpw]"); if (w) { place = w.dataset.rpw === "india" ? "india" : w.dataset.rpw; store.set("place", place); drawReport(); return; }
+    const m = t.closest("[data-rpm]"); if (m) { rpMode = m.dataset.rpm; store.set("rpMode", rpMode); drawReport(); $("#rpanel").scrollIntoView({ block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); return; }
+    const ty = t.closest("[data-rpt]"); if (ty) { rpType = ty.dataset.rpt; store.set("rpType", rpType); drawReport(); return; }
+  });
+
   /* ---------- router ---------- */
   let currentView = null, pendingScroll = null;
   function show(view, fn) { if (currentView !== view) { fn(); currentView = view; scrollTo({ top: 0 }); } }
@@ -3158,6 +3398,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     else if (h === "plan") { renderPlan(); currentView = "plan"; scrollTo({ top: 0 }); }
     else if (GUIDES[h]) show(h, () => renderState(h));
     else if (h === "resources") show("resources", renderResources);
+    else if (h === "report") show("report", renderReport);
     else show("home", renderHome);
     if (pendingScroll) { const el = document.getElementById(pendingScroll); pendingScroll = null; el && setTimeout(() => el.scrollIntoView({ block: "start" }), 0); }
   }
