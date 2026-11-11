@@ -289,6 +289,7 @@ table.mini th { font-weight: 500; color: var(--muted); font-size: 0.82rem; }
 .signup .people .nm { font-weight: 600; }
 .signup .people .you { font-size: 0.78rem; color: var(--good); margin-left: 6px; font-weight: 600; }
 .signup form { display: grid; gap: 12px; margin-top: 14px; }
+.signup select { padding: 8px 10px; border: 1px solid var(--line-2); border-radius: 4px; background: #fff; margin-top: 0; }
 .signup label { display: grid; gap: 4px; font-size: 0.88rem; font-weight: 500; }
 .signup input, .signup textarea { padding: 9px 11px; border: 1px solid var(--line-2); border-radius: 4px; background: #fff; font-weight: 400; }
 .signup textarea { min-height: 64px; resize: vertical; }
@@ -2164,11 +2165,144 @@ GUIDES.telangana.quick.push(
 );
 GUIDES.delhi.quick.push({ t: "2m", g: ["farmed", "culture"], title: "Save the number to report overloaded animal trucks", line: "Note the vehicle number from a safe distance, then report to 112.", btn: "See steps", act: "dl-transport", lowstep: true });
 
+/* Ten more ideas: pest poisons, shellac, subsidies and pollution consents, alternative proteins, insecticides, live-bird shops, and AI. */
+const S = {
+  rodent: { t: "Mason & Littin (2003), The humaneness of rodent pest control, Animal Welfare", u: "https://core-prod.cambridgecore.org/core/journals/animal-welfare/article/humaneness-of-rodent-pest-control/C3F635B118EFBDAEEED6460A844B4750" },
+  glueDTE: { t: "Down To Earth: Delhi bans glue pads, but what about poison?", u: "https://www.downtoearth.org.in/wildlife-biodiversity/delhi-has-joined-several-indian-states-in-banning-glue-pads-for-rodent-control-but-what-about-poison--91766" },
+  fssai: { t: "FSSAI Labelling and Display Regulations, 2020 (compendium): definition of non-vegetarian food", u: "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Labelling_Display_04_01_2022.pdf" },
+  bwc: { t: "Beauty Without Cruelty India: veg and non-veg symbols", u: "https://bwcindia.org/web/Awareness/LearnAbout/VegandNon-VegSymbols.html" },
+  nlm: { t: "DAHD: National Livestock Mission leaflet", u: "https://dahd.gov.in/sites/default/files/2023-07/NLM-Leaflet-E.pdf" },
+  cpcb: { t: "Down To Earth, Aug 2021: CPCB's new rules for poultry farms by size", u: "https://www.downtoearth.org.in/pollution/new-rules-put-larger-onus-on-small-medium-poultry-farms-78699" },
+  gfi: { t: "AgroSpectrum, 13 Feb 2026: GFI India report on the smart-protein talent gap", u: "https://agrospectrumindia.com/news/161/33446/good-food-institute-india-report-flags-smart-protein-talent-gap-despite-2-5-lakh-annual-graduates.html" },
+  dspp: { t: "Education21: Delhi Smart Protein Project, India's first Alt Protein Project chapter", u: "https://education21.in/delhi-smart-protein-project-dspp-indias-first-chapter-of-the-global-alt-protein-project-launched" },
+  slaughter: { t: "Prevention of Cruelty to Animals (Slaughter House) Rules, 2001 (AWBI)", u: "https://awbi.gov.in/uploads/regulations/163309997882(SLAUGHTER%20HOUSE)%20RULES,%202001.pdf" },
+  spec: { t: "OpenAI: the updated Model Spec, and its call for feedback", u: "https://www.openai.com/index/updated-model-spec/" },
+  ae: { t: "Animal Ethics: why language models should consider all sentient beings", u: "https://www.animal-ethics.org/?p=34083" }
+};
+const IDEAS = [
+  MK({ id: "in-rodenticide", title: "Ask your municipal corporation which rat poisons its pest contract uses", short: "Glue traps are banned; poisons aren't. Some kill over several days, and kites and owls eat the poisoned rats.", animals: "Rats, mice, and the kites, owls and cats that eat them", scale: "Every city pest-control contract", lens: ["WAS", "WF"],
+    status: "Glue traps banned in several States; no rules on poison choice", who: "None known",
+    why: "Cities spend lakhs every year on pest control, and the contract decides which poisons are used. Welfare scientists have ranked anticoagulant poisons among the least humane methods: rats die over several days, and the poisoned bodies kill the kites, owls and cats that eat them. Asking what the contract uses, and asking for prevention first (closing waste and entry points), followed by faster methods, is a mild, practical step that also protects wildlife.",
+    asks: ["Publish which rodenticides the pest contract uses, and how much", "Prevention first: closed bins, sealed drains, waste control", "Phase out the slowest-acting poisons, and keep baits away from where wildlife and pets can reach the bodies"],
+    deciders: [{ n: "Municipal Commissioner", r: "Signs the pest-control contract" }, { n: "Chief Medical Officer of Health / entomology wing", r: "Runs vector and pest control" }],
+    suggest: ["GHMC entomology wing (Hyderabad)", "MCD public health department (Delhi)"],
+    email: { to: "The Chief Medical Officer of Health, [Municipal Corporation]", subject: "Rodenticides used under the corporation's pest-control contract", body: "Sir/Madam,\n\nI request details of the rodenticides used under the corporation's pest-control contract, and whether the contract requires prevention measures first.\n\nSome anticoagulant poisons kill rats slowly over several days and also kill birds of prey and pets that eat poisoned rats. I request that the corporation favour prevention and faster-acting methods, and phase out the slowest poisons.\n\nYours faithfully,\n[Name]" },
+    letter: { to: "To\nThe Municipal Commissioner\n[Municipal Corporation]", subject: "Sub: Choice of rodenticides in pest control", body: "Respected Sir/Madam,\n\nWe request publication of the rodenticides used, a prevention-first approach, and phasing out of the slowest-acting poisons.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    rti: [{ pio: "Public Information Officer, [Municipal Corporation], Public Health / Entomology Department", qs: ["Copy of the current pest-control contract(s) covering rodent control, and the name of the contractor.", "The names and quantities of rodenticides purchased or used in 2024-25 and 2025-26.", "Any guidelines given to the contractor on placing baits and removing dead rodents."] }, { pio: "Follow-up (after the reply)", qs: ["Whether the corporation will consider replacing the slowest-acting anticoagulant rodenticides with prevention measures and faster methods, and if so, by when."] }],
+    src: [S.rodent, S.glueDTE], groups: ["wild"], first: "File the RTI to your corporation's public health department.", time: "30 minutes", skills: ["research"], risk: "Low. Don't argue against all pest control; ask for prevention and faster methods.", measure: "The contract and poison list obtained; a follow-up reply." }),
+
+  MK({ id: "in-shellac-brand", title: "Ask a sweet shop, bakery or pharmacy brand whether it uses shellac", short: "Shellac is made from lac insects. It glazes sweets, fruit and tablets, and still gets a green dot.", animals: "Lac insects", scale: "Tens of thousands of insects for each kilo of lac", lens: ["AB"], priority: "Low",
+    status: "Shellac counts as vegetarian under FSSAI's labelling rules", who: "None known",
+    why: "Shellac is a resin secreted by lac insects, and the insects are killed when it is scraped from trees. It is used as a glaze on sweets, chocolates, fruit and tablet coatings. Under FSSAI's 2020 labelling rules it is expressly excluded from the definition of non-vegetarian food, so products with shellac carry the green dot, and many vegetarians don't know. A polite question to a brand you buy from, and a request for a plant-based glaze, costs nothing.",
+    asks: ["Say whether products use shellac (E904) or other insect-derived ingredients", "Use plant-based glazes where possible, and label insect-derived ingredients"],
+    deciders: [{ n: "The brand's quality or customer team", r: "Answers ingredient questions" }],
+    email: { to: "[Brand] customer care", subject: "Does this product contain shellac?", body: "Hello,\n\nI buy [product]. Could you tell me whether its glaze or coating contains shellac (E904) or any other insect-derived ingredient? Many vegetarians don't know that shellac comes from insects. If it does, would you consider a plant-based glaze, or at least label it clearly?\n\nThank you,\n[Name]" },
+    letter: { to: "[Brand]", subject: "Shellac", body: "Please confirm whether your products use shellac and consider a plant-based glaze." },
+    src: [S.fssai, S.bwc], groups: ["inverts"], first: "Check the label of one sweet, chocolate or tablet you buy for 'shellac' or 'E904', then send the e-mail.", time: "2 minutes", skills: [], risk: "Low. Ask, don't accuse; many brands don't know either.", measure: "A reply, or a label change." }),
+
+  MK({ id: "in-shellac-fssai", title: "Ask FSSAI to label shellac as insect-derived", short: "FSSAI's rules expressly treat shellac and beeswax as vegetarian.", animals: "Lac insects, bees", scale: "Every packaged food in India", lens: ["AB", "WF"], priority: "Medium",
+    status: "FSSAI's 2020 definition of non-vegetarian food excludes honey, beeswax, carnauba wax and shellac", who: "Beauty Without Cruelty India has explained the issue",
+    why: "FSSAI's Labelling and Display Regulations, 2020 define non-vegetarian food as food containing any part of an animal, including insects, but then exclude milk, honey, beeswax, carnauba wax and shellac. So products glazed with shellac carry a green dot. Consumers who choose vegetarian food on principle are misled. The ask is modest: a clear label that the ingredient comes from insects, even if the green dot stays. FSSAI publishes draft amendments for comment, and a short, specific comment is what it can act on.",
+    asks: ["Require labels to say 'insect-derived' next to shellac and beeswax", "Review whether insect-derived ingredients should carry the green dot"],
+    deciders: [{ n: "FSSAI (Food Safety and Standards Authority of India)", r: "Writes labelling rules" }],
+    suggest: ["FSSAI's labelling division; watch fssai.gov.in for draft notifications and comment deadlines"],
+    email: { to: "The Chief Executive Officer, FSSAI, FDA Bhawan, New Delhi", subject: "Labelling of shellac and other insect-derived ingredients", body: "Sir/Madam,\n\nThe Food Safety and Standards (Labelling and Display) Regulations, 2020 define non-vegetarian food to include parts of insects, but exclude shellac and beeswax from that definition. As a result, products containing shellac carry the vegetarian mark, and many consumers do not know that shellac comes from insects.\n\nI request that FSSAI require such ingredients to be labelled as 'insect-derived', and consider this in the next amendment to the labelling regulations.\n\nYours faithfully,\n[Name]" },
+    letter: { to: "To\nThe Chief Executive Officer\nFood Safety and Standards Authority of India, New Delhi", subject: "Sub: Labelling of insect-derived ingredients", body: "Respected Sir/Madam,\n\nWe request that shellac and beeswax be labelled as insect-derived under the Labelling and Display Regulations, 2020.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    watch: ["Draft amendments to FSSAI's labelling regulations: comment windows are short"], src: [S.fssai, S.bwc], groups: ["inverts"], first: "Send the e-mail, and comment when FSSAI next publishes a labelling draft.", time: "30 minutes", skills: ["letters", "law"], risk: "Low.", measure: "A labelling change in a draft amendment." }),
+
+  MK({ id: "in-subsidies", title: "File an RTI on poultry and fish subsidies in your district", short: "How many intensive units were funded, and for how much? It's the base data for any campaign.", animals: "Chickens, hens, fish, prawns", scale: "Crores in central and State subsidies each year", lens: ["EA"], priority: "High",
+    status: "Schemes include the National Livestock Mission, AHIDF and PMMSY", who: "None known publishing district data",
+    why: "Public money pays for much of the growth of intensive poultry and fish farming, through the National Livestock Mission, the Animal Husbandry Infrastructure Development Fund (AHIDF) and the Pradhan Mantri Matsya Sampada Yojana (PMMSY). Nobody has put together what these schemes fund district by district. Unit numbers and amounts tell you where intensification is being paid for, and give journalists, researchers and campaigners a hard number to start from.",
+    asks: ["Publish district-wise data on units funded under each scheme"],
+    deciders: [{ n: "District Animal Husbandry Officer", r: "Processes NLM and other livestock applications" }, { n: "District Fisheries Officer", r: "Processes PMMSY applications" }],
+    email: { to: "The District Animal Husbandry Officer and the District Fisheries Officer, [district]", subject: "Data on poultry and fish units funded in the district", body: "Sir/Madam,\n\nI request district-wise data on poultry and fish units sanctioned under the National Livestock Mission, AHIDF and PMMSY since 2021, with the number of birds or production capacity and the amounts sanctioned.\n\nYours faithfully,\n[Name]" },
+    letter: { to: "To\nThe District Animal Husbandry Officer\n[District]", subject: "Sub: Units funded under livestock and fisheries schemes", body: "Respected Sir/Madam,\n\nWe request district-wise data on poultry and fish units funded since 2021.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    rti: [{ pio: "Public Information Officer, O/o the District Animal Husbandry Officer, [district]", qs: ["Number of poultry units (layer, broiler, hatchery or breeder) sanctioned in the district under the National Livestock Mission and the Animal Husbandry Infrastructure Development Fund since 1 April 2021, with the bird capacity of each and the subsidy or loan amount sanctioned.", "Any other State scheme funding poultry units in the same period, with the same details."] }, { pio: "Public Information Officer, O/o the District Fisheries Officer, [district]", qs: ["Number of projects sanctioned in the district under PMMSY since 1 April 2021, by type (ponds, cages, biofloc, RAS, hatcheries, shrimp farms), with the amounts sanctioned."] }],
+    src: [S.nlm], groups: ["farmed", "aquatic"], first: "File both RTIs for your district.", time: "30 minutes", skills: ["research"], risk: "None. Share the data with groups that work on farmed animals.", measure: "District figures obtained and shared." }),
+
+  MK({ id: "in-pcb-poultry", title: "Ask your State pollution board for its list of large poultry farms", short: "Medium and large farms need pollution consents. The list shows where intensive farming is growing.", animals: "Hens and broiler chickens", scale: "Farms of 25,000 birds and more", lens: ["EA"], priority: "Medium",
+    status: "CPCB guidelines of 2021 brought farms with over 5,000 birds under environmental rules", who: "None known",
+    why: "After a 2020 order of the National Green Tribunal, the Central Pollution Control Board's guidelines of 2021 set rules for poultry farms by size: small (5,000–25,000 birds), medium (25,000–1,00,000) and large (over 1,00,000). Medium farms need consent from the State pollution board to set up and run. Those consents are public records, so a list of them is the best available map of intensive poultry in your State, with bird numbers.",
+    asks: ["Publish the list of poultry farms holding consents, with capacity and location"],
+    deciders: [{ n: "Member Secretary, State Pollution Control Board", r: "Grants consents" }],
+    suggest: ["Telangana State Pollution Control Board", "Delhi Pollution Control Committee"],
+    email: { to: "The Member Secretary, [State] Pollution Control Board", subject: "List of poultry farms holding consents", body: "Sir/Madam,\n\nI request the list of poultry farms in the State holding a Consent to Establish or Consent to Operate, with each farm's location and bird capacity, as categorised under the CPCB's 2021 guidelines.\n\nYours faithfully,\n[Name]" },
+    letter: { to: "To\nThe Member Secretary\n[State] Pollution Control Board", subject: "Sub: Poultry farms holding consents", body: "Respected Sir/Madam,\n\nWe request a list of poultry farms holding consents, with location and capacity.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    rti: [{ pio: "Public Information Officer, [State] Pollution Control Board", qs: ["List of poultry farms holding a Consent to Establish or Consent to Operate as on the date of reply, with address, district and bird capacity.", "Number of applications from poultry farms received, granted and refused in 2024-25 and 2025-26.", "Number of poultry farms inspected, and actions taken, since the CPCB's 2021 guidelines."] }],
+    src: [S.cpcb], groups: ["farmed"], first: "File the RTI to your State pollution board.", time: "30 minutes", skills: ["research"], risk: "None.", measure: "The list obtained and mapped." }),
+
+  MK({ id: "in-altprotein-canteen", title: "Ask a canteen or caterer to add one dish with Indian plant-based meat", short: "Builds demand for the alternative, not just a meat-free default.", animals: "Chickens, goats, fish", scale: "Every regular buyer helps a young industry grow", lens: ["EA"], priority: "Medium",
+    status: "Several Indian brands sell plant-based chicken, mutton and keema", who: "Good Food Institute India supports the sector",
+    why: "Defaults reduce meat on one menu. Steady orders for plant-based meat help the alternatives become cheaper and better, which can reduce meat far beyond one canteen. Indian brands now make plant-based chicken, mutton keema and nuggets that fit Indian dishes. One regular dish, such as a plant-based keema pav or biryani on one day a week, is an easy ask for a caterer.",
+    asks: ["Add one regular dish made with an Indian plant-based meat brand", "Label it clearly and price it close to the meat dish"],
+    deciders: [{ n: "Canteen manager or caterer", r: "Chooses suppliers and dishes" }],
+    email: { to: "[Canteen manager / caterer]", subject: "Adding one plant-based meat dish", body: "Hello,\n\nCould the canteen add one regular dish made with an Indian plant-based meat, such as a plant-based keema, chicken curry or biryani, once a week? Several Indian brands supply these in bulk. I and several colleagues would order it.\n\nThanks,\n[Name]" },
+    letter: { to: "[Canteen]", subject: "Plant-based meat dish", body: "Please consider one regular plant-based meat dish." },
+    src: [S.gfi], groups: ["farmed", "aquatic"], first: "Ask your canteen manager in person, then follow up by e-mail with two colleagues.", time: "30 minutes", skills: [], risk: "Low.", measure: "The dish on the menu, and how many sell." }),
+
+  MK({ id: "in-altprotein-course", title: "Ask your college for an alternative-protein module or internship", short: "India graduates 2.5 lakh students a year in the right fields, but the sector can't find job-ready people.", animals: "Farmed animals and fish, in the long run", scale: "Food-tech, biotech and chemical engineering departments", lens: ["EA"], priority: "Medium",
+    status: "GFI India's February 2026 report flags gaps in bioprocessing, cell culture and extrusion", who: "Good Food Institute India; the Delhi Smart Protein Project, a student chapter",
+    why: "Plant-based, fermented and cultivated proteins could replace a large share of animal farming, but only with skilled people. GFI India's 2026 report found that although India produces about 2.5 lakh graduates a year in relevant fields, the sector lacks job-ready talent in bioprocessing, cell culture, extrusion and food-safety regulation. It recommends electives under NEP 2020, internships and industry-linked projects. A student or faculty request is how such electives begin.",
+    asks: ["A smart-protein elective or value-added course under NEP 2020", "Internships or capstone projects with alternative-protein companies"],
+    deciders: [{ n: "Head of Department (food technology, biotechnology, chemical engineering)", r: "Proposes electives" }, { n: "Placement or industry-relations cell", r: "Arranges internships" }],
+    suggest: ["Good Food Institute India, which works with universities", "Start or join an Alt Protein Project student chapter"],
+    email: { to: "The Head of Department, [Department], [College]", subject: "Proposal: a smart-protein elective and internships", body: "Respected Sir/Madam,\n\nThe Good Food Institute India's February 2026 report on the smart-protein sector found strong demand for graduates trained in bioprocessing, extrusion, cell culture and food-safety regulation, and recommends electives under NEP 2020 and industry internships.\n\nWe request that the department consider a smart-protein elective or value-added course, and help connect students with internships in this sector.\n\nYours faithfully,\n[Names, course, year]" },
+    letter: { to: "To\nThe Head of Department\n[College]", subject: "Sub: Smart-protein elective", body: "Respected Sir/Madam,\n\nWe request a smart-protein elective and internships.\n\nYours faithfully,\n[Names]\n[Date]" },
+    src: [S.gfi, S.dspp], groups: ["farmed", "aquatic"], first: "If you study food tech, biotech or chemical engineering, send the e-mail with two classmates.", time: "Ongoing", skills: ["science", "organise"], risk: "Low.", measure: "An elective, a workshop or an internship arranged." }),
+
+  MK({ id: "in-insecticide", title: "Ask an agricultural university how quickly common insecticides kill", short: "Billions of insects die from pesticides. Almost nothing is known about how much they suffer.", animals: "Insects", scale: "Every sprayed field", lens: ["WAS", "EA"], priority: "Low",
+    status: "Very little research anywhere", who: "None known in India",
+    why: "Insecticides kill vast numbers of insects, and some act in seconds while others take hours or days. If insects can suffer, and the evidence for many species is growing, the speed of death matters, and choosing faster-acting products where they work equally well would reduce suffering without changing farm output. This is an early-stage question. A polite request to an agricultural university or KVK for what is known starts the conversation and finds researchers who may be interested.",
+    asks: ["Share any data on how quickly common insecticides kill target insects", "Consider time-to-death as a factor in research and recommendations"],
+    deciders: [{ n: "Department of Entomology at your State agricultural university", r: "Researches pest control" }, { n: "Krishi Vigyan Kendra (KVK)", r: "Advises local farmers" }],
+    email: { to: "The Head, Department of Entomology, [University]", subject: "A research question on how quickly insecticides kill", body: "Respected Sir/Madam,\n\nI am interested in the welfare of insects affected by pest control. Has the department, or any study you know of, measured how quickly commonly used insecticides kill target insects? Where products are equally effective, faster-acting ones might reduce suffering.\n\nI would be grateful for any references, and would be glad to hear whether this could interest a student project.\n\nYours faithfully,\n[Name]" },
+    letter: { to: "[University]", subject: "Insecticide time-to-death", body: "Requesting any data on time-to-death for common insecticides." },
+    src: [{ t: "Animal Ethics: the evidence on sentience", u: "https://www.animal-ethics.org/sintiencia-seccion/" }],
+    groups: ["inverts"], first: "Send the e-mail to your State agricultural university's entomology department.", time: "Ongoing", skills: ["science"], risk: "Low. Frame it as a research question, not a criticism of farmers.", measure: "A reply, a reference, or an interested researcher." }),
+
+  MK({ id: "in-liveshop", title: "Ask how chickens are killed at live-bird shops", short: "For most chickens the worst moment is the end. Ask for the licensing and inspection records.", animals: "Broiler chickens", scale: "Thousands of shops in every city", lens: ["WF", "EA"], priority: "Medium",
+    status: "The Slaughter House Rules, 2001 restrict slaughter to licensed premises; enforcement at small shops is rare", who: "None known",
+    why: "Most chickens in Indian cities are sold live and killed at small shops, often in view of other birds. The Prevention of Cruelty to Animals (Slaughter House) Rules, 2001 and food-safety licensing set standards, but they are rarely checked at small shops. Asking the corporation how many shops are licensed and inspected, and for basic welfare standards (no killing in view of other birds, no crowded cages, quick killing), is where to start. Crackdowns on meat shops have been used to target communities, so the ask must be about welfare at every shop, never about closing one group's businesses.",
+    asks: ["Publish the number of licensed poultry shops and inspections", "Basic welfare standards at every shop: space and water in cages, no killing in view of other birds, quick killing by trained staff"],
+    deciders: [{ n: "Municipal Commissioner", r: "Licenses meat and poultry shops" }, { n: "Designated Officer, Food Safety", r: "Food-safety licences" }],
+    suggest: ["GHMC veterinary wing (Hyderabad)", "MCD veterinary services department (Delhi)"],
+    email: { to: "The Commissioner, [Municipal Corporation]", subject: "Welfare standards at poultry shops", body: "Sir/Madam,\n\nI request information on how many poultry shops in the city are licensed and inspected, and whether the corporation applies any welfare standards. I request basic standards at every shop: space and water for birds in cages, no killing in view of other birds, and quick killing by trained staff.\n\nYours faithfully,\n[Name]" },
+    letter: { to: "To\nThe Commissioner\n[Municipal Corporation]", subject: "Sub: Welfare at poultry shops", body: "Respected Sir/Madam,\n\nWe request data on licensing and inspection of poultry shops, and basic welfare standards at all shops.\n\nYours faithfully,\n[Name, address]\n[Date]" },
+    rti: [{ pio: "Public Information Officer, Veterinary / Public Health Department, [Municipal Corporation]", qs: ["Number of licensed shops selling or slaughtering live poultry in the city, by zone, as on the date of reply.", "Number of inspections of such shops in 2025-26, and the violations found.", "Any guidelines on handling and slaughter of poultry at shops."] }],
+    src: [S.slaughter], groups: ["farmed"], first: "File the RTI to your corporation. Don't go to shops to question or film staff.", time: "30 minutes", skills: ["research"], risk: "Medium. Shop owners are often poor, and meat-shop crackdowns have been used against communities. Ask for welfare standards at every shop; never ask for closures or single anyone out.", measure: "Licensing and inspection data obtained." }),
+
+  MK({ id: "in-modelspec", title: "Ask OpenAI to name animals in its Model Spec", short: "OpenAI is asking for feedback on the rules its AI follows. Animal Ethics has proposed three changes.", animals: "All sentient animals", scale: "Hundreds of millions of people use these AI models", lens: ["EA"], priority: "Medium",
+    status: "OpenAI published a new Model Spec on 29 October 2026 and invites feedback through a form", who: "Animal Ethics",
+    why: "AI assistants increasingly shape what people read and decide, including about food, pests, pets and farming. OpenAI's Model Spec sets the values its models follow, and OpenAI has asked the public for specific suggestions. Animal Ethics has proposed three: name all sentient animals among the harms the model should minimise; treat serious harm to animals as a risk in itself, not only when it is illegal; and represent the evidence on sentience accurately, with uncertainty not used as a reason to ignore animals' interests. Each form submission takes about three minutes and should carry one recommendation.",
+    asks: ["Name the suffering and death of sentient animals among the harms in 'Minimize harm', and among affected parties in the side-effects rule", "Recognise serious harm to animals as a risk category in its own right", "Represent sentience evidence accurately and apply precaution under uncertainty, in the honesty and side-effects rules"],
+    deciders: [{ n: "OpenAI's Model Spec team", r: "Reviews public feedback" }],
+    email: { to: "OpenAI Model Spec feedback form (one recommendation per submission)", subject: "Name sentient animals in 'Minimize harm'", body: "Section: Minimize harm (and the side-effects rule)\nAction: Change a rule\n\nRecommendation: Specify that the harms the model should minimise include the suffering and death of sentient animals, and that when the side-effects rule asks the model to consider adverse effects on other parties, those parties include all sentient beings.\n\nWhy: Animals are affected by many everyday requests, about food, pest control, pets and farming. Naming them removes ambiguity about whether their interests count.\n\n---\nSecond submission\nSection: Do not facilitate or encourage illicit behaviour / safety rules\nAction: Address something missing\nRecommendation: Mention animal cruelty explicitly, and recognise serious harm to animals as a risk in itself, so protection does not depend only on each country's laws.\n\n---\nThird submission\nSection: Honesty, and the side-effects rule\nAction: Make something clearer\nRecommendation: Ask the model to represent the scientific evidence on animal sentience accurately, distinguish degrees of uncertainty (strong for vertebrates and many invertebrates, weaker for some), and not treat a lack of certainty as a reason to ignore animals' possible interests." },
+    letter: { to: "OpenAI", subject: "Model Spec feedback", body: "See the e-mail draft: three separate submissions." },
+    src: [{ t: "OpenAI Model Spec feedback form", u: "https://model-spec-feedback-2026.openai.chatgpt.site/" }, S.spec, S.ae],
+    groups: ["dogs", "farmed", "aquatic", "inverts", "wild", "labs"], first: "Open the form and submit the first recommendation. Add the other two as separate submissions.", time: "30 minutes", skills: ["letters"], risk: "Low. Write in your own words; identical copied submissions carry less weight.", measure: "Animals named in a future version of the Spec." })
+];
+IDEAS.forEach((a) => { IN_ACTIONS.push(a); ALL_ACTIONS.push(a); });
+Object.assign(ACT_TACTICS, { "in-rodenticide": ["document"], "in-shellac-brand": ["outreach"], "in-shellac-fssai": ["consult"], "in-subsidies": ["join"], "in-pcb-poultry": ["join"], "in-altprotein-canteen": ["meeting"], "in-altprotein-course": ["join"], "in-insecticide": ["join"], "in-liveshop": ["document"], "in-modelspec": ["consult"] });
+Object.assign(DOC, { "in-rodenticide": ["Dead kites or owls found near baited areas, with place and date", "The contract and poison list from the RTI"], "in-liveshop": ["Only from RTI replies and public records; don't film inside shops"], "in-pcb-poultry": ["The list as a spreadsheet: farm, district, capacity, consent date"], "in-subsidies": ["Replies by district, in one spreadsheet you can share"] });
+IDEAS.forEach((a) => { if (DOC[a.id]) a.doc = DOC[a.id]; });
+IN_QUICK.push(
+  { t: "30m", g: ["wild"], title: "Ask which rat poisons your city's pest contract uses", line: "Slow poisons also kill the kites and owls that eat the rats.", btn: "Open RTI", act: "in-rodenticide" },
+  { t: "2m", g: ["inverts"], title: "Ask a brand whether its glaze uses shellac", line: "Shellac comes from insects and still gets a green dot.", btn: "Open e-mail", act: "in-shellac-brand" },
+  { t: "30m", g: ["inverts"], title: "Ask FSSAI to label shellac as insect-derived", line: "Its rules expressly count shellac and beeswax as vegetarian.", btn: "Open e-mail", act: "in-shellac-fssai" },
+  { t: "30m", g: ["farmed", "aquatic"], title: "File an RTI on poultry and fish subsidies in your district", line: "NLM, AHIDF and PMMSY: who got funded, and for how much.", btn: "Open RTI", act: "in-subsidies" },
+  { t: "30m", g: ["farmed"], title: "Get your State's list of large poultry farms", line: "Pollution consents show where intensive farming is growing.", btn: "Open RTI", act: "in-pcb-poultry" },
+  { t: "30m", g: ["farmed", "aquatic"], title: "Ask your canteen for one plant-based meat dish", line: "Builds demand for Indian alternative-protein brands.", btn: "Open e-mail", act: "in-altprotein-canteen" },
+  { t: "long", g: ["farmed", "aquatic"], title: "Ask your college for an alternative-protein module", line: "For food-tech, biotech and chemical engineering students.", btn: "See steps", act: "in-altprotein-course" },
+  { t: "long", g: ["inverts"], title: "Ask an agricultural university how fast insecticides kill", line: "An early question that could reduce suffering at huge scale.", btn: "See steps", act: "in-insecticide" },
+  { t: "30m", g: ["farmed"], title: "Ask your city how chickens are killed at live-bird shops", line: "An RTI on licensing and inspections. Don't confront shops.", btn: "Open RTI", act: "in-liveshop" },
+  { t: "30m", g: ["dogs", "farmed", "aquatic", "inverts", "wild", "labs"], title: "Ask OpenAI to name animals in its Model Spec", line: "Three short form submissions, drafted from Animal Ethics' proposals.", btn: "Open drafts", act: "in-modelspec" }
+);
+
 /* Backfire risk: how likely a careless or solo attempt is to set the cause back, and who to talk to first. */
 const BK_SET = {
   low: ["fish", "board", "monkeys", "disaster", "campus", "silk", "prawns", "insects", "bees", "gluetraps", "manja", "rescue", "welfare-bio",
         "dl-shelters", "dl-manja", "dl-fish", "dl-heat", "dl-gluetraps", "dl-zoo", "dl-campus", "in-pca", "in-abc", "in-ccsea", "in-inverts"],
-  med: ["dogs", "labs", "tigers", "abc-city", "boar", "dl-ward-abc", "dl-cattle", "dl-birdtrade", "dl-chickens", "dl-horses", "dl-pigeons", "tg-horses", "tg-transport", "in-canteen", "tg-canteen", "dl-canteen"],
+  med: ["dogs", "labs", "tigers", "abc-city", "boar", "dl-ward-abc", "dl-cattle", "dl-birdtrade", "dl-chickens", "dl-horses", "dl-pigeons", "tg-horses", "tg-transport", "in-liveshop", "in-canteen", "tg-canteen", "dl-canteen"],
   high: ["hens", "meals", "procession", "dl-ghazipur", "dl-transport", "in-caterer"]
 };
 const BK_WITH = {
@@ -2192,6 +2326,7 @@ const BK_WITH = {
   "dl-canteen": "Vegan Outreach's Green Tuesday team, and go through an employee of the company",
   "in-caterer": "Humane World for Animals India or ProVeg India, who run corporate food work",
   "tg-transport": "the police (100/112) or your district SPCA; report from a distance, never intervene",
+  "in-liveshop": "a group that works on farmed animals; use RTI, and never single out a shop or community",
   "dl-ghazipur": "a lawyer or an established group",
   "dl-transport": "an established group; any ask tied to one festival will be read as targeting a community, so ask for year-round checks for all animals"
 };
@@ -2285,16 +2420,21 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
   }
 
   /* ---------- shared sign-ups ("I'm working on this") ---------- */
-  const W = { db: null, me: null, canWrite: null, state: "loading", docs: new Map(), busy: false };
+  const W = { db: null, me: null, canWrite: null, state: "loading", docs: new Map(), out: new Map(), busy: false };
   function workersFor(id) {
     const out = [];
     W.docs.forEach((d, uid) => { const e = d && d.acts && d.acts[id]; if (e && typeof e === "object" && e.name) out.push(Object.assign({ uid }, e)); });
     return out.sort((a, b) => (a.at || 0) - (b.at || 0));
   }
   const countFor = (id) => workersFor(id).length;
+  const DID = ["Sent the e-mail", "Filed the RTI", "Sent or handed in the letter", "Met someone", "Posted or shared", "Something else"];
+  const RES = ["No reply yet", "Got a reply", "Got the information", "They agreed or acted", "They refused"];
+  function reportsFor(id) { const out = []; W.out.forEach((d, uid) => { const xs = d && d.r && d.r[id]; if (Array.isArray(xs)) xs.forEach((x) => x && out.push(Object.assign({ uid }, x))); }); return out.sort((a, b) => (b.at || 0) - (a.at || 0)); }
   function refreshWork() {
     $$("[data-wc]").forEach((el) => { const n = countFor(el.dataset.wc); el.textContent = n ? `${n} ${n === 1 ? "person" : "people"} working on this` : ""; el.hidden = !n; });
+    $$("[data-oc]").forEach((el) => { const n = reportsFor(el.dataset.oc).length; el.textContent = n ? `${n} report${n === 1 ? "" : "s"} back` : ""; el.hidden = !n; });
     const box = $("#signup"); if (box && !box.querySelector("form")) drawSignup(box.dataset.act);
+    const ob = $("#outcome"); if (ob && !ob.querySelector("form")) drawOutcome(ob.dataset.act);
   }
   (async function initWork() {
     const t = setTimeout(() => { if (W.state === "loading") { W.state = "slow"; refreshWork(); } }, 10000);
@@ -2304,6 +2444,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
       if (!db) { clearTimeout(t); W.state = "none"; refreshWork(); return; }
       W.db = db;
       if (user) { try { W.me = await user.id(); } catch (e) {} try { W.canWrite = await user.can("data.write"); } catch (e) {} }
+      db.collection("outcomes").onSnapshot((snap) => { W.out = new Map(snap.docs.filter((d) => d.exists).map((d) => [d.id, d.data()])); refreshWork(); }, () => {});
       db.collection("work").onSnapshot((snap) => {
         clearTimeout(t);
         W.docs = new Map(snap.docs.filter((d) => d.exists).map((d) => [d.id, d.data()]));
@@ -2363,6 +2504,39 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     };
   }
 
+  function drawOutcome(id, editing) {
+    const box = $("#outcome"); if (!box) return;
+    const rs = reportsFor(id);
+    const tally = RES.map((r) => [r, rs.filter((x) => x.res === r).length]).filter((x) => x[1]);
+    const summary = rs.length ? `<p class="small" style="margin-top:6px">${rs.length} report${rs.length === 1 ? "" : "s"} so far: ${tally.map(([r, n]) => `${n} ${esc(r.toLowerCase())}`).join(", ")}.</p><ul class="people">${rs.slice(0, 4).map((x) => `<li><span class="nm">${esc(x.did || "")}</span> · ${esc(x.res || "")}${x.note ? `<div>${esc(x.note)}</div>` : ""}<div class="tiny muted">${esc(fmtDate(x.at))}</div></li>`).join("")}</ul>` : `<p class="small muted" style="margin-top:6px">No reports yet. If you take a step, say what happened, so others learn what works.</p>`;
+    let ctl = "";
+    if (W.state === "none") ctl = `<p class="small" style="margin-top:12px">Reports are kept on the claude.ai copy. <a href="${SITE_URL}#do-${esc(id)}" target="_blank" rel="noopener">Report there</a>.</p>`;
+    else if (W.state !== "ok") ctl = "";
+    else if (!W.me || W.canWrite === false) ctl = `<p class="tiny muted" style="margin-top:12px">Your access is view-only, so you can read reports but not add one.</p>`;
+    else if (editing) ctl = `<form id="oform" novalidate>
+        <label>What did you do? <select name="did">${DID.map((d) => `<option>${esc(d)}</option>`).join("")}</select></label>
+        <label>What happened? <select name="res">${RES.map((d) => `<option>${esc(d)}</option>`).join("")}</select></label>
+        <label>Anything others should know <span class="muted" style="font-weight:400">(optional; no personal details of officials)</span><textarea name="note" maxlength="240" placeholder="For example: PIO replied in 25 days; asked for Rs 10 more for copies"></textarea></label>
+        <p class="tiny muted">Reports are visible to everyone who opens this page, without your name.</p>
+        <div class="acts"><button class="btn sm" type="submit">Save report</button><button class="btn ghost sm" type="button" id="ocancel">Cancel</button><span class="err" id="oerr" role="alert"></span></div></form>`;
+    else ctl = `<div class="acts"><button class="btn ghost sm" id="ojoin">Report back on a step you took</button></div>`;
+    box.innerHTML = `<h3>What happened when people tried</h3>${summary}${ctl}`;
+    const j = $("#ojoin", box); if (j) j.onclick = () => drawOutcome(id, true);
+    const f = $("#oform", box);
+    if (f) {
+      f.querySelector("select").focus();
+      $("#ocancel", box).onclick = () => drawOutcome(id);
+      f.onsubmit = async (e) => {
+        e.preventDefault(); if (W.busy) return; W.busy = true;
+        const btn = f.querySelector("[type=submit]"); btn.disabled = true; btn.textContent = "Saving…";
+        const cur = W.out.get(W.me); const r = Object.assign({}, (cur && cur.r) || {});
+        r[id] = [{ did: f.did.value, res: f.res.value, note: f.note.value.trim(), at: Date.now() }, ...((r[id] || []).slice(0, 19))];
+        try { await W.db.collection("outcomes").doc(W.me).set({ r }); W.busy = false; say("Report saved."); drawOutcome(id); }
+        catch (err) { W.busy = false; btn.disabled = false; btn.textContent = "Try again"; $("#oerr", box).textContent = "Couldn't save just now. Please try again."; }
+      };
+    }
+  }
+
   /* ---------- QUICK: the front page, for all of India ---------- */
   let qTime = store.get("qtime2") || "any", qCause = "", showRisky = false;
   if (!TIME_L[qTime] && qTime !== "any") qTime = "any";
@@ -2417,7 +2591,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     const keyOf = ({ q, src }) => `${src}:${(src === "india" ? IN_QUICK : g.quick).indexOf(q)}`;
     const row = (x, i) => {
       const { q, src } = x, a = q.act && findAct(q.act), rk = quickRisk(q), key = keyOf(x);
-      const meta = [rk !== "low" ? `<span class="bk-${rk}">${BK[rk].l}</span>` : "", qTime === "any" ? "" : "", a ? `<span>${esc(a.animals)}</span>` : "", src === "india" && g ? "<span>Anywhere in India</span>" : "", a ? `<span class="who-on" data-wc="${a.id}" hidden></span>` : ""].join("");
+      const meta = [rk !== "low" ? `<span class="bk-${rk}">${BK[rk].l}</span>` : "", qTime === "any" ? "" : "", a ? `<span>${esc(a.animals)}</span>` : "", src === "india" && g ? "<span>Anywhere in India</span>" : "", a ? `<span class="who-on" data-wc="${a.id}" hidden></span><span class="muted" data-oc="${a.id}" hidden></span>` : ""].join("");
       return `<div class="row"><span class="rk">${i + 1}</span><div><h3><button data-q="${key}">${esc(q.title)}</button></h3><p class="ln">${esc(q.line)}</p><div class="meta">${meta}</div></div><div class="go"><button class="btn ${i ? "ghost " : ""}sm" data-q="${key}">${esc(q.btn)}</button></div></div>`;
     };
     const order = { low: 0, med: 1, high: 2 };
@@ -2587,7 +2761,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
   function srcLink(key) { const s = SRC[key] || (G && G.d.sources.find((x) => x.k === key)); return s ? extLink(s.u, "source") : ""; }
   function lensLine(a) { return `<p class="lens">${a.lens.map((l) => esc(LENS_SHORT[l])).join(" · ")}</p>`; }
   function actRow(a, i) {
-    return `<div class="row clickable" data-act="${a.id}"><span class="rk">${i + 1}</span><div><h3><button data-act="${a.id}">${esc(a.title)}</button></h3><p class="ln">${esc(a.short)}</p><div class="meta"><span class="bk-${a.bk}">${BK[a.bk].l}</span><span>${esc(a.animals)}</span><span>${esc(a.priority)} impact</span><span class="who-on" data-wc="${a.id}" hidden></span></div></div><div class="go"><span class="more arrow" aria-hidden="true">Open</span></div></div>`;
+    return `<div class="row clickable" data-act="${a.id}"><span class="rk">${i + 1}</span><div><h3><button data-act="${a.id}">${esc(a.title)}</button></h3><p class="ln">${esc(a.short)}</p><div class="meta"><span class="bk-${a.bk}">${BK[a.bk].l}</span><span>${esc(a.animals)}</span><span>${esc(a.priority)} impact</span><span class="who-on" data-wc="${a.id}" hidden></span><span class="muted" data-oc="${a.id}" hidden></span></div></div><div class="go"><span class="more arrow" aria-hidden="true">Open</span></div></div>`;
   }
   function drawPanel() {
     $$(".tabs [role=tab]").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === tab));
@@ -2692,6 +2866,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
       <div class="kv"><div><b>Animals</b><span>${esc(a.animals)}</span></div><div><b>Scale</b><span>${esc(a.scale)}</span></div><div><b>Status</b><span>${esc(a.status)}</span></div><div><b>Time</b><span>${esc(a.time || "—")}</span></div></div>
       ${a.first ? `<div class="first"><b>Do this first</b>${esc(a.first)}</div>` : ""}
       <div class="signup" id="signup" data-act="${a.id}"></div>
+      <div class="signup" id="outcome" data-act="${a.id}"></div>
       ${a.places && PLACES[a.guide] ? (() => { const P = PLACES[a.guide][a.places.kind] || []; const isFood = a.places.kind === "food";
         const draftFor = (p) => isFood ? `I ate at ${p.n} (${p.a}) on [date] and enjoyed [dish]. One request: please ${p.ask}. I'd come back more often for it.` : `I was at ${p.n} on [date] as a [patient / visitor]. [What went well.] One suggestion: please add a clearly labelled plant-based meal (no ghee, curd, paneer or egg, with dal, chana or soya) for patients and in the canteen.`;
         const hasPid = P.some((p) => p.pid);
@@ -2711,7 +2886,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     </aside>`;
     document.body.insertAdjacentHTML("beforeend", html);
     document.body.style.overflow = "hidden";
-    drawSignup(a.id);
+    drawSignup(a.id); drawOutcome(a.id);
     trap($("#sheet"));
     $("#close").focus();
     $("#scrim").addEventListener("click", () => closeAct());
@@ -2831,7 +3006,7 @@ TACTICS.forEach((t) => (t.bk = TACTIC_BK[t.id] || "low"));
     const nat = g ? IN_ACTIONS.filter((a) => fits(a, null).ok) : [];
     const placeL = !g ? "Anywhere in India" : ans.part === "hyd" ? "Hyderabad" : ans.part === "unit" ? ans.unit : g.name;
     const chips = [placeL, ...(ans.groups.length ? ans.groups.map((x) => (GROUPS.find((y) => y.id === x) || {}).l) : ["All animals"]), { light: "A few hours a month", weekly: "A few hours a week", full: "Full-time" }[ans.time] || "", ...ans.skills.map((k) => (SKILLS.find((x) => x.id === k) || {}).l)].filter(Boolean);
-    const card = (a, i) => `<div class="row clickable" data-act="${a.id}"><span class="rk">${i + 1}</span><div><h3><button data-act="${a.id}">${esc(a.title)}</button></h3><p class="ln"><b style="color:var(--ink);font-weight:500">Do this first:</b> ${esc(a.first || "Open it for the first step.")}</p><div class="meta"><span class="bk-${a.bk}">${BK[a.bk].l}</span><span>${esc(a.time || "")}</span><span>${esc(a.animals)}</span><span class="who-on" data-wc="${a.id}" hidden></span></div></div><div class="go"><span class="more arrow" aria-hidden="true">Open</span></div></div>`;
+    const card = (a, i) => `<div class="row clickable" data-act="${a.id}"><span class="rk">${i + 1}</span><div><h3><button data-act="${a.id}">${esc(a.title)}</button></h3><p class="ln"><b style="color:var(--ink);font-weight:500">Do this first:</b> ${esc(a.first || "Open it for the first step.")}</p><div class="meta"><span class="bk-${a.bk}">${BK[a.bk].l}</span><span>${esc(a.time || "")}</span><span>${esc(a.animals)}</span><span class="who-on" data-wc="${a.id}" hidden></span><span class="muted" data-oc="${a.id}" hidden></span></div></div><div class="go"><span class="more arrow" aria-hidden="true">Open</span></div></div>`;
     let local = "";
     const u = g && (ans.part === "unit" ? g.units.find((x) => x.d === ans.unit) : ans.part === "hyd" ? g.units.find((x) => x.d === "Hyderabad") : null);
     if (u) {
