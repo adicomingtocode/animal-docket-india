@@ -26,6 +26,15 @@
       "headline": "Stray dogs: High Courts tighten the screws ahead of Supreme Court review",
       "art": "dog",
       "file": "issues/issue-03.json"
+    },
+    {
+      "id": "issue-04",
+      "number": 4,
+      "range": "9–22 November 2026",
+      "published": "2026-11-23",
+      "headline": "Supreme Court reserves order on stray-dog compliance, presses NHAI on cattle shelters",
+      "art": "dog",
+      "file": "issues/issue-04.json"
     }
   ]
 }

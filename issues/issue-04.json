@@ -1,0 +1,719 @@
+{
+  "number": 4,
+  "id": "issue-04",
+  "range": "9–22 November 2026",
+  "published": "2026-11-23",
+  "summary": [
+    "The [Supreme Court](#feature) on November 17 reserved its order on how far the States have complied with its stray-dog directions, and asked the National Highways Authority of India to consider cattle shelters near toll plazas. The Madras High Court separately ordered local bodies across Tamil Nadu to seize cattle left on public roads.",
+    "In the [courts](#courts), the Supreme Court dismissed a PIL seeking a ban on animal sacrifice in religious rituals, and the Allahabad and Gujarat High Courts ruled against officials and prosecutors in two cattle-transport cases.",
+    "The [National Medical Commission](#movement) has asked medical colleges to send comments on the draft laboratory-animal rules within 30 days of its November 16 notice, although public objections closed on November 5. Readers with links to medical colleges can press them to file strong comments before the window closes in mid-December.",
+    "On the [EA Forum](#forum), Fish Welfare Initiative reported a $500,000 funding gap for its work on Indian fish farms, while Animal Charity Evaluators named eight recommended charities for 2026, none of them working in India."
+  ],
+  "cover": {
+    "art": "dog",
+    "kicker": "Cover story",
+    "title": "Supreme Court reserves order on stray-dog compliance, presses NHAI on cattle shelters",
+    "dek": "Six months after its nationwide judgment on stray dogs, the Supreme Court has heard how 19 States say they are carrying it out and reserved its order, sending intervenors with complaints to their High Courts. It also asked the highways authority to look at shelters for stray cattle near toll plazas, while the Madras High Court ordered a statewide drive to clear cattle from Tamil Nadu's roads.",
+    "tags": [
+      "Order reserved",
+      "Cattle on highways",
+      "Tamil Nadu seizure drive"
+    ]
+  },
+  "topStories": [
+    {
+      "art": "gavel",
+      "label": "Supreme Court",
+      "title": "PIL against animal sacrifice dismissed",
+      "text": "A Bench led by Justice Vikram Nath dismissed a plea to amend Section 28 of the PCA Act, which protects killing in the manner a religion requires. The reasons are awaited.",
+      "anchor": "courts"
+    },
+    {
+      "art": "lab",
+      "label": "Draft laboratory rules",
+      "title": "Medical regulator seeks colleges' views on lab-animal rules",
+      "text": "The NMC's notice of November 16 gives medical institutions 30 days to comment. The Centre has not responded to the public objections.",
+      "anchor": "movement"
+    },
+    {
+      "art": "fish",
+      "label": "EA Forum",
+      "title": "Fish Welfare Initiative seeks $500,000 for Andhra Pradesh work",
+      "text": "The organisation says it has helped about 5.3 million fish since 2019, mostly through water-quality work on Indian farms.",
+      "anchor": "forum"
+    }
+  ],
+  "feature": {
+    "art": "dog",
+    "kicker": "Stray animals | Supreme Court and Madras High Court",
+    "title": "Supreme Court reviews stray-dog compliance and turns to cattle on highways",
+    "dek": "When it delivered its judgment in the nationwide stray-dog case on May 19, the Supreme Court fixed November 17 to review how the States had acted on it. At that hearing, a Bench of Justices Vikram Nath, Sandeep Mehta and N.V. Anjaria [reserved its order on compliance](https://lawbeat.in/top-stories/stray-cattle-on-highways-supreme-court-asks-nhai-to-contribute-csr-funds-for-shelters-near-toll-plazas-1652784) and spent much of the day on a related question: who should take care of the cattle that wander onto national highways. A day later, the [Madras High Court](https://www.barandbench.com/news/litigation/public-roads-are-meant-for-people-vehicles-madras-high-court-orders-seizure-of-stray-cattle) issued statewide directions on the same problem.",
+    "columns": [
+      {
+        "heading": "Supreme Court, November 17",
+        "items": [
+          {
+            "lead": "Reports from 19 States.",
+            "text": "Amicus curiae Gaurav Agarwal told the Bench that compliance reports had been received from 19 States. He said Assam and Bihar needed to do better and that Delhi's measures were inadequate, while Rajasthan and Uttar Pradesh filed additional figures, according to LawBeat."
+          },
+          {
+            "lead": "Order reserved.",
+            "text": "The Bench reserved its order on compliance and told intervenors to take their individual grievances to the High Courts concerned, which the May judgment had made responsible for monitoring. The judges also remarked that collared dogs were roaming inside the premises of the Gujarat and Delhi High Courts."
+          },
+          {
+            "lead": "NHAI and stray cattle.",
+            "text": "Solicitor General Tushar Mehta argued that the National Highways Authority of India cannot acquire land for shelters and that compliance would cost more than ₹5,000 crore. The Bench asked the NHAI to consider cattle shelters near toll plazas, funded at least in part from corporate social responsibility money. “Lives are being lost due to cattle roaming on roads,” Justice Mehta said, as [reported by ThePrint](https://theprint.in/india/lives-lost-due-to-stray-cattle-on-roads-sc-asks-nhai-to-build-shelters-at-toll-plazas/3101378/). The amicus will file a reply, and the matter is expected to be listed again in January 2027."
+          }
+        ]
+      },
+      {
+        "heading": "Madras High Court, mid-November",
+        "items": [
+          {
+            "lead": "Statewide seizure.",
+            "text": "A Bench of Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan directed all local bodies in Tamil Nadu to seize cattle found roaming or tethered on public roads, using dedicated teams working by day and by night, and asked the police to protect these drives."
+          },
+          {
+            "lead": "Licences and prosecution.",
+            "text": "Cattle kept within municipal limits must be licensed and tagged, and owners whose animals repeatedly stray must be prosecuted. Unclaimed cattle are to be auctioned or sent to shelters under the Tamil Nadu Animals and Birds in Urban Areas (Control and Regulation) Act, 1997."
+          },
+          {
+            "lead": "Four weeks for circulars.",
+            "text": "The State and the Director General of Police must issue circulars within four weeks. The court disposed of the PIL with these directions ([Verdictum](https://www.verdictum.in/madras-high-court/mkamesh-v-the-municipal-commissioner-livestock-streets-traffic-cautions-cattle-owners-1626155))."
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "label": "Supreme Court case",
+        "text": "In Re: ‘City Hounded by Strays, Kids Pay Price’ · SMW(C) No. 5 of 2025 · Justices Vikram Nath, Sandeep Mehta and N.V. Anjaria · hearing on November 17 · main judgment of May 19, 2026, 2026 SCC OnLine SC 894 ([SCC Online summary](https://www.scconline.com/blog/post/2026/05/19/sc-stray-dogs-abc-rules-nationwide-sterilisation-directions-may-2026/))"
+      },
+      {
+        "label": "Madras case",
+        "text": "M. Kamesh v. The Municipal Commissioner & Ors. · 2026:MHC:4597 · Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan · reported November 18 ([order PDF via Bar & Bench](https://images.assettype.com/barandbench/2026-11-18/46cw28t3/Kamesh_Vs_Municipal_Commissioner.pdf))"
+      },
+      {
+        "label": "Still pending",
+        "text": "The Jharkhand High Court's suo motu case on stray dogs and cattle on highways is listed for December 3, and the Goa Animal Husbandry Department's shelter action plan is due on December 1."
+      }
+    ],
+    "whyItMatters": "By sending intervenors back to the High Courts, the Supreme Court has confirmed that the day-to-day enforcement of its stray-dog judgment will happen in State courts, so advocates who want to raise failures on the ground should do so there. The NHAI hearing widens the case from dogs to cattle, and the two orders show courts treating roaming cattle mainly as a road-safety problem. For animal advocates, the question to watch is what happens to the seized animals: whether shelters near toll plazas or in Tamil Nadu's towns are built and run to a decent standard, or whether auctions send cattle into the same hands that abandoned them.",
+    "sources": [
+      {
+        "label": "LawBeat, Supreme Court, November 18",
+        "url": "https://lawbeat.in/top-stories/stray-cattle-on-highways-supreme-court-asks-nhai-to-contribute-csr-funds-for-shelters-near-toll-plazas-1652784"
+      },
+      {
+        "label": "ThePrint, Supreme Court, November 17",
+        "url": "https://theprint.in/india/lives-lost-due-to-stray-cattle-on-roads-sc-asks-nhai-to-build-shelters-at-toll-plazas/3101378/"
+      },
+      {
+        "label": "Bar & Bench, Madras HC, November 18",
+        "url": "https://www.barandbench.com/news/litigation/public-roads-are-meant-for-people-vehicles-madras-high-court-orders-seizure-of-stray-cattle"
+      },
+      {
+        "label": "Verdictum, Madras HC",
+        "url": "https://www.verdictum.in/madras-high-court/mkamesh-v-the-municipal-commissioner-livestock-streets-traffic-cautions-cattle-owners-1626155"
+      },
+      {
+        "label": "SCC Online, SC judgment, May 19",
+        "url": "https://www.scconline.com/blog/post/2026/05/19/sc-stray-dogs-abc-rules-nationwide-sterilisation-directions-may-2026/"
+      }
+    ]
+  },
+  "courts": {
+    "cases": [
+      {
+        "art": "gavel",
+        "title": "Supreme Court dismisses PIL seeking ban on animal sacrifice in religious rituals",
+        "reported": "November 18",
+        "citation": "PIL by Advocate Shruti Bisht · Supreme Court · Justices Vikram Nath, R. Mahadevan and Aparesh Kumar Singh · case number not reported",
+        "parts": [
+          {
+            "label": "Background",
+            "text": "The petition asked the Centre to amend Section 28 of the Prevention of Cruelty to Animals Act, 1960, which saves the killing of an animal in the manner required by the religion of any community from the Act's penal provisions. In March, a Bench of Justices Vikram Nath and Sandeep Mehta had issued notice to the Ministry of Animal Husbandry."
+          },
+          {
+            "label": "The ruling",
+            "text": "The court dismissed the petition. According to Bar & Bench, the detailed order is awaited, so the court's reasons are not yet known."
+          },
+          {
+            "label": "Significance",
+            "text": "Section 28 is one of the PCA Act's broadest exemptions, and the dismissal leaves any change to it with Parliament. The written order will show whether the court considered the question on its merits."
+          }
+        ],
+        "links": [
+          {
+            "label": "LiveLaw report",
+            "url": "https://www.livelaw.in/top-stories/supreme-court-dismisses-pil-seeking-ban-on-animal-sacrifices-for-religious-rituals-558980"
+          },
+          {
+            "label": "Bar & Bench report",
+            "url": "https://www.barandbench.com/news/litigation/supreme-court-dismisses-plea-seeking-ban-on-animal-sacrifice-in-temples"
+          }
+        ]
+      },
+      {
+        "art": "cow",
+        "title": "Allahabad High Court quashes confiscation of vehicle under cow-slaughter law and orders compensation",
+        "reported": "November 9",
+        "citation": "Tej Prakash v. State of U.P. & Ors. · 2026:AHC:228068 · Allahabad High Court · Justice Sandeep Jain",
+        "parts": [
+          {
+            "label": "Background",
+            "text": "The District Magistrate had confiscated a vehicle carrying bullocks under Section 5-A of the Uttar Pradesh Prevention of Cow Slaughter Act, 1955, and the Commissioner upheld the order on appeal."
+          },
+          {
+            "label": "The ruling",
+            "text": "The court set aside both orders. It held that the fact that the vehicle was found in a border district did not prove the animals were being taken out of the State or meant for slaughter, and that no veterinary evidence supported the charge of cruelty under Section 5-B. It ordered the vehicle's release, compensation of ₹40,000 a month from the date of seizure, ₹25,000 for harassment and 8% interest on late payment, and allowed the State to recover the amount from the officers responsible."
+          },
+          {
+            "label": "Significance",
+            "text": "The ruling puts the burden on officials to show evidence of slaughter or cruelty before confiscating vehicles, and makes them personally answerable for seizures without it."
+          }
+        ],
+        "links": [
+          {
+            "label": "Verdictum report",
+            "url": "https://www.verdictum.in/allahabad-high-court/tej-prakash-v-state-of-uttar-pradesh-and-others-2026ahc228068-vehicle-confiscation-1625444"
+          }
+        ]
+      },
+      {
+        "art": "cow",
+        "title": "Cruel transport alone does not show cattle were bound for slaughter, says Gujarat High Court",
+        "reported": "November 13",
+        "citation": "Ashvinbhai Govindbhai Navadiya & Anr. v. State of Gujarat · R/Cr.MA No. 26413 of 2026 · 2026 LiveLaw (Guj) 313 · Gujarat High Court · Justice Hasmukh D. Suthar",
+        "parts": [
+          {
+            "label": "Background",
+            "text": "Two men were accused under the PCA Act and the penal code of transporting ten cows and two calves tied up without food or water."
+          },
+          {
+            "label": "The ruling",
+            "text": "Granting regular bail, the court held that the inhuman condition in which the animals were found was not a ground to presume they were being taken for slaughter. It noted that the accused had no previous record and that the investigation was complete."
+          },
+          {
+            "label": "Significance",
+            "text": "The order separates the offence of cruel transport, which remains to be tried, from the far heavier charge of transport for slaughter under State cattle laws."
+          }
+        ],
+        "links": [
+          {
+            "label": "LiveLaw report",
+            "url": "https://www.livelaw.in/high-court/gujarat-high-court/gujarat-high-court-animal-slaughter-inhuman-condition-558371"
+          },
+          {
+            "label": "Verdictum report",
+            "url": "https://www.verdictum.in/gujarat-high-court/2026-gujhc-70678-ashvinbhai-govindbhai-navadiya-v-state-of-gujarat-1625738"
+          }
+        ]
+      },
+      {
+        "art": "tiger",
+        "title": "Madhya Pradesh High Court summons Kanha director over incomplete report on tiger deaths",
+        "reported": "November 19",
+        "citation": "Subit Chakraborty v. Union of India · WP 19398 of 2026 · Madhya Pradesh High Court (Jabalpur) · Chief Justice Alpesh Y. Kogje and Justice Vivek Jain",
+        "parts": [
+          {
+            "label": "Background",
+            "text": "In October the court had ordered the State to investigate two further tiger deaths in the Kanha Tiger Reserve and report within two weeks."
+          },
+          {
+            "label": "The ruling",
+            "text": "At the hearing on November 19, the State filed a report covering two deaths in September and October, one of which it attributed to canine distemper virus and said had occurred outside the reserve. The court expressed displeasure that the report was incomplete and ordered the Director of the reserve and the Advocate General to appear in person on November 30, according to ETV Bharat."
+          }
+        ],
+        "links": [
+          {
+            "label": "ETV Bharat report (Hindi)",
+            "url": "https://www.etvbharat.com/hi/state/mp-high-court-hearing-tiger-dies-on-canine-distemper-virus-petition-reprimanded-incomplete-information-mps26111906590"
+          },
+          {
+            "label": "Earlier order (LiveLaw)",
+            "url": "https://www.livelaw.in/amp/high-court/madhya-pradesh-high-court/probe-tiger-deaths-kanha-national-park-556013"
+          }
+        ]
+      },
+      {
+        "art": "elephant",
+        "title": "Madras High Court asks Kerala to install AI cameras on forest rail tracks to prevent elephant deaths",
+        "reported": "November 21",
+        "citation": "Madras High Court · Justices N. Sathish Kumar and G.K. Muthukumar · case title and order date not stated in reports",
+        "parts": [
+          {
+            "label": "The ruling",
+            "text": "The Bench directed the Kerala government to install AI-based cameras on railway tracks passing through forests along the Tamil Nadu–Kerala border within two months, and to approve underpasses for elephants without delay, according to ETV Bharat. The matter will be heard next on February 5, 2027."
+          },
+          {
+            "label": "Significance",
+            "text": "Elephants are regularly killed by trains on forest stretches of track, and the order sets a firm timeline for preventive measures."
+          }
+        ],
+        "links": [
+          {
+            "label": "ETV Bharat report",
+            "url": "https://www.etvbharat.com/en/state/madras-high-court-orders-kerala-govt-to-install-ai-cameras-on-railway-tracks-to-prevent-elephant-deaths-enn26112104234"
+          }
+        ]
+      },
+      {
+        "art": "leaf",
+        "title": "NGT asks Environment Ministry to consider a full study of threats to Ladakh's birds",
+        "reported": "November 23 (hearing on November 19)",
+        "citation": "Suo motu application · National Green Tribunal, Principal Bench · Chairperson Justice Prakash Shrivastava with expert members A. Senthil Vel and Afroz Ahmad",
+        "parts": [
+          {
+            "label": "The ruling",
+            "text": "Acting on a report by the Wildlife Institute of India and SACON which found no systematic studies of the threats facing Ladakh's birdlife, the tribunal gave the Environment Ministry four weeks to obtain instructions on commissioning a comprehensive study, and asked the Ladakh administration to say whether the two institutes should carry it out. The matter is listed for March 5, 2027."
+          }
+        ],
+        "links": [
+          {
+            "label": "The Kashmir Images report",
+            "url": "https://thekashmirimages.com/2026/11/23/ngt-asks-ladakh-administration-to-commission-study-on-threats-to-430-bird-species/"
+          }
+        ]
+      }
+    ],
+    "quiet": [
+      "The Jammu & Kashmir and Ladakh High Court (Justice Sanjay Dhar) upheld a preventive detention under the Public Safety Act, holding that smuggling cattle for slaughter can incite religious hatred and disturb public order ([LiveLaw, November 14](https://www.livelaw.in/high-court/jammu-kashmir/cattle-smuggling-for-slaughter-has-potential-to-incite-religious-hatred-disturb-public-order-hc-upholds-preventive-detention-558449)). The ruling sits uneasily with the same court's October decision that cattle-theft cases were matters of ordinary law and order.",
+      "The Animal Welfare Board of India issued a circular dated November 18 on implementing the Prevention of Cruelty to Animals (Regulation of Livestock Markets) Rules, 2017 ([AWBI circulars](https://awbi.gov.in/circulars)). Rajasthan's Forest Minister Sanjay Sharma announced on November 18 that families of people killed in human-wildlife conflict will receive ₹10 lakh ([Social News XYZ](https://www.socialnews.xyz/2026/11/18/compensation-for-families-of-human-wildlife-conflict-victims-increased-to-rs-10-lakh-rajasthan-minister/)); no government order had been reported at the time of writing.",
+      "Outcomes awaited: the Goa High Court's follow-up after the November 16 deadline for panchayat reports on stray dogs, and the Allahabad High Court's stray-dog compliance matter, had not been reported at the time of writing. No new notifications were reported from the Environment Ministry, the NTCA, the Central Zoo Authority or the Wildlife Crime Control Bureau. Parliament's Winter Session is likely to begin in the first week of December, according to [Telangana Today](https://telanganatoday.com/winter-session-likely-in-december-as-centre-prepares-to-move-womens-quota-delimitation-bill); no animal-related Bills have been announced."
+    ]
+  },
+  "movement": [
+    {
+      "art": "lab",
+      "actNow": true,
+      "tag": "Draft laboratory rules · Street campaign",
+      "date": "October 29 – November 16",
+      "title": "Medical colleges have until mid-December to comment on draft lab-animal rules",
+      "text": "The National Medical Commission on November 16 issued a public notice asking medical colleges and institutions to send their comments on the draft Prevention of Cruelty to Animals (Control and Supervision of Experiment, Breeding and Trading of Laboratory Animals) Rules, 2026 (G.S.R. 864(E)) to the Member Secretary of the CCSEA within 30 days, after the draft was forwarded to it by the CCSEA ([Medical Dialogues, November 17](https://medicaldialogues.in/health-news/nmc/nmc-invites-comments-from-medical-colleges-on-draft-prevention-of-cruelty-to-animals-rules-2026-to-regulate-animal-experiments-183433)). The public objection period closed on November 5, and no extension, response or final notification has been announced; the 1998 rules remain in force, according to the [Animal Writes tracker](https://animalwrites.in/campaigns/lab-animals-rules-2026/). The campaign against the draft has also taken to the streets. On October 29, students of Fergusson College marched in Pune with Simba Animal Save and Peedu's People to demand that the draft be withdrawn ([Punekar News](https://www.punekarnews.in/?p=248065)), and the Aloha Ahimsa Foundation and the Ojuswani Foundation held a press conference in New Delhi in early November to seek independent inspections and limits on exemptions ([ThePrint/PTI, November 6](https://theprint.in/india/animal-rights-activists-oppose-draft-rules-on-lab-experiments-seek-stronger-safeguards/3092408/)). Writing in [Scroll](https://scroll.in/article/1096974/indias-new-draft-on-animal-experiment-rules-top-a-decade-of-selective-retreat-from-compassion) on November 12, Alok Hisarwala Gupta of the Centre for Research on Animal Rights argued that 30 days was too short for consultation. Advocates who work at or with medical colleges can urge those institutions to send detailed comments to the CCSEA before the NMC window closes, about December 16 by a count of 30 days from the notice, which gives no calendar date. Others can still write to the CCSEA, the Ministry of Fisheries, Animal Husbandry and Dairying or their MPs ahead of the Winter Session, although comments sent after November 5 may not be formally considered.",
+      "links": [
+        {
+          "label": "Medical Dialogues, NMC notice",
+          "url": "https://medicaldialogues.in/health-news/nmc/nmc-invites-comments-from-medical-colleges-on-draft-prevention-of-cruelty-to-animals-rules-2026-to-regulate-animal-experiments-183433"
+        },
+        {
+          "label": "Punekar News: Pune march, October 29",
+          "url": "https://www.punekarnews.in/?p=248065"
+        },
+        {
+          "label": "ThePrint (PTI): Delhi press conference",
+          "url": "https://theprint.in/india/animal-rights-activists-oppose-draft-rules-on-lab-experiments-seek-stronger-safeguards/3092408/"
+        },
+        {
+          "label": "Animal Writes: status tracker",
+          "url": "https://animalwrites.in/campaigns/lab-animals-rules-2026/"
+        }
+      ]
+    },
+    {
+      "art": "fish",
+      "actNow": false,
+      "tag": "Fish Welfare Initiative · Leadership",
+      "date": "November 20",
+      "title": "Jennifer-Justine Kirsch leaves Fish Welfare Initiative with a call for better evidence",
+      "text": "Jennifer-Justine Kirsch is leaving Fish Welfare Initiative after six and a half years, during which, she writes, its staff grew from three to 30. In a farewell post, she argues that the animal movement under-invests in monitoring and evaluation, and calls for local implementers, locally generated evidence in lower- and middle-income countries and a willingness to stop projects that fail, citing FWI's decision to drop fortified feed. Sakthi joins as Programs Lead. FWI has also set out a $500,000 gap in its 2027 budget (see [EA Forum](#forum)).",
+      "links": [
+        {
+          "label": "FWI blog post",
+          "url": "https://www.fishwelfareinitiative.org/post/goodbye-jennifer"
+        }
+      ]
+    },
+    {
+      "art": "heart",
+      "actNow": false,
+      "tag": "Animal Charity Evaluators · Recommendations",
+      "date": "November 10",
+      "title": "ACE names eight recommended charities for 2026, none working in India",
+      "text": "Animal Charity Evaluators added Çiftlik Hayvanlarını Koruma Derneği of Türkiye, Greener by Default and Sinergia Animal to its list of recommended charities, and retained Animal Welfare Observatory, Shrimp Welfare Project, Sociedade Vegetariana Brasileira, The Humane League and Wild Animal Initiative. None of the eight is described as working in India. According to ACE, Sinergia secured 51 cage-free commitments covering about 1.7 million hens a year between January 2024 and June 2026.",
+      "links": [
+        {
+          "label": "ACE announcement",
+          "url": "https://forum.effectivealtruism.org/posts/uaTctowvZ5fj7dCB2/announcing-our-2026-charity-recommendations"
+        }
+      ]
+    },
+    {
+      "art": "food",
+      "actNow": false,
+      "tag": "GFI India · Research",
+      "date": "November 17",
+      "title": "GFI India releases second State of the Industry report on smart protein",
+      "text": "The Good Food Institute India launched the second edition of its State of the Industry report, covering 2023 to 2025, at its State of Smart Protein 2026 event in Bengaluru. According to the organisation, the high-protein food segment raised ₹440 crore in more than 24 funding rounds in 2025, while India still imports about 90% of its plant protein isolates. In a blind taste test it commissioned, 60% of participants said they liked the plant-based meat and egg products.",
+      "links": [
+        {
+          "label": "Press release (ANI/ThePrint)",
+          "url": "https://theprint.in/ani-press-releases/the-good-food-institute-india-launches-its-second-state-of-the-industry-report-charting-the-next-phase-of-smart-protein-growth/3101218/"
+        }
+      ]
+    },
+    {
+      "art": "hen",
+      "actNow": false,
+      "tag": "PETA India · World Vegan Month",
+      "date": "November 18",
+      "title": "PETA India puts up chicken billboards outside colleges in seven cities",
+      "text": "For World Vegan Month, PETA India has placed billboards showing a chicken with the line “Bro. Don't Eat Me!” outside colleges in Mumbai, Guwahati, Bengaluru, Kolkata, Chennai, Delhi and Pune, according to Mediainfoline. The campaign is aimed at students and urges them to go vegan.",
+      "links": [
+        {
+          "label": "Mediainfoline report",
+          "url": "https://www.mediainfoline.com/ooh/bro-dont-eat-me-peta-indias-world-vegan-month-billboard-blitz-urges-gen-z-to-spare-chickens"
+        }
+      ]
+    },
+    {
+      "art": "food",
+      "actNow": false,
+      "tag": "People for Animals · Woofly",
+      "date": "Launched October 4",
+      "title": "Maneka Gandhi launches vegan dog food to fund People for Animals",
+      "text": "Maneka Gandhi has launched Woofly, a vegan dog food made by Compassion Foods, a company she owns, with the profits to go to People for Animals. According to Business Line, it was unveiled at the CineKind event on World Animal Day, October 4. A 100-gram packet of powder costs ₹40 and expands to about 300 grams when mixed with water, and the food is made at a vegan-only facility in Jaipur. It is to be sold on Zepto, Amazon, Flipkart and the brand's own website, and foods for older and diabetic dogs and a vegan cat food are planned. ETV Bharat reported the launch on October 28. Mrs Gandhi said the venture would give the organisation a steady source of income.",
+      "links": [
+        {
+          "label": "Business Line, via TradingView",
+          "url": "https://www.tradingview.com/news/moodys:6a6254841a806:0-maneka-gandhi-turns-entrepreneur-launches-vegan-pet-food-brand-woofly/"
+        },
+        {
+          "label": "ETV Bharat (Hindi), October 28",
+          "url": "https://www.etvbharat.com/hi/state/maneka-gandhi-new-path-from-animal-welfare-campaigning-to-the-pet-food-market-ups26102803685"
+        }
+      ]
+    },
+    {
+      "art": "search",
+      "actNow": false,
+      "tag": "Indian Animal Studies Collective · Research",
+      "date": "November 21",
+      "title": "Worth following: the Indian Animal Studies Collective",
+      "text": "The Indian Animal Studies Collective, a group of scholars from several disciplines who study animals in Indian contexts, released the 48th episode of its Table Talk series on November 21, a conversation with anthropologist Naisargi Dave about her essay on love, compassion and an “ethics of indifference” towards animals. The collective is run by Anu Pande of EFLU Hyderabad and Susan Haris of BITS Pilani. Its Table Talks are informal conversations with academics and activists, and recordings of these and of its panels appear on the [Between Theory and Praxis podcast](https://open.spotify.com/show/1G8TvqsqXLVqMw0MOxKDLF). Its [events page](https://indiananimalstudiescollective.com/index.php/upcoming-events/) has a sign-up for the next Table Talk.",
+      "links": [
+        {
+          "label": "Table Talk, Ep. 48 (YouTube)",
+          "url": "https://www.youtube.com/watch?v=WPPp2U8ek9A"
+        },
+        {
+          "label": "IASC website",
+          "url": "https://indiananimalstudiescollective.com/"
+        },
+        {
+          "label": "Podcast on Spotify",
+          "url": "https://open.spotify.com/show/1G8TvqsqXLVqMw0MOxKDLF"
+        }
+      ]
+    },
+    {
+      "art": "heart",
+      "actNow": false,
+      "tag": "ALC India · Conference",
+      "date": "Dates to be announced",
+      "title": "Registration reportedly open for Animal Liberation Conference India in Indore",
+      "text": "Registration is reportedly open for the next Animal Liberation Conference India in Indore, Madhya Pradesh. Its dates, venue and fee had not been published on a public page at the time of writing. The previous edition, held in Indore from January 9 to 11, 2026, was organised by Indore Animal Liberation with Direct Action Everywhere and drew more than 180 activists from over 30 cities, according to DxE.",
+      "links": [
+        {
+          "label": "DxE on ALC India 2026",
+          "url": "https://www.directactioneverywhere.com/dxe-in-the-news/alc-india-was-a-huge-success"
+        },
+        {
+          "label": "Webdunia (Hindi), January 6",
+          "url": "https://hindi.webdunia.com/national-hindi-news/animal-liberation-conference-india-2026-will-be-held-in-indore-126010600023_1.html"
+        }
+      ]
+    }
+  ],
+  "forum": {
+    "pick": {
+      "art": "fish",
+      "label": "Pick of the fortnight",
+      "date": "November 18",
+      "title": "Fish Welfare Initiative's Funding Gap",
+      "author": "haven (Fish Welfare Initiative)",
+      "text": "Fish Welfare Initiative, which works mainly on fish farms in Andhra Pradesh, says it faces a $500,000 gap, about half of its $1 million budget for 2027. It reports having improved the lives of about 5.3 million fish since 2019, chiefly by improving water quality, and estimates that it helps about ten fish per dollar. Its Alliance for Responsible Aquaculture has enrolled 195 farms and aims to reach about 1,200 by 2029. As one of the few large animal-welfare programmes built and run in India, its fundraising is a useful test of how far donors will back farmed-fish work in the country.",
+      "url": "https://forum.effectivealtruism.org/posts/cE6pYwDWEagron7Z2/fish-welfare-initiative-s-funding-gap"
+    },
+    "posts": [
+      {
+        "art": "food",
+        "date": "November 18",
+        "category": "Diet change · Evidence",
+        "title": "Was I too optimistic about plant-based meat?",
+        "author": "Jacob Peacock",
+        "text": "Jacob Peacock had expected that adding plant-based meat to menus would cut meat choices by five to ten percentage points, and now believes that was too optimistic. In a 2026 experiment with 4,431 American adults, adding two meat-free options reduced meat orders by only 2.1 points, and data from 1.2 million restaurant transactions point to reductions of less than 5%.",
+        "url": "https://forum.effectivealtruism.org/posts/uiRY2XwJzpCA2sxWM/was-i-too-optimistic-about-plant-based-meat"
+      },
+      {
+        "art": "fish",
+        "date": "November 20",
+        "category": "Farmed fish",
+        "title": "Scale Welfare: Trying to figure out how to help farmed fish in Southeast Asia",
+        "author": "KvPelt and Ameer Virani",
+        "text": "After 18 months in the Philippines and Vietnam, the charity narrowed 123 ideas to a single pilot: slaughtering tilapia on the farm in ice slurry instead of transporting them alive for five to 15 hours, a journey the authors say kills 5–10% of fish. A frozen-meat retailer with more than 180 stores is trialling the protocol. The lessons apply to India's fast-growing aquaculture sector.",
+        "url": "https://forum.effectivealtruism.org/posts/Ekqa9C56wMthBZFar/scale-welfare-trying-to-figure-out-how-to-help-farmed-fish"
+      },
+      {
+        "art": "search",
+        "date": "November 18",
+        "category": "Organisations · India",
+        "title": "Animal Ethics' urgent funding gap",
+        "author": "Animal Ethics",
+        "text": "Animal Ethics says it needs $220,000 of its $270,000 budget for 2027 and will have to cut back by May without new funding. Its requests include money for courses and fellowships in the Global South and an AI-and-animals campaign. The organisation reports piloting a fellowship with about 360 students across more than ten Delhi University colleges and plans to extend it to other Indian cities.",
+        "url": "https://forum.effectivealtruism.org/posts/dxgaxMnEFFb2dkFie/animal-ethics-urgent-funding-gap"
+      },
+      {
+        "art": "globe",
+        "date": "November 10",
+        "category": "Strategy",
+        "title": "Longtermism For Animals",
+        "author": "Bentham's Bulldog",
+        "text": "The author argues that advocates should concentrate on making the far future go well for animals, since future populations will far outnumber today's, by preventing factory farming and wild-animal suffering from spreading, ensuring AI systems value animal welfare and building compassion for animals. Commenters question whether such distant outcomes can be influenced.",
+        "url": "https://forum.effectivealtruism.org/posts/nKQthLKo6o7Xt57Pr/longtermism-for-animals"
+      }
+    ],
+    "alsoPosted": "[Announcing our 2026 Charity Recommendations](https://forum.effectivealtruism.org/posts/uaTctowvZ5fj7dCB2/announcing-our-2026-charity-recommendations) by Animal Charity Evaluators (see [Movement](#movement)) · [Wild Animal Initiative can effectively use up to $4.6M more](https://forum.effectivealtruism.org/posts/PoKpeXcuvLD2mf8M2/wild-animal-initiative-can-effectively-use-up-to-usd4-6m) by Cat Kerr · [GFI's funding gap](https://forum.effectivealtruism.org/posts/3twSjrqP7MGCpYXoh/gfi-s-funding-gap-sustaining-high-impact-work-and-unlocking-1) by Helen Normand, which discusses India's BioE3 policy"
+  },
+  "careers": {
+    "intro": "Paid roles, a fellowship, a training session and a call for papers open to people in India, all confirmed as open on November 23. The Bharat Initiative for Accountability is hiring for four roles in India, and two deadlines fall within the next ten days.",
+    "items": [
+      {
+        "art": "chat",
+        "actNow": true,
+        "org": "Training",
+        "title": "Understanding how people (actually) make decisions",
+        "location": "Online · 1.30 p.m. or 8.30 p.m. IST (8 a.m. or 3 p.m. UK) · 90 minutes",
+        "deadline": "Wednesday, December 2, 2026",
+        "text": "A free introduction to behavioural science for campaigners and for staff in corporate relations and communications. The session covers how people make decisions, the two systems of thinking, a framework for building stronger messages and a few biases that can be applied right away, with examples such as winning a cage-free commitment or getting a petition signed. Registrants will receive a recording. The registration pages do not name an organiser.",
+        "links": [
+          {
+            "label": "Register: 1.30 p.m. IST",
+            "url": "https://luma.com/wfr0t3jk"
+          },
+          {
+            "label": "Register: 8.30 p.m. IST",
+            "url": "https://luma.com/ey40y4aj"
+          }
+        ]
+      },
+      {
+        "art": "hen",
+        "actNow": true,
+        "org": "International Council for Animal Welfare",
+        "title": "Director of Digital Campaigns",
+        "location": "Fully remote, anywhere (must be able to work legally where you live; no visa sponsorship)",
+        "deadline": "November 30, 2026, end of day (time zone not stated)",
+        "text": "The director will run digital tactics, including mass emails, petitions and online actions, in campaigns that press food companies on farmed-animal welfare. Applicants need at least three years' experience; pay for those outside the United States is discussed at interview.",
+        "links": [
+          {
+            "label": "Job details",
+            "url": "https://i-caw.org/digital-campaigns"
+          }
+        ]
+      },
+      {
+        "art": "film",
+        "actNow": true,
+        "org": "Reporters for Animals International",
+        "title": "Program & Community Coordinator (freelance)",
+        "location": "Remote; no geographic restriction stated",
+        "deadline": "December 2, 2026, 11.59 p.m. CET (4.29 a.m. IST on December 3)",
+        "text": "The organisation's first hire in this role will coordinate the delivery of its 2027 programmes and support its network of investigators. Pay is not stated.",
+        "links": [
+          {
+            "label": "Application form",
+            "url": "https://tally.so/r/EqdqO2"
+          },
+          {
+            "label": "Listing (Global South Opportunities)",
+            "url": "https://www.globalsouthopportunities.com/2026/11/18/reporters-2/"
+          }
+        ]
+      },
+      {
+        "art": "film",
+        "actNow": true,
+        "org": "Animal Advocacy Media",
+        "title": "Animal Advocacy Media Fellowship",
+        "location": "Worldwide, fully online · 5–7 hours a week, January 18 – February 18, 2027",
+        "deadline": "December 6, 2026 (time zone not stated)",
+        "text": "A free, month-long course in making short-form video for farmed animals, open to anyone over 18 with a phone or camera that records in 1080p. A need-based stipend of up to $200 may be available.",
+        "links": [
+          {
+            "label": "Fellowship details",
+            "url": "https://animaladvocacycareers.org/job/animal-advocacy-media-fellowship-participant/"
+          }
+        ]
+      },
+      {
+        "art": "briefcase",
+        "actNow": false,
+        "org": "Bharat Initiative for Accountability",
+        "title": "Four campaign roles: Research & Intel, Campaigns & Comms, Campaign Operations, Grassroots Organising",
+        "location": "India · three roles remote within India (Operations with regular travel); Grassroots role travel-heavy",
+        "deadline": "Not stated; applications open",
+        "text": "The coalition, which holds companies in India to their cage-free and welfare commitments, is recruiting four full-time leads. All four roles use a single application form; salaries are not listed.",
+        "links": [
+          {
+            "label": "Hiring page",
+            "url": "https://accountabilitymatters.in/hiring/"
+          },
+          {
+            "label": "Application form",
+            "url": "https://forms.gle/cKECuWgmmRXhffTA7"
+          }
+        ]
+      },
+      {
+        "art": "chat",
+        "actNow": false,
+        "org": "FIAPO",
+        "title": "Media Outreach Manager",
+        "location": "Hybrid, Delhi or Bengaluru",
+        "deadline": "Not stated",
+        "text": "The manager will report to the chief executive of the Federation of Indian Animal Protection Organisations. The role calls for eight to ten years' experience and pays ₹1.2–1.5 lakh a month; applicants should check the application address on the page.",
+        "links": [
+          {
+            "label": "FIAPO: get involved",
+            "url": "https://fiapo.org/get-involved"
+          }
+        ]
+      },
+      {
+        "art": "fish",
+        "actNow": false,
+        "org": "Fish Welfare Initiative",
+        "title": "Welfare Measurement Lead",
+        "location": "Indian nationals only · Eluru, Andhra Pradesh for at least six months of year one, otherwise remote within India",
+        "deadline": "Rolling",
+        "text": "A senior role building FWI's framework for measuring fish welfare and comparing farms, and leading field staff. The salary is ₹1.3–2.7 lakh a month.",
+        "links": [
+          {
+            "label": "Job details",
+            "url": "https://www.fishwelfareinitiative.org/wml"
+          }
+        ]
+      },
+      {
+        "art": "search",
+        "actNow": false,
+        "org": "Eastern Kentucky University",
+        "title": "Call for papers: Living with Animals Conference 2027",
+        "location": "Hybrid, with some online contributions · March 11–13, 2027",
+        "deadline": "Abstracts by Tuesday, December 15, 2026",
+        "text": "Scholars and practitioners may send an abstract of 200–400 words with a one-page CV by email to the organisers, as set out in the call.",
+        "links": [
+          {
+            "label": "The call (Rural History Newsletter)",
+            "url": "https://www.ruralhistory.eu/newsletter/2026/rhn-2026-099"
+          }
+        ]
+      }
+    ],
+    "boards": [
+      {
+        "label": "Animal Advocacy Careers job board",
+        "url": "https://animaladvocacycareers.org/job-board/"
+      },
+      {
+        "label": "Connect for Animals: list of job boards",
+        "url": "https://connectforanimals.com/resources-jobs"
+      },
+      {
+        "label": "Hive newsletter (jobs each issue)",
+        "url": "https://joinhive.substack.com/"
+      },
+      {
+        "label": "EA Forum: open job listings",
+        "url": "https://forum.effectivealtruism.org/topics/job-listing-open"
+      }
+    ]
+  },
+  "global": {
+    "items": [
+      {
+        "art": "hen",
+        "tag": "EU · Farm animal welfare",
+        "title": "European Commission set to propose phasing out cages for laying hens",
+        "text": "Leaked plans reported in November show the Commission preparing to ban cages for laying hens, with 12 years for existing farms to convert, to ban the culling of male chicks after five years and to require imported poultry products to meet equivalent standards, according to Agence Europe. The College of Commissioners is expected to adopt the proposal on December 9. The End the Cage Age coalition welcomed the ban but called the transition far too long ([Eurogroup for Animals](https://www.eurogroupforanimals.org/news/leaked-eu-cage-ban-falls-short-animals-and-farmers)).",
+        "link": {
+          "label": "Agence Europe, November 17",
+          "url": "https://agenceurope.eu/en/bulletin/article/13983/5/european-commission-to-present-on-9-december-a-proposal-to-phase-out-cages-for-laying-hens-and-other-poultry"
+        }
+      },
+      {
+        "art": "globe",
+        "tag": "Bulgaria · Fur farming",
+        "title": "Bulgaria bans fur farming by a unanimous vote",
+        "text": "Bulgaria's National Assembly on November 13 voted 173 to 0 to ban the farming of mink, foxes, chinchillas and raccoon dogs for fur. According to Eurogroup for Animals, 24 European countries now ban or restrict fur farming, while the European Commission has yet to respond to the Fur Free Europe citizens' initiative.",
+        "link": {
+          "label": "Eurogroup for Animals",
+          "url": "https://www.eurogroupforanimals.org/news/another-fur-victory-bulgaria-bans-fur-farming"
+        }
+      },
+      {
+        "art": "monkey",
+        "tag": "U.S. · Animal testing",
+        "title": "U.S. National Institutes of Health to send its last 34 chimpanzees to sanctuary",
+        "text": "The NIH has said it will move its remaining 34 chimpanzees from the Keeling Center in Texas to Chimp Haven in Louisiana, completing a commitment it made in 2015 to retire all the chimpanzees it owns. The transfers are to begin in early 2027.",
+        "link": {
+          "label": "Rise for Animals",
+          "url": "https://riseforanimals.org/news/keeling-center-md-anderson-nih-chimps/"
+        }
+      },
+      {
+        "art": "lab",
+        "tag": "U.K. · Animal testing",
+        "title": "Challenge to secrecy clause on animal experiments goes to the U.K. Court of Appeal",
+        "text": "Cruelty Free International has won permission to appeal against Section 24 of the Animals (Scientific Procedures) Act, which bars the disclosure of information about animal experiments, after an Upper Tribunal panel agreed the clause conflicts with the right to freedom of expression under Article 10 of the European Convention on Human Rights, according to Rise for Animals.",
+        "link": {
+          "label": "Rise for Animals, November 13",
+          "url": "https://riseforanimals.org/news/news-nov-13-2026/"
+        }
+      }
+    ],
+    "source": {
+      "label": "Rise for Animals roundup, November 20",
+      "url": "https://riseforanimals.org/news/news-nov-20-2026/"
+    }
+  },
+  "watchlist": [
+    {
+      "date": "Nov 30",
+      "text": "Kanha Tiger Reserve Director and Advocate General to appear before the [MP High Court on tiger deaths](https://www.etvbharat.com/hi/state/mp-high-court-hearing-tiger-dies-on-canine-distemper-virus-petition-reprimanded-incomplete-information-mps26111906590); applications close for ICAW's [Director of Digital Campaigns](https://i-caw.org/digital-campaigns)"
+    },
+    {
+      "date": "Dec 1",
+      "text": "Goa Animal Husbandry Department's deadline for a [stray-dog shelter action plan](https://nenews.in/goa/goa-hc-orders-disciplinary-action-against-8-panchayat-secretaries-over-stray-dog-reports/70158/)"
+    },
+    {
+      "date": "Dec 2",
+      "text": "Free online training: [Understanding how people (actually) make decisions](https://luma.com/wfr0t3jk), 1.30 p.m. or [8.30 p.m. IST](https://luma.com/ey40y4aj); applications close for Reporters for Animals' [Program & Community Coordinator](https://tally.so/r/EqdqO2)"
+    },
+    {
+      "date": "Dec 3",
+      "text": "Jharkhand High Court: [stray dogs and cattle on highways](https://www.thehansindia.com/news/national/jharkhand-hc-seeks-compliance-report-from-state-centre-over-stray-dogs-and-cattle-on-roads-1139521)"
+    },
+    {
+      "date": "Early Dec",
+      "text": "Parliament's Winter Session [likely to begin](https://telanganatoday.com/winter-session-likely-in-december-as-centre-prepares-to-move-womens-quota-delimitation-bill); dates not yet notified"
+    },
+    {
+      "date": "Dec 6",
+      "text": "Applications close for the [Animal Advocacy Media Fellowship](https://animaladvocacycareers.org/job/animal-advocacy-media-fellowship-participant/)"
+    },
+    {
+      "date": "Dec 9",
+      "text": "European Commission expected to adopt its [proposal to phase out cages for poultry](https://agenceurope.eu/en/bulletin/article/13983/5/european-commission-to-present-on-9-december-a-proposal-to-phase-out-cages-for-laying-hens-and-other-poultry)"
+    },
+    {
+      "date": "Dec 15",
+      "text": "Abstracts due for the [Living with Animals Conference 2027](https://www.ruralhistory.eu/newsletter/2026/rhn-2026-099)"
+    },
+    {
+      "date": "Mid-Dec",
+      "text": "30-day window for medical colleges' comments under the [NMC notice](https://medicaldialogues.in/health-news/nmc/nmc-invites-comments-from-medical-colleges-on-draft-prevention-of-cruelty-to-animals-rules-2026-to-regulate-animal-experiments-183433) of November 16 on the draft lab-animal rules runs out; urge medical colleges to file comments with the CCSEA"
+    }
+  ]
+}
